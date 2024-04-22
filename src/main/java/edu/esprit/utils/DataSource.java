@@ -5,7 +5,7 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class DataSource {
-    private final String URL = "jdbc:mysql://127.0.0.1:3306/nnnn";
+    private final String URL = "jdbc:mysql://127.0.0.1:3306/nnn";
     private final String USER = "root";
     private final String PWD = "";
     private Connection cnx;

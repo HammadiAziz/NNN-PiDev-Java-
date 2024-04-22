@@ -134,7 +134,7 @@ void login (ActionEvent event){
                     if (role == -1) {
                         // Coach or player, navigate to profile
                         try {
-                            FXMLLoader loader = new FXMLLoader(getClass().getResource("/UpdateUserGUI.fxml"));
+                            FXMLLoader loader = new FXMLLoader(getClass().getResource("/profileGUI.fxml"));
                             Parent root = loader.load();
                             ProfileController profileController = loader.getController();
                             profileController.setStage(new Stage()); // Set the stage for profile controller
