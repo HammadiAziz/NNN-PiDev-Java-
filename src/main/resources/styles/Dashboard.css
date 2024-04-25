@@ -1,0 +1,32 @@
+.parent {
+    -fx-background-color: #3E3E3E; /* Correction de la couleur */
+}
+
+.sidebar {
+    -fx-border-color: #B0B0B0;
+    -fx-background-color: #4F4F4F; /* Correction de la couleur */
+}
+
+.button {
+    -fx-background-color: #3E3E3E;
+    -fx-background-radius: 0em;
+}
+
+.button:hover {
+    -fx-background-color: #7bc186; /* Correction de la couleur */
+}
+
+.button:pressed {
+    -fx-background-color: #596c5e; /* Correction de la couleur */
+}
+
+.button:focused {
+    -fx-background-color: #7D6CC;
+    -fx-border-color: #7bc186; /* Assurez-vous que cette couleur correspond à vos besoins */
+    -fx-border-width: 0px 0px 0px 3px;
+}
+
+.table-view .column-header .label {
+    -fx-background-color: #7bc186;
+}
+

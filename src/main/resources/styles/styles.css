@@ -1,0 +1,18 @@
+.button {
+    -fx-background-color:  #15aa6e; /* Couleur de fond verte */
+    -fx-text-fill: white; /* Couleur du texte en blanc */
+    -fx-font-size: 14px; /* Taille de police */
+    -fx-font-weight: bold; /* Police en gras */
+    -fx-padding: 8px 15px; /* Espacement interne réduit */
+    -fx-border-radius: 5px; /* Bord arrondi */
+    -fx-background-radius: 5px; /* Bord arrondi de l'arrière-plan */
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.4), 10, 0, 0, 0); /* Effet de flou */
+}
+
+.button:hover {
+    -fx-background-color: #15aa6e; /* Couleur de fond verte foncée au survol */
+}
+
+.button:pressed {
+    -fx-background-color: #357a38; /* Couleur de fond verte plus foncée lorsqu'appuyé */
+}

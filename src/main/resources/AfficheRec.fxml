@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" stylesheets="@styles/Front.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.esprit.controllers.AfficheRec">
+   <children>
+      <TableView fx:id="tableView" layoutX="109.0" layoutY="55.0" prefHeight="245.0" prefWidth="445.0">
+        <columns>
+          <TableColumn fx:id="objectCol" prefWidth="75.0" text="OBJECT" />
+            <TableColumn fx:id="categorieCol" prefWidth="94.6666259765625" text="CATEGORY" />
+            <TableColumn fx:id="etatCol" prefWidth="88.00002034505206" text="STATUS" />
+        </columns>
+      </TableView>
+      <ButtonBar layoutX="164.0" layoutY="323.0" prefHeight="40.0" prefWidth="200.0">
+        <buttons>
+            <Button mnemonicParsing="false" onAction="#deleteRec" style="-fx-background-color: #15aa6e;" text="Delete" textFill="WHITE">
+               <effect>
+                  <Reflection />
+               </effect></Button>
+            <Button layoutX="135.0" layoutY="12.0" mnemonicParsing="false" onAction="#back" prefHeight="24.0" prefWidth="118.0" style="-fx-background-color: #15aa6e;" text="Back" textFill="WHITE">
+               <font>
+                  <Font size="11.0" />
+               </font>
+               <effect>
+                  <Reflection />
+               </effect></Button>
+        </buttons>
+      </ButtonBar>
+      <Text fill="#15aa6e" layoutX="202.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="List of Reclamation" textAlignment="CENTER" wrappingWidth="177.65170288085938">
+         <font>
+            <Font name="Cambria Math" size="21.0" />
+         </font>
+      </Text>
+   </children>
+   <effect>
+      <Glow />
+   </effect>
+</AnchorPane>

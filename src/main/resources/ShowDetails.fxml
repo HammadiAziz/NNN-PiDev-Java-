@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.esprit.controllers.ShowDetails">
+   <children>
+      <Label layoutX="30.0" layoutY="14.0" prefHeight="35.0" prefWidth="306.0" text="Details of Reclamation" textFill="#5dd28c">
+         <font>
+            <Font name="Cambria Math" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="59.0" layoutY="62.0" prefHeight="17.0" prefWidth="148.0" text="Object : " textFill="#40965e">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="59.0" layoutY="125.0" prefHeight="17.0" prefWidth="148.0" text="Categorie :" textFill="#40965e">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="59.0" layoutY="186.0" prefHeight="17.0" prefWidth="148.0" text="Description : " textFill="#40965e">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="label_object" layoutX="121.0" layoutY="62.0" prefHeight="17.0" prefWidth="172.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="label_categorie" layoutX="152.0" layoutY="125.0" prefHeight="17.0" prefWidth="172.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="59.0" layoutY="250.0" prefHeight="17.0" prefWidth="148.0" text="Etat : " textFill="#40965e">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="label_decription" layoutX="163.0" layoutY="186.0" prefHeight="17.0" prefWidth="404.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="label_etat" layoutX="109.0" layoutY="250.0" prefHeight="17.0" prefWidth="148.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Button layoutX="479.0" layoutY="327.0" mnemonicParsing="false" onAction="#back" prefHeight="25.0" prefWidth="95.0" style="-fx-background-color: #15aa6e;" text="Back" textFill="WHITE">
+         <effect>
+            <Reflection />
+         </effect>
+      </Button>
+      <Label layoutX="59.0" layoutY="313.0" prefHeight="17.0" prefWidth="148.0" text="Reponses: " textFill="#40965e">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="label_reponse" layoutX="163.0" layoutY="318.0" prefHeight="76.0" prefWidth="306.0" />
+   </children>
+</AnchorPane>
