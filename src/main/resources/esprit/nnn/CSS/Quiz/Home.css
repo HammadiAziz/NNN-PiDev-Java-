@@ -1,0 +1,17 @@
+
+.choice{
+
+    -fx-background-color: #9a9a9a;
+    -fx-background-radius: 10px; /* Adjust the value as needed */
+    -fx-effect: dropshadow( gaussian , rgba(10,0,0,0.5) , 10, 0, 0, 2 );
+
+
+
+}
+.choice:hover {
+    -fx-effect: dropshadow( gaussian , rgba(10,0,0,0.5) , 10, 0, 0, 2 );
+    -fx-background-color: #807f7f;
+
+
+
+}
