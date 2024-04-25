@@ -114,7 +114,16 @@ public class ResetPassController {
             message.setFrom(new InternetAddress(username));
             message.setRecipient(Message.RecipientType.TO, new InternetAddress(recipientEmail));
             message.setSubject("Password Reset Token");
-            message.setText("Your password reset token is: " + resetToken);
+            // Create HTML content for the email body
+            String htmlContent = "<html><body style=\"font-family: Arial, sans-serif;\">"
+                    + "<p style=\"color: #008000;\">Dear User,</p>"
+                    + "<p style=\"color: #008000;\">Your password reset token is: <strong>" + resetToken + "</strong></p>"
+                    + "<p style=\"color: #008000;\">Please use this token to reset your password.</p>"
+                    + "<p style=\"color: #008000;\">Regards,<br/>Your Application Team</p>"
+                    + "</body></html>";
+
+            // Set email content as HTML
+            message.setContent(htmlContent, "text/html");
 
             Transport.send(message);
             return true;
