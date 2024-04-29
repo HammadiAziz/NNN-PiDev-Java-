@@ -91,8 +91,8 @@ public class ResetPassController {
     private boolean sendEmail(String recipientEmail, String resetToken) {
         String host = "smtp.office365.com";
         String port = "587";
-        String username = "NaturalNerdNetwork@outlook.com";
-        String password = "Wicem159";
+        String username = "amine.hamed@esprit.tn";
+        String password = "Amino455@";
 
         Properties properties = new Properties();
         properties.put("mail.smtp.auth", "true");
@@ -114,6 +114,7 @@ public class ResetPassController {
             message.setFrom(new InternetAddress(username));
             message.setRecipient(Message.RecipientType.TO, new InternetAddress(recipientEmail));
             message.setSubject("Password Reset Token");
+
             // Create HTML content for the email body
             String htmlContent = "<html><body style=\"font-family: Arial, sans-serif;\">"
                     + "<p style=\"color: #008000;\">Dear User,</p>"
@@ -132,5 +133,6 @@ public class ResetPassController {
             return false;
         }
     }
+
 
 }

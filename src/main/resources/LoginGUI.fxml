@@ -49,14 +49,13 @@
             <Button layoutX="122.0" layoutY="395.0" mnemonicParsing="false" onAction="#handleLoginButton" styleClass="btn" stylesheets="@style/login.css" text="Login" />
             <Label layoutX="115.0" layoutY="452.0" text="Create Account," />
             <Hyperlink layoutX="200.0" layoutY="449.0" onAction="#handleRegisterButton" text="Sign Up" />
-            <Hyperlink layoutX="29.0" layoutY="349.0" onAction="#handleReset" text="Forgot Password ?" />
+            <Hyperlink layoutX="29.0" layoutY="349.0" text="Forgot Password ?" />
             <ImageView fitHeight="82.0" fitWidth="400.0" layoutY="95.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../../../../Desktop/1.png" />
                </image>
             </ImageView>
             <Hyperlink layoutX="295.0" layoutY="562.0" onAction="#handleReset" text="Reset Password" />
-            <Hyperlink layoutX="38.0" layoutY="384.0" onAction="#handleReset" text="Hyperlink" />
          </children>
       </Pane>
       <ProgressIndicator fx:id="loadingindicator" layoutX="327.0" layoutY="7.0" progress="0.0" />

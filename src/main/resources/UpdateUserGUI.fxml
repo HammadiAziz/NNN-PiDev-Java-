@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
 <?import java.lang.String?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
@@ -9,54 +8,40 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-
-<AnchorPane prefHeight="594.0" prefWidth="781.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UpdateUserGUI">
+<AnchorPane prefHeight="594.0" prefWidth="781.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.esprit.controllers.ProfileController">
    <children>
       <AnchorPane prefHeight="597.0" prefWidth="208.0" styleClass="nav-form" stylesheets="@style/dashboardDesign.css">
          <children>
-            <FontAwesomeIcon fill="WHITE" glyphName="USER" layoutX="59.0" layoutY="114.0" size="7em" />
             <Label layoutX="55.0" layoutY="126.0" text="Welcome," textFill="WHITE">
                <font>
                   <Font name="Tahoma" size="17.0" />
                </font>
             </Label>
-            <Label fx:id="username" alignment="CENTER" layoutX="-5.0" layoutY="148.0" prefHeight="23.0" prefWidth="194.0" text="Flen" textFill="WHITE">
-               <font>
-                  <Font name="Arial Bold" size="20.0" />
-               </font>
-            </Label>
             <Line endX="80.40000915527344" endY="-1.52587890625E-5" layoutX="113.0" layoutY="190.0" startX="-100.0" stroke="WHITE" />
-            <Button fx:id="home_btn" layoutX="2.0" layoutY="203.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="35.0" prefWidth="180.0" styleClass="nav-btn" stylesheets="@style/dashboardDesign.css" text="Go Back Home">
-               <graphic>
-                  <FontAwesomeIcon fill="WHITE" glyphName="HOME" size="1.5em" />
-               </graphic>
-            </Button>
-            <Button fx:id="logout" layoutX="12.0" layoutY="544.0" mnemonicParsing="false" onAction="#logout" stylesheets="@../../../../../Desktop/EmployeeManagementSystem-main/employeeManagementSystem/src/employeemanagementsystem/dashboardDesign.css">
-               <graphic>
-                  <FontAwesomeIcon fill="WHITE" glyphName="SIGN_OUT" size="2em" />
-               </graphic>
+            <Button layoutX="29.0" layoutY="203.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="180.0" styleClass="nav-btn" stylesheets="@style/dashboardDesign.css" text="Go Back Home" />
+            <Button layoutX="12.0" layoutY="544.0" mnemonicParsing="false" onAction="#logout" stylesheets="@../../../../../Desktop/EmployeeManagementSystem-main/employeeManagementSystem/src/employeemanagementsystem/dashboardDesign.css">
                <styleClass>
                   <String fx:value="logout" />
                   <String fx:value="shadow" />
                </styleClass>
+               <graphic>
+                  <ImageView fitHeight="26.0" fitWidth="28.0" onMouseClicked="#logout" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/logout.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
             </Button>
             <Label layoutX="59.0" layoutY="550.0" text="Logout" textFill="WHITE">
                <font>
                   <Font size="14.0" />
                </font>
             </Label>
-            <Button fx:id="home_btn1" layoutX="2.0" layoutY="246.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="35.0" prefWidth="180.0" styleClass="nav-btn" stylesheets="@style/dashboardDesign.css" text="Edit Details">
-               <graphic>
-                  <FontAwesomeIcon fill="WHITE" glyphName="EDIT" size="1.5em" />
-               </graphic>
-            </Button>
-            <Button fx:id="home_btn11" layoutX="2.0" layoutY="289.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="35.0" prefWidth="180.0" styleClass="nav-btn" stylesheets="@style/dashboardDesign.css" text="Change Password">
-               <graphic>
-                  <FontAwesomeIcon fill="WHITE" glyphName="KEY" size="1.5em" />
-               </graphic>
-            </Button>
-            <Button fx:id="home_btn111" layoutX="2.0" layoutY="334.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="35.0" prefWidth="180.0" styleClass="nav-btn" stylesheets="@style/dashboardDesign.css" text="Buy Diamonds">
+            <Button fx:id="edit" layoutX="35.0" layoutY="252.0" mnemonicParsing="false" onAction="#NavigateToUpdate" prefHeight="35.0" prefWidth="180.0" styleClass="nav-btn" stylesheets="@style/dashboardDesign.css" text="Edit Details" />
+            <Button layoutX="29.0" layoutY="290.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="180.0" styleClass="nav-btn" stylesheets="@style/dashboardDesign.css" text="Change Password" />
+            <Button fx:id="navToBadge" layoutX="2.0" layoutY="334.0" mnemonicParsing="false" onAction="#navToBadges" prefHeight="35.0" prefWidth="180.0" styleClass="nav-btn" stylesheets="@style/dashboardDesign.css" text="Buy Badges">
                <graphic>
                   <ImageView fitHeight="30.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -65,9 +50,34 @@
                   </ImageView>
                </graphic>
             </Button>
+            <ImageView fitHeight="20.0" fitWidth="15.0" layoutX="14.0" layoutY="213.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/home.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="30.0" fitWidth="27.0" layoutX="8.0" layoutY="256.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/editprofile.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="23.0" fitWidth="27.0" layoutX="10.0" layoutY="296.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/changepass.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="106.0" fitWidth="101.0" layoutX="42.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/66620d1.png" />
+               </image>
+            </ImageView>
+            <Text fx:id="emailq" fill="WHITE" layoutX="25.0" layoutY="176.0" strokeType="OUTSIDE" strokeWidth="0.0" text="email">
+               <font>
+                  <Font name="Arial Bold" size="13.0" />
+               </font>
+            </Text>
          </children>
       </AnchorPane>
-      <Button fx:id="addEmployee_deleteBtn" layoutX="224.0" layoutY="541.0" mnemonicParsing="false" onAction="#addEmployeeDelete" prefHeight="42.0" prefWidth="159.0" styleClass="delete-btn" stylesheets="@../../../../../Desktop/EmployeeManagementSystem-main/employeeManagementSystem/src/employeemanagementsystem/dashboardDesign.css" text="Delete My Account !" />
+      <Button layoutX="224.0" layoutY="541.0" mnemonicParsing="false" onAction="#deleteaccount" prefHeight="42.0" prefWidth="159.0" styleClass="delete-btn" stylesheets="@style/dashboardDesign.css" text="Delete My Account !" />
       <ImageView fitHeight="112.0" fitWidth="152.0" layoutX="661.0" layoutY="485.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../../../../../xampp/htdocs/test/public/SRC/logo.png" />
@@ -78,22 +88,22 @@
             <Font name="Impact" size="24.0" />
          </font>
       </Label>
-      <Label layoutX="230.0" layoutY="86.0" opacity="0.72" text="First Name :" textFill="#043309">
+      <Label layoutX="242.0" layoutY="87.0" opacity="0.72" text="First Name :" textFill="#043309">
          <font>
             <Font name="Bell MT Bold" size="14.0" />
          </font>
       </Label>
-      <Label layoutX="230.0" layoutY="128.0" opacity="0.72" text="Last Name :" textFill="#043309">
+      <Label layoutX="231.0" layoutY="128.0" opacity="0.72" text="Last Name :" textFill="#043309">
          <font>
             <Font name="Bell MT Bold" size="14.0" />
          </font>
       </Label>
-      <Label layoutX="230.0" layoutY="174.0" opacity="0.72" text="Phone Number :" textFill="#043309">
+      <Label layoutX="231.0" layoutY="176.0" opacity="0.72" text="Phone Number :" textFill="#043309">
          <font>
             <Font name="Bell MT Bold" size="14.0" />
          </font>
       </Label>
-      <Label layoutX="231.0" layoutY="215.0" opacity="0.72" text="Birthdate :" textFill="#043309">
+      <Label layoutX="247.0" layoutY="215.0" opacity="0.72" text="Birthdate :" textFill="#043309">
          <font>
             <Font name="Bell MT Bold" size="14.0" />
          </font>
@@ -103,5 +113,23 @@
             <Font name="Bell MT Bold" size="14.0" />
          </font>
       </Label>
+      <Text fx:id="nameq" fill="#187922" fontSmoothingType="LCD" layoutX="336.0" layoutY="100.0" strokeType="OUTSIDE" strokeWidth="0.0" text="name" />
+      <Text fx:id="lastnameq" fill="#187922" fontSmoothingType="LCD" layoutX="316.0" layoutY="142.0" strokeType="OUTSIDE" strokeWidth="0.0" text="last name" />
+      <Text fx:id="numberq" fill="#187922" fontSmoothingType="LCD" layoutX="351.0" layoutY="189.0" strokeType="OUTSIDE" strokeWidth="0.0" text="phone number" />
+      <Text fx:id="birthdayq" fill="#187922" fontSmoothingType="LCD" layoutX="336.0" layoutY="228.0" strokeType="OUTSIDE" strokeWidth="0.0" text="birthday" />
+      <AnchorPane layoutX="640.0" layoutY="15.0" prefHeight="27.0" prefWidth="91.0" stylesheets="@style/dashboardDesign.css">
+         <styleClass>
+            <String fx:value="white-bg" />
+            <String fx:value="shadow" />
+         </styleClass>
+         <children>
+            <ImageView fitHeight="33.0" fitWidth="23.0" layoutX="3.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/diamond.png" />
+               </image>
+            </ImageView>
+            <Text fx:id="diamonsq" layoutX="26.0" layoutY="18.0" strokeType="OUTSIDE" strokeWidth="0.0" text="diamons" wrappingWidth="65.60000000000002" />
+         </children>
+      </AnchorPane>
    </children>
 </AnchorPane>

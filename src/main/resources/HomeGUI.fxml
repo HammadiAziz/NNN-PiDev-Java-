@@ -47,7 +47,7 @@
                     <children>
                         <HBox alignment="CENTER_LEFT" spacing="10.0" styleClass="link" stylesheets="@style/home.css">
                             <children>
-                        <FontAwesomeIcon glyphName="USER" size="2em" />
+                        
                                 <Label text="Profile" />
                             </children>
                             <VBox.margin>
