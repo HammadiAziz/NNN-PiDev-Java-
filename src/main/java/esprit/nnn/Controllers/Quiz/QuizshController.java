@@ -96,4 +96,27 @@ public class QuizshController {
         alert.setContentText(message);
         alert.showAndWait();
     }
+
+    @FXML
+    void QuizHome(ActionEvent event) {
+
+
+        try {
+            // Utilisez FXMLLoader pour charger le fichier FXML de la nouvelle page
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/esprit/nnn/FXML/Admin/QuizHome.fxml"));
+            Parent root = loader.load();
+            // Obtenez le contrôleur de la nouvelle page
+            QuizHomecontroller Listcontroller = loader.getController();
+            // Obtenez la scène actuelle à partir de l'événement
+            Scene currentScene = ((Node) event.getSource()).getScene();
+
+            // Remplacez la racine de la scène actuelle avec la nouvelle page
+            currentScene.setRoot(root);
+        } catch (IOException e) {
+            // Gérez les exceptions d'E/S
+            e.printStackTrace();
+            throw new RuntimeException(e);
+        }
+
+    }
 }

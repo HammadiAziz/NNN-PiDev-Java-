@@ -15,3 +15,10 @@
 
 
 }
+
+
+.input {
+    -fx-background-color: transparent;
+    -fx-border-color: #7bc186;
+    -fx-border-width: 0 0 3px 0;
+}

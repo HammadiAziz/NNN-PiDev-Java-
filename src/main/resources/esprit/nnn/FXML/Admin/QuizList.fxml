@@ -24,7 +24,7 @@
             </ImageView>
             <Button alignment="CENTER" layoutX="8.0" layoutY="182.0" mnemonicParsing="false" prefHeight="71.0" prefWidth="91.0" styleClass="btn" stylesheets="@../../CSS/Dashboard/Dashboard.css" text="Group" textFill="WHITE" />
             <Button alignment="CENTER" layoutX="8.0" layoutY="111.0" mnemonicParsing="false" prefHeight="71.0" prefWidth="91.0" styleClass="btn" stylesheets="@../../CSS/Dashboard/Dashboard.css" text="User" textFill="WHITE" />
-            <Button alignment="CENTER" layoutX="8.0" layoutY="324.0" mnemonicParsing="false" prefHeight="71.0" prefWidth="91.0" styleClass="btn" stylesheets="@../../CSS/Dashboard/Dashboard.css" text="Quiz" textFill="WHITE" />
+            <Button alignment="CENTER" layoutX="8.0" layoutY="324.0" mnemonicParsing="false" onAction="#QuizHome" prefHeight="71.0" prefWidth="91.0" styleClass="btn" stylesheets="@../../CSS/Dashboard/Dashboard.css" text="Quiz" textFill="WHITE" />
             <Button alignment="CENTER" layoutX="8.0" layoutY="466.0" mnemonicParsing="false" prefHeight="71.0" prefWidth="91.0" styleClass="btn" stylesheets="@../../CSS/Dashboard/Dashboard.css" text="Reclamation" textFill="WHITE" />
             <Button alignment="CENTER" layoutX="8.0" layoutY="395.0" mnemonicParsing="false" prefHeight="71.0" prefWidth="91.0" styleClass="btn" stylesheets="@../../CSS/Dashboard/Dashboard.css" text="Market" textFill="WHITE" />
             <Label layoutX="25.0" layoutY="48.0" text="NNN." textFill="#7bc186">
@@ -36,7 +36,7 @@
       </Pane>
       <Pane layoutX="94.0" layoutY="62.0" prefHeight="542.0" prefWidth="810.0">
          <children>
-            <ScrollPane prefHeight="542.0" prefWidth="810.0">
+            <ScrollPane layoutX="-3.0" layoutY="-2.0" prefHeight="542.0" prefWidth="810.0">
                <content>
                   <GridPane fx:id="grid" prefHeight="45.0" prefWidth="131.0">
                     <rowConstraints>

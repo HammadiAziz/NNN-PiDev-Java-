@@ -1,6 +1,7 @@
 package esprit.nnn.Controllers.Question;
 
 import esprit.nnn.Controllers.Quiz.QuizDetailsController;
+import esprit.nnn.Controllers.Quiz.QuizHomecontroller;
 import esprit.nnn.Models.Questions;
 import esprit.nnn.Models.Quiz;
 import esprit.nnn.Services.QuestionsService;
@@ -48,6 +49,28 @@ public class QuestionAdd {
 
     @FXML
     void add(ActionEvent event) {
+        if (text.getText().isEmpty() || ch1.getText().isEmpty() || ch2.getText().isEmpty() ||ch3.getText().isEmpty() ||ch4.getText().isEmpty() ||correct.getText().isEmpty() || points.getText().isEmpty()) {
+            showAlert("Veuillez remplir tous les champs.");
+            return;
+        }
+
+        String correctValue = correct.getText();
+        if (!correctValue.equals(ch1.getText()) && !correctValue.equals(ch2.getText()) && !correctValue.equals(ch3.getText()) && !correctValue.equals(ch4.getText())) {
+            showAlert("Le champ 'correct' doit être égal à l'une des valeurs dans 'choix1', 'choix2' ou 'choix3' ou 'choix4'");
+            return;
+        }
+
+        // Vérification si le champ points est un entier valide
+        try {
+            int pointsValue = Integer.parseInt(points.getText());
+            if (pointsValue <= 0) {
+                showAlert("Le nombre de points doit être supérieur à zéro.");
+                return;
+            }
+        } catch (NumberFormatException e) {
+            showAlert("Le nombre de points doit être un entier valide.");
+            return;
+        }
 
         Questions questions = new Questions(Integer.parseInt(points.getText()),quiz.getId(),text.getText(),ch1.getText(),ch2.getText(), ch3.getText(),ch4.getText(),correct.getText());
      questionsService.Create(quiz.getId(),questions);
@@ -84,6 +107,14 @@ public class QuestionAdd {
 
     }
 
+    private void showAlert(String message) {
+        Alert alert = new Alert(Alert.AlertType.ERROR);
+        alert.setTitle("Erreur");
+        alert.setHeaderText(null);
+        alert.setContentText(message);
+        alert.showAndWait();
+    }
+
     @FXML
     void clear(ActionEvent event) {
 
@@ -94,6 +125,32 @@ public class QuestionAdd {
         correct.clear();
         points.clear();
         text.clear();
+
+    }
+
+
+
+    @FXML
+    void QuizHome(ActionEvent event) {
+
+
+
+        try {
+            // Utilisez FXMLLoader pour charger le fichier FXML de la nouvelle page
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/esprit/nnn/FXML/Admin/QuizHome.fxml"));
+            Parent root = loader.load();
+            // Obtenez le contrôleur de la nouvelle page
+            QuizHomecontroller Listcontroller = loader.getController();
+            // Obtenez la scène actuelle à partir de l'événement
+            Scene currentScene = ((Node) event.getSource()).getScene();
+
+            // Remplacez la racine de la scène actuelle avec la nouvelle page
+            currentScene.setRoot(root);
+        } catch (IOException e) {
+            // Gérez les exceptions d'E/S
+            e.printStackTrace();
+            throw new RuntimeException(e);
+        }
 
     }
 

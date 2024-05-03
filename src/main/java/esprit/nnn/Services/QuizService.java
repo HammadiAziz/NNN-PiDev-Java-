@@ -99,15 +99,16 @@ public class QuizService implements Iservices<Quiz> {
         String quizDeleteQuery = "DELETE FROM quiz WHERE id=?";
         String questionDeleteQuery = "DELETE FROM question WHERE quiz_id=?";
         try {
+            // Deleting questions
+            PreparedStatement questionStatement = this.connection.prepareStatement(questionDeleteQuery);
+            questionStatement.setInt(1, id);
+            result += questionStatement.executeUpdate();
             // Deleting quiz
             PreparedStatement quizStatement = this.connection.prepareStatement(quizDeleteQuery);
             quizStatement.setInt(1, id);
             result += quizStatement.executeUpdate();
 
-            // Deleting questions
-            PreparedStatement questionStatement = this.connection.prepareStatement(questionDeleteQuery);
-            questionStatement.setInt(1, id);
-            result += questionStatement.executeUpdate();
+
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }

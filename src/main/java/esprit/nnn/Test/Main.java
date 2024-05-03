@@ -18,7 +18,7 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws IOException {
 
 
-        FXMLLoader loader=new FXMLLoader(getClass().getResource("/esprit/nnn/FXML/Admin/QuizHome.fxml"));
+        FXMLLoader loader=new FXMLLoader(getClass().getResource("/esprit/nnn/FXML/User/QuizList.fxml"));
 
 
 

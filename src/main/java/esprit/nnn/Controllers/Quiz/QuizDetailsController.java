@@ -151,11 +151,34 @@ public class QuizDetailsController implements Initializable {
         // No need to populate the grid here since it's already populated in setQuizToModify()
     }
 
-
+    private void showAlert(String message) {
+        Alert alert = new Alert(Alert.AlertType.ERROR);
+        alert.setTitle("Erreur");
+        alert.setHeaderText(null);
+        alert.setContentText(message);
+        alert.showAndWait();
+    }
 
 @FXML
     void Updatequiz(ActionEvent event) {
+    if (nameadd.getText().isEmpty() || descadd.getText().isEmpty() || Typeadd.getValue() == null || pointsadd.getText().isEmpty()) {
+        showAlert("Veuillez remplir tous les champs.");
+        return;
+    }
+
+    // Vérification si le champ points est un entier valide
+    try {
+        int pointsValue = Integer.parseInt(pointsadd.getText());
+        if (pointsValue <= 0) {
+            showAlert("Le nombre de points doit être supérieur à zéro.");
+            return;
+        }
+    } catch (NumberFormatException e) {
+        showAlert("Le nombre de points doit être un entier valide.");
+        return;
+    }
         // Récupérer les données modifiées de l'interface
+
         String nom =nameadd.getText();
         String desctex = descadd.getText();
         int points;
@@ -252,12 +275,37 @@ public class QuizDetailsController implements Initializable {
             throw new RuntimeException(e);
         }
 
+
+
+
+
     }
 
 
 
 
+    @FXML
+    void QuizHome(ActionEvent event) {
 
+
+        try {
+            // Utilisez FXMLLoader pour charger le fichier FXML de la nouvelle page
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/esprit/nnn/FXML/Admin/QuizHome.fxml"));
+            Parent root = loader.load();
+            // Obtenez le contrôleur de la nouvelle page
+            QuizHomecontroller Listcontroller = loader.getController();
+            // Obtenez la scène actuelle à partir de l'événement
+            Scene currentScene = ((Node) event.getSource()).getScene();
+
+            // Remplacez la racine de la scène actuelle avec la nouvelle page
+            currentScene.setRoot(root);
+        } catch (IOException e) {
+            // Gérez les exceptions d'E/S
+            e.printStackTrace();
+            throw new RuntimeException(e);
+        }
+
+    }
 
 
 

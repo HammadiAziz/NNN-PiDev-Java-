@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.net.URL?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
@@ -24,7 +25,7 @@
             </ImageView>
             <Button alignment="CENTER" layoutX="8.0" layoutY="182.0" mnemonicParsing="false" prefHeight="71.0" prefWidth="91.0" styleClass="btn" stylesheets="@../../CSS/Dashboard/Dashboard.css" text="Group" textFill="WHITE" />
             <Button alignment="CENTER" layoutX="8.0" layoutY="111.0" mnemonicParsing="false" prefHeight="71.0" prefWidth="91.0" styleClass="btn" stylesheets="@../../CSS/Dashboard/Dashboard.css" text="User" textFill="WHITE" />
-            <Button alignment="CENTER" layoutX="8.0" layoutY="324.0" mnemonicParsing="false" prefHeight="71.0" prefWidth="91.0" styleClass="btn" stylesheets="@../../CSS/Dashboard/Dashboard.css" text="Quiz" textFill="WHITE" />
+            <Button alignment="CENTER" layoutX="8.0" layoutY="324.0" mnemonicParsing="false" onAction="#QuizHome" prefHeight="71.0" prefWidth="91.0" styleClass="btn" stylesheets="@../../CSS/Dashboard/Dashboard.css" text="Quiz" textFill="WHITE" />
             <Button alignment="CENTER" layoutX="8.0" layoutY="466.0" mnemonicParsing="false" prefHeight="71.0" prefWidth="91.0" styleClass="btn" stylesheets="@../../CSS/Dashboard/Dashboard.css" text="Reclamation" textFill="WHITE" />
             <Button alignment="CENTER" layoutX="8.0" layoutY="395.0" mnemonicParsing="false" prefHeight="71.0" prefWidth="91.0" styleClass="btn" stylesheets="@../../CSS/Dashboard/Dashboard.css" text="Market" textFill="WHITE" />
             <Label layoutX="25.0" layoutY="48.0" text="NNN." textFill="#7bc186">
@@ -36,32 +37,48 @@
       </Pane>
       <Pane layoutX="104.0" layoutY="72.0" prefHeight="528.0" prefWidth="799.0">
          <children>
-            <Button layoutX="367.0" layoutY="441.0" mnemonicParsing="false" onAction="#AjouterQuiz" prefHeight="17.0" prefWidth="51.0" text="Add">
+            <Button layoutX="363.0" layoutY="443.0" mnemonicParsing="false" onAction="#AjouterQuiz" prefHeight="17.0" prefWidth="51.0" styleClass="choice" text="Add">
                <font>
                   <Font size="16.0" />
                </font>
+               <stylesheets>
+                  <URL value="@../../CSS/Quiz/quizcard.css" />
+                  <URL value="@../../CSS/Quiz/Home.css" />
+               </stylesheets>
             </Button>
-            <TextField fx:id="Name" layoutX="306.0" layoutY="128.0" prefHeight="39.0" prefWidth="165.0" promptText="Name" styleClass="input" stylesheets="@../../CSS/Quiz/Quiz.css">
+            <TextField fx:id="Name" layoutX="306.0" layoutY="128.0" prefHeight="39.0" prefWidth="165.0" promptText="Name" styleClass="input">
                <font>
                   <Font size="16.0" />
                </font>
+               <stylesheets>
+                  <URL value="@../../CSS/Quiz/Quiz.css" />
+                  <URL value="@../../CSS/Quiz/Home.css" />
+               </stylesheets>
             </TextField>
-            <TextArea fx:id="Desc" layoutX="306.0" layoutY="206.0" prefHeight="55.0" prefWidth="165.0" promptText="Desc" styleClass="input" stylesheets="@../../CSS/Quiz/Quiz.css">
+            <TextArea fx:id="Desc" layoutX="306.0" layoutY="206.0" prefHeight="55.0" prefWidth="165.0" promptText="Desc" styleClass="input">
                <font>
                   <Font size="16.0" />
                </font>
+               <stylesheets>
+                  <URL value="@../../CSS/Quiz/Quiz.css" />
+                  <URL value="@../../CSS/Quiz/Home.css" />
+               </stylesheets>
             </TextArea>
-            <TextField fx:id="points" layoutX="310.0" layoutY="293.0" prefHeight="39.0" prefWidth="165.0" promptText="Points" styleClass="input" stylesheets="@../../CSS/Quiz/Quiz.css">
+            <TextField fx:id="points" layoutX="310.0" layoutY="293.0" prefHeight="39.0" prefWidth="165.0" promptText="Points" styleClass="input">
                <font>
                   <Font size="16.0" />
                </font>
+               <stylesheets>
+                  <URL value="@../../CSS/Quiz/Quiz.css" />
+                  <URL value="@../../CSS/Quiz/Home.css" />
+               </stylesheets>
             </TextField>
-            <Label layoutX="296.0" layoutY="26.0" text="New Quiz">
+            <Label layoutX="300.0" layoutY="26.0" text="New Quiz">
                <font>
-                  <Font size="39.0" />
+                  <Font name="System Bold" size="39.0" />
                </font>
             </Label>
-            <ComboBox fx:id="typeT" layoutX="304.0" layoutY="373.0" prefHeight="25.0" prefWidth="178.0" promptText="Type" />
+            <ComboBox fx:id="typeT" layoutX="304.0" layoutY="373.0" prefHeight="25.0" prefWidth="178.0" promptText="Type" style="-fx-background-color: #7bc186;" />
          </children>
       </Pane>
    </children>

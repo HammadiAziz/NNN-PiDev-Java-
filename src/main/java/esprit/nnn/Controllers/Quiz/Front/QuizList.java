@@ -1,17 +1,12 @@
-package esprit.nnn.Controllers.Quiz;
+package esprit.nnn.Controllers.Quiz.Front;
 
+import esprit.nnn.Controllers.Quiz.QuizcardController;
 import esprit.nnn.Models.Quiz;
 import esprit.nnn.Services.QuizService;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.geometry.Insets;
-import javafx.scene.Node;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
 
@@ -22,23 +17,7 @@ import java.util.List;
 import java.util.ResourceBundle;
 import java.util.Set;
 
-public class QuizListcontroller implements Initializable {
-
-
-    @FXML
-    private TableColumn<Quiz, String> Desc;
-
-    @FXML
-    private TableColumn<Quiz, String> Name;
-
-    @FXML
-    private TableView<Quiz> QuizTable;
-
-    @FXML
-    private TableColumn<Quiz, Integer> points;
-
-    @FXML
-    private TableColumn<Quiz, String> type;
+public class QuizList implements Initializable {
 
     @FXML
     private GridPane grid;
@@ -56,13 +35,13 @@ public class QuizListcontroller implements Initializable {
         try {
             for (int i = 0; i < serviceList.size(); i++) {
                 FXMLLoader fxmlLoader = new FXMLLoader();
-                fxmlLoader.setLocation(getClass().getResource("/esprit/nnn/FXML/Admin/QuizCard.fxml"));
+                fxmlLoader.setLocation(getClass().getResource("/esprit/nnn/FXML/User/QuizItem.fxml"));
                 AnchorPane anchorPane = fxmlLoader.load();
                 anchorPane.setBorder(new Border(new BorderStroke(Color.BLACK,
                         BorderStrokeStyle.SOLID, null, new BorderWidths(1))));
 
 
-                QuizcardController itemController = fxmlLoader.getController();
+                Quizitem itemController = fxmlLoader.getController();
                 itemController.setData(serviceList.get(i));
 
                 if (column == 1) {
@@ -90,37 +69,4 @@ public class QuizListcontroller implements Initializable {
 
 
 
-    @FXML
-    void QuizHome(ActionEvent event) {
-
-
-        try {
-            // Utilisez FXMLLoader pour charger le fichier FXML de la nouvelle page
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/esprit/nnn/FXML/Admin/QuizHome.fxml"));
-            Parent root = loader.load();
-            // Obtenez le contrôleur de la nouvelle page
-            QuizHomecontroller Listcontroller = loader.getController();
-            // Obtenez la scène actuelle à partir de l'événement
-            Scene currentScene = ((Node) event.getSource()).getScene();
-
-            // Remplacez la racine de la scène actuelle avec la nouvelle page
-            currentScene.setRoot(root);
-        } catch (IOException e) {
-            // Gérez les exceptions d'E/S
-            e.printStackTrace();
-            throw new RuntimeException(e);
-        }
-
-    }
-
-    }
-
-
-
-
-
-
-
-
-
-
+}
