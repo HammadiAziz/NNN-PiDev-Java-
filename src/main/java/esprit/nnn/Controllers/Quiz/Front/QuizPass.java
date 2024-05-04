@@ -1,6 +1,9 @@
 package esprit.nnn.Controllers.Quiz.Front;
 
+import esprit.nnn.Controllers.Quiz.Front.Certification.result;
 import esprit.nnn.Controllers.Question.QuestionCardController;
+import esprit.nnn.Controllers.Quiz.QuizDetailsController;
+import esprit.nnn.Controllers.Quiz.QuizListcontroller;
 import esprit.nnn.Models.Questions;
 import esprit.nnn.Models.Quiz;
 import esprit.nnn.Services.QuestionsService;
@@ -9,22 +12,12 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.geometry.Insets;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
-import org.apache.pdfbox.pdmodel.PDDocument;
-import org.apache.pdfbox.pdmodel.PDPage;
-import org.apache.pdfbox.pdmodel.PDPageContentStream;
-import org.apache.pdfbox.pdmodel.font.PDType1Font;
-
-
-import org.apache.pdfbox.pdmodel.PDDocument;
-import org.apache.pdfbox.pdmodel.PDPage;
-import org.apache.pdfbox.pdmodel.PDPageContentStream;
-import org.apache.pdfbox.pdmodel.graphics.image.PDImageXObject;
-import org.apache.pdfbox.pdmodel.font.PDType1Font;
-import org.apache.pdfbox.pdmodel.graphics.color.PDColor;
-import org.apache.pdfbox.pdmodel.graphics.color.PDDeviceRGB;
 
 import java.awt.*;
 import java.io.File;
@@ -40,6 +33,8 @@ public class QuizPass {
 
     @FXML
     private GridPane grid;
+
+
 
 
     private final QuizService se = new QuizService();
@@ -103,7 +98,7 @@ public class QuizPass {
     }
 
 
-    public void checkAnswers(ActionEvent actionEvent) {
+    public void checkAnswers(ActionEvent event) {
         int score = 0;
         for (QuizPassItem item : quizPassItemList) {
             String userAnswer = item.getUserAnswer();
@@ -116,104 +111,29 @@ public class QuizPass {
         }
 
         int totalQuestions = quizPassItemList.size();
-        Alert alert = new Alert(Alert.AlertType.ERROR);
-
-        if( score > totalQuestions/2 ) {
 
 
 
-
-            alert.setTitle("Congratulations!");
-            alert.setHeaderText(null);
-            alert.setContentText(" jewebt 3la " + String.valueOf(score) + " / " + String.valueOf(quizPassItemList.size())+ " ya dhkeyyy ");
-            alert.showAndWait();
-            generateCertificationPDF("aziz", score, totalQuestions);
-        }
-
-        else {
-
-
-            alert.setTitle("Failed");
-            alert.setHeaderText(null);
-            alert.setContentText(" jewebt 3la " + String.valueOf(score) + " / " + String.valueOf(quizPassItemList.size())+ " yaa bhimmmmm  ");
-            alert.showAndWait();
-
-        }
-    }
-
-
-    public void generateCertificationPDF(String recipientName, int score, int totalQuestions) {
         try {
-            // Create a new PDF document
-            PDDocument document = new PDDocument();
-            PDPage page = new PDPage();
-            document.addPage(page);
-
-            // Create a content stream for writing to the page
-            PDPageContentStream contentStream = new PDPageContentStream(document, page);
-
-            // Set font and font size
-            contentStream.setFont(PDType1Font.HELVETICA_BOLD, 16);
-
-            // Add organization logo
-            PDImageXObject logoImage = PDImageXObject.createFromFile("C:\\Users\\azizh\\Desktop\\Java Pidev\\NNN\\src\\main\\resources\\esprit\\nnn\\Img\\logo.png", document);
-            contentStream.drawImage(logoImage, 50, 700, 100, 100); // Adjust coordinates and size as needed
-
-            // Add title with blue color
-            PDColor blueColor = new PDColor(new float[]{0, 0, 1}, PDDeviceRGB.INSTANCE);
-            contentStream.setNonStrokingColor(blueColor);
-            contentStream.beginText();
-            contentStream.newLineAtOffset(200, 750);
-            contentStream.showText("CERTIFICATION OF ACHIEVEMENT");
-            contentStream.endText();
-
-            // Add recipient's name with black color
-            PDColor blackColor = new PDColor(new float[]{0, 0, 0}, PDDeviceRGB.INSTANCE);
-            contentStream.setNonStrokingColor(blackColor);
-            contentStream.beginText();
-            contentStream.setFont(PDType1Font.HELVETICA, 12);
-            contentStream.newLineAtOffset(200, 720);
-            contentStream.showText("This certifies that " + recipientName + " has successfully completed the quiz.");
-            contentStream.endText();
-
-            // Add score and total questions with green color
-            PDColor greenColor = new PDColor(new float[]{0, 1, 0}, PDDeviceRGB.INSTANCE);
-            contentStream.setNonStrokingColor(greenColor);
-            contentStream.beginText();
-            contentStream.newLineAtOffset(200, 700);
-            contentStream.showText("Score: " + score + " / " + totalQuestions);
-            contentStream.endText();
-
-            // Add signature line with black color
-            contentStream.setNonStrokingColor(blackColor);
-            contentStream.beginText();
-            contentStream.newLineAtOffset(200, 650);
-            contentStream.showText("_____________________________");
-            contentStream.endText();
-
-            // Add issuer's signature with black color
-            contentStream.beginText();
-            contentStream.newLineAtOffset(200, 635);
-            contentStream.showText("Issued by: XYZ Organization");
-            contentStream.endText();
-
-            // Close the content stream
-            contentStream.close();
-
-            // Save the document
-            File file = new File("certificationn.pdf");
-            document.save(file);
-            document.close();
-
-            // Show confirmation message
-            Alert alert = new Alert(Alert.AlertType.INFORMATION);
-            alert.setTitle("PDF generated");
-            alert.setHeaderText(null);
-            alert.setContentText("The certification PDF has been generated.");
-            alert.showAndWait();
+            // Utilisez FXMLLoader pour charger le fichier FXML de la nouvelle page
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/esprit/nnn/FXML/User/Result.fxml"));
+            Parent root = loader.load();
+            // Obtenez le contrôleur de la nouvelle page
+            result Listcontroller = loader.getController();
+            // Obtenez la scène actuelle à partir de l'événement
+            Scene currentScene = ((Node) event.getSource()).getScene();
+Listcontroller.setdata(1,score,totalQuestions,quizToModify.getQuiz_name(),quizToModify.getId());
+        // Remplacez la racine de la scène actuelle avec la nouvelle page
+            currentScene.setRoot(root);
         } catch (IOException e) {
+            // Gérez les exceptions d'E/S
             e.printStackTrace();
-            // Handle the exception
+            throw new RuntimeException(e);
         }
+
+
+
     }
+
+
 }

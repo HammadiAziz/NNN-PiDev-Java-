@@ -17,6 +17,8 @@ module esprit.nnn {
     opens esprit.nnn.Models to javafx.base;
     exports esprit.nnn.Controllers.Question;
     exports esprit.nnn.Controllers.Quiz.Front;
+    exports esprit.nnn.Controllers.Quiz.Front.Certification;
+    opens esprit.nnn.Controllers.Quiz.Front.Certification;
     opens esprit.nnn.Controllers.Quiz.Front;
     opens esprit.nnn.Controllers.Question;
     exports esprit.nnn.Controllers.Quiz;
