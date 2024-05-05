@@ -19,6 +19,9 @@ import java.util.Set;
 
 public class QuizList implements Initializable {
 
+
+    @FXML
+    private GridPane rec;
     @FXML
     private GridPane grid;
 
@@ -27,6 +30,14 @@ public class QuizList implements Initializable {
     private QuizService se = new QuizService();
     Set<Quiz> serviceSet = se.getAll();
     List<Quiz> serviceList = new ArrayList<>(serviceSet);
+
+
+
+    Set<Quiz> recmnd = se.getRecommendedQuizzesForUser(1);
+    List<Quiz> recmndlist = new ArrayList<>(recmnd);
+
+
+
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -38,7 +49,9 @@ public class QuizList implements Initializable {
                 fxmlLoader.setLocation(getClass().getResource("/esprit/nnn/FXML/User/QuizItem.fxml"));
                 AnchorPane anchorPane = fxmlLoader.load();
                 anchorPane.setBorder(new Border(new BorderStroke(Color.BLACK,
-                        BorderStrokeStyle.SOLID, null, new BorderWidths(1))));
+                        BorderStrokeStyle.SOLID,
+                        new CornerRadii(10), // Set the corner radii to make corners rounded
+                        new BorderWidths(1))));
 
 
                 Quizitem itemController = fxmlLoader.getController();
@@ -59,6 +72,39 @@ public class QuizList implements Initializable {
                 grid.setMinHeight(Region.USE_COMPUTED_SIZE);
                 grid.setPrefHeight(Region.USE_COMPUTED_SIZE);
                 grid.setMaxHeight(Region.USE_PREF_SIZE);
+
+                GridPane.setMargin(anchorPane, new Insets(8));
+            }
+
+
+            for (int i = 0; i < recmndlist.size(); i++) {
+                FXMLLoader fxmlLoader = new FXMLLoader();
+                fxmlLoader.setLocation(getClass().getResource("/esprit/nnn/FXML/User/QuizRecemn.fxml"));
+                AnchorPane anchorPane = fxmlLoader.load();
+                anchorPane.setBorder(new Border(new BorderStroke(Color.BLACK,
+                        BorderStrokeStyle.SOLID,
+                        new CornerRadii(10), // Set the corner radii to make corners rounded
+                        new BorderWidths(1))));
+
+
+                QuizRecm itemController = fxmlLoader.getController();
+                itemController.setdata(recmndlist.get(i));
+
+                if (column == 1) {
+                    column = 0;
+                    row++;
+                }
+
+                rec.add(anchorPane, column++, row); //(child,column,row)
+                //set grid width
+                rec.setMinWidth(Region.USE_COMPUTED_SIZE);
+                rec.setPrefWidth(Region.USE_COMPUTED_SIZE);
+                rec.setMaxWidth(Region.USE_PREF_SIZE);
+
+                //set grid height
+                rec.setMinHeight(Region.USE_COMPUTED_SIZE);
+                rec.setPrefHeight(Region.USE_COMPUTED_SIZE);
+                rec.setMaxHeight(Region.USE_PREF_SIZE);
 
                 GridPane.setMargin(anchorPane, new Insets(8));
             }

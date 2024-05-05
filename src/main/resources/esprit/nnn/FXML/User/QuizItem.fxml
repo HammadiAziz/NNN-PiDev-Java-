@@ -17,7 +17,7 @@
             <Font size="16.0" />
          </font>
       </Label>
-      <Button fx:id="pass" layoutX="535.0" layoutY="68.0" mnemonicParsing="false" onAction="#QuizPlay" text="take the quiz" />
+      <Button fx:id="pass" layoutX="521.0" layoutY="69.0" mnemonicParsing="false" onAction="#QuizPlay" stylesheets="@../../CSS/Front/Quiz/QuizItem.css" text="take the quiz" />
       <Label fx:id="type" layoutX="563.0" layoutY="141.0" text="type" textFill="#279e17">
          <font>
             <Font size="15.0" />

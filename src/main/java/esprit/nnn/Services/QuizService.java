@@ -168,6 +168,36 @@ public class QuizService implements Iservices<Quiz> {
     }
 
 
+    public Set<Quiz> getRecommendedQuizzesForUser(int userId) {
+        Set<Quiz> recommendedQuizzes = new HashSet<>();
 
+        // Assuming 'type' refers to the type of quiz the user has passed
+        String query = "SELECT q.id, q.quiz_name, q.desc_quiz, q.type, q.points " +
+                "FROM quiz q " +
+                "WHERE q.id NOT IN (SELECT quiz_id FROM history_quiz WHERE user_id = ? AND result = 1) " +
+                "AND q.type IN (SELECT DISTINCT type FROM history_quiz WHERE user_id = ? AND result = 1) " +
+                "GROUP BY q.id " +
+                "ORDER BY COUNT(*) DESC " +
+                "LIMIT 2";
+
+        try (PreparedStatement ps = connection.prepareStatement(query)) {
+            ps.setInt(1, userId);
+            ps.setInt(2, userId);
+            ResultSet rs = ps.executeQuery();
+            while (rs.next()) {
+                int quizId = rs.getInt("id");
+                String name = rs.getString("quiz_name");
+                String desc = rs.getString("desc_quiz");
+                String type = rs.getString("type");
+                int points = rs.getInt("points");
+                Quiz quiz = new Quiz(quizId, name, desc, type, points);
+                recommendedQuizzes.add(quiz);
+            }
+        } catch (SQLException e) {
+            System.out.println("Error fetching recommended quizzes: " + e.getMessage());
+        }
+
+        return recommendedQuizzes;
+    }
 
 }

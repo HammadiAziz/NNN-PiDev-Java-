@@ -15,45 +15,62 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="557.0" prefWidth="943.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="esprit.nnn.Controllers.Quiz.Front.QuizList">
+<AnchorPane prefHeight="546.0" prefWidth="945.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="esprit.nnn.Controllers.Quiz.Front.QuizList">
    <children>
+      <ImageView fitHeight="558.0" fitWidth="2000.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../Img/backgroundfront.png" />
+         </image>
+      </ImageView>
       <Pane layoutY="-5.0" prefHeight="95.0" prefWidth="944.0">
          <children>
-            <Label layoutX="318.0" layoutY="40.0" text="Events" />
-            <ImageView fitHeight="47.0" fitWidth="54.0" layoutX="25.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
+            <Label layoutX="256.0" layoutY="26.0" prefHeight="47.0" prefWidth="87.0" styleClass="menu-button" stylesheets="@../../CSS/Front/Front.css" text="Events" />
+            <ImageView fitHeight="68.0" fitWidth="60.0" layoutX="22.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../Img/logo.png" />
                </image>
             </ImageView>
-            <Label layoutX="402.0" layoutY="40.0" text="Groups" />
-            <Label layoutX="482.0" layoutY="41.0" text="Quiz" />
-            <Label layoutX="546.0" layoutY="40.0" text="Market" />
+            <Label layoutX="359.0" layoutY="26.0" prefHeight="47.0" prefWidth="76.0" styleClass="menu-button" stylesheets="@../../CSS/Front/Front.css" text="Groups" />
+            <Label layoutX="450.0" layoutY="26.0" prefHeight="47.0" prefWidth="76.0" styleClass="menu-button" stylesheets="@../../CSS/Front/Front.css" text="Quiz" />
+            <Label layoutX="539.0" layoutY="25.0" prefHeight="47.0" prefWidth="87.0" styleClass="menu-button" stylesheets="@../../CSS/Front/Front.css" text="Market" />
             <Circle layoutX="770.0" layoutY="48.0" radius="19.0" stroke="BLACK" strokeType="INSIDE" />
-            <Label layoutX="55.0" layoutY="37.0" text="NNN.">
+            <Label layoutX="52.0" layoutY="37.0" prefHeight="29.0" prefWidth="60.0" text="NNN.">
                <font>
-                  <Font name="Tw Cen MT Condensed Extra Bold" size="21.0" />
+                  <Font name="Tw Cen MT Condensed Extra Bold" size="28.0" />
                </font>
             </Label>
             <Label layoutX="796.0" layoutY="41.0" text="Aziz Hammadi" />
          </children>
       </Pane>
-      <Pane layoutX="1.0" layoutY="154.0" prefHeight="404.0" prefWidth="202.0">
+      <Pane layoutY="153.0" prefHeight="404.0" prefWidth="210.0">
          <children>
-            <TextField layoutX="27.0" layoutY="26.0" promptText="Recherche" />
+            <TextField layoutX="27.0" layoutY="25.0" promptText="Recherche" styleClass="recherche" stylesheets="@../../CSS/Front/Front.css" />
             <Label layoutX="27.0" layoutY="65.0" prefHeight="26.0" prefWidth="129.0" text="Filter by Type">
                <font>
                   <Font name="System Bold" size="17.0" />
                </font>
             </Label>
-            <CheckBox layoutX="29.0" layoutY="109.0" mnemonicParsing="false" text="CheckBox" />
-            <CheckBox layoutX="29.0" layoutY="137.0" mnemonicParsing="false" text="CheckBox" />
-            <CheckBox layoutX="29.0" layoutY="165.0" mnemonicParsing="false" text="CheckBox" />
+            <CheckBox layoutX="29.0" layoutY="109.0" mnemonicParsing="false" styleClass="custom-checkbox" stylesheets="@../../CSS/Front/Front.css" text="CheckBox" />
+            <CheckBox layoutX="29.0" layoutY="137.0" mnemonicParsing="false" styleClass="custom-checkbox" stylesheets="@../../CSS/Front/Front.css" text="CheckBox" />
+            <CheckBox layoutX="29.0" layoutY="165.0" mnemonicParsing="false" styleClass="custom-checkbox" stylesheets="@../../CSS/Front/Front.css" text="CheckBox" />
+            <Line endX="-100.99998474121094" endY="504.0" layoutX="310.0" layoutY="-101.0" startX="-100.99998474121094" startY="78.80000305175781" />
+            <ScrollPane layoutX="6.0" layoutY="190.0" prefHeight="198.0" prefWidth="196.0" styleClass="scroula" stylesheets="@../../CSS/Front/Front.css">
+               <content>
+                  <GridPane fx:id="rec" prefHeight="30.0" prefWidth="46.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                  </GridPane>
+               </content>
+            </ScrollPane>
          </children>
       </Pane>
       <Pane layoutX="210.0" layoutY="153.0" prefHeight="404.0" prefWidth="732.0">
          <children>
-            <ScrollPane prefHeight="395.0" prefWidth="721.0">
+            <ScrollPane layoutX="6.0" layoutY="5.0" prefHeight="395.0" prefWidth="721.0" styleClass="scroula" stylesheets="@../../CSS/Front/Front.css">
                <content>
                   <GridPane fx:id="grid" prefHeight="28.0" prefWidth="129.0">
                     <columnConstraints>
@@ -67,7 +84,6 @@
             </ScrollPane>
          </children>
       </Pane>
-      <Line endX="-100.0" endY="332.0" layoutX="310.0" layoutY="225.0" startX="-99.0" startY="-71.0" />
       <Label layoutX="247.0" layoutY="100.0" text="Pass a quiz to get a certification">
          <font>
             <Font name="Verdana" size="22.0" />
