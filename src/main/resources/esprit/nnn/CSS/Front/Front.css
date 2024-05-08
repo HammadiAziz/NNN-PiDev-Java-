@@ -16,6 +16,22 @@
 
     /* Add shadow effect and change color to green on hover */
 }
+.selectedbutton {
+    /* Existing styles */
+    -fx-background-color: transparent;
+    -fx-alignment: center;
+
+    -fx-background-insets: 1.5, 20;
+    -fx-border-radius: 15;
+    -fx-border-color: #515151;
+    -fx-border-style: solid;
+    -fx-border-width: 0 0 1 0;
+
+   
+    /* Add shadow effect */
+
+}
+
 
 
 

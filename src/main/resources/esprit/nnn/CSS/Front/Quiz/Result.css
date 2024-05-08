@@ -1,0 +1,6 @@
+.congrats-label {
+    -fx-font-size: 70px; /* Set a larger font size */
+    -fx-font-weight: bold; /* Set a bold font weight */
+    -fx-text-fill: #4c4c4c; /* Set a green text color */
+    -fx-padding: 10px; /* Set padding around the label */
+}

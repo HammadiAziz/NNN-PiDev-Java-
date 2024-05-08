@@ -1,0 +1,38 @@
+.radio-button {
+    -fx-font-size: 14px; /* Set the font size */
+    -fx-padding: 5px 10px; /* Set padding around the RadioButton */
+}
+
+/* Styling for the RadioButton text */
+
+.radio-button .text {
+    -fx-fill: #333333; /* Set the text color */
+}
+
+/* Styling for the RadioButton icon */
+
+.radio-button .radio {
+    -fx-background-color: #ffffff; /* Set the background color of the RadioButton */
+    -fx-border-color: #333333; /* Set the border color */
+    -fx-border-width: 2px; /* Set the border width */
+    -fx-shape: "M 0 0 L 8 0 L 8 8 L 0 8 Z"; /* Set a custom shape for the RadioButton */
+}
+
+/* Styling for the selected RadioButton */
+
+.radio-button:selected .radio {
+    -fx-background-color: #333333; /* Set the background color of the selected RadioButton */
+}
+
+/* Styling for the RadioButton when hovered */
+
+.radio-button:hover .radio {
+    -fx-background-color: #666666; /* Set the background color when hovered */
+}
+
+.title-label {
+    -fx-font-size: 42px; /* Set a larger font size */
+    -fx-font-weight: bold; /* Set a bold font weight */
+    -fx-text-fill: #333333; /* Set the text color */
+    -fx-padding: 10px; /* Set padding around the label */
+}

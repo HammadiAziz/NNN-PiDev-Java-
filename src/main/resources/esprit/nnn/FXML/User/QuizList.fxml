@@ -31,7 +31,7 @@
                </image>
             </ImageView>
             <Label layoutX="359.0" layoutY="26.0" prefHeight="47.0" prefWidth="76.0" styleClass="menu-button" stylesheets="@../../CSS/Front/Front.css" text="Groups" />
-            <Label layoutX="450.0" layoutY="26.0" prefHeight="47.0" prefWidth="76.0" styleClass="menu-button" stylesheets="@../../CSS/Front/Front.css" text="Quiz" />
+            <Label layoutX="450.0" layoutY="26.0" prefHeight="47.0" prefWidth="76.0" styleClass="selectedbutton" stylesheets="@../../CSS/Front/Front.css" text="Quiz" />
             <Label layoutX="539.0" layoutY="25.0" prefHeight="47.0" prefWidth="87.0" styleClass="menu-button" stylesheets="@../../CSS/Front/Front.css" text="Market" />
             <Circle layoutX="770.0" layoutY="48.0" radius="19.0" stroke="BLACK" strokeType="INSIDE" />
             <Label layoutX="52.0" layoutY="37.0" prefHeight="29.0" prefWidth="60.0" text="NNN.">

@@ -67,6 +67,8 @@ public class QuizList implements Initializable {
                 grid.setMinWidth(Region.USE_COMPUTED_SIZE);
                 grid.setPrefWidth(Region.USE_COMPUTED_SIZE);
                 grid.setMaxWidth(Region.USE_PREF_SIZE);
+               grid.setPrefWidth(700);  // Adjust these values as needed
+                grid.setPrefHeight(100);
 
                 //set grid height
                 grid.setMinHeight(Region.USE_COMPUTED_SIZE);
@@ -86,7 +88,8 @@ public class QuizList implements Initializable {
                         new CornerRadii(10), // Set the corner radii to make corners rounded
                         new BorderWidths(1))));
 
-
+                anchorPane.setPrefWidth(180);  // Adjust these values as needed
+                anchorPane.setPrefHeight(100);
                 QuizRecm itemController = fxmlLoader.getController();
                 itemController.setdata(recmndlist.get(i));
 
@@ -100,13 +103,16 @@ public class QuizList implements Initializable {
                 rec.setMinWidth(Region.USE_COMPUTED_SIZE);
                 rec.setPrefWidth(Region.USE_COMPUTED_SIZE);
                 rec.setMaxWidth(Region.USE_PREF_SIZE);
+                rec.setPrefWidth(150);  // Adjust these values as needed
+                rec.setPrefHeight(100);
 
                 //set grid height
                 rec.setMinHeight(Region.USE_COMPUTED_SIZE);
                 rec.setPrefHeight(Region.USE_COMPUTED_SIZE);
                 rec.setMaxHeight(Region.USE_PREF_SIZE);
 
-                GridPane.setMargin(anchorPane, new Insets(8));
+
+                GridPane.setMargin(anchorPane, new Insets(4));
             }
         } catch (IOException e) {
             e.printStackTrace();

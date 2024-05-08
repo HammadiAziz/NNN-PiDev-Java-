@@ -3,15 +3,22 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="655.0" prefWidth="1065.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="esprit.nnn.Controllers.Quiz.Front.QuizPass">
+<AnchorPane prefHeight="624.0" prefWidth="1061.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="esprit.nnn.Controllers.Quiz.Front.QuizPass">
    <children>
-      <ScrollPane layoutX="271.0" layoutY="183.0" prefHeight="270.0" prefWidth="554.0">
+      <ImageView fitHeight="655.0" fitWidth="1065.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../Img/backgroundfront.png" />
+         </image>
+      </ImageView>
+      <ScrollPane layoutX="204.0" layoutY="132.0" prefHeight="410.0" prefWidth="662.0" styleClass="scroula" stylesheets="@../../CSS/Front/Front.css">
          <content>
             <GridPane fx:id="grid">
               <columnConstraints>
@@ -23,14 +30,14 @@
             </GridPane>
          </content>
       </ScrollPane>
-      <Button layoutX="765.0" layoutY="518.0" mnemonicParsing="false" text="Quit" />
-      <Button fx:id="submit" layoutX="685.0" layoutY="518.0" mnemonicParsing="false" onAction="#checkAnswers" text="Submit" />
-      <Label layoutX="448.0" layoutY="14.0" text="Quiz Name">
+      <Button layoutX="781.0" layoutY="559.0" mnemonicParsing="false" styleClass="sign-button" stylesheets="@../../CSS/Front/Quiz/QuizItem.css" text="Quit" />
+      <Button fx:id="submit" layoutX="675.0" layoutY="559.0" mnemonicParsing="false" onAction="#checkAnswers" styleClass="sign-button" stylesheets="@../../CSS/Front/Quiz/QuizItem.css" text="Submit" />
+      <Label layoutX="415.0" layoutY="14.0" styleClass="title-label" stylesheets="@../../CSS/Front/Quiz/Quizpass.css" text="Quiz Name">
          <font>
             <Font name="System Bold" size="32.0" />
          </font>
       </Label>
-      <Label layoutX="399.0" layoutY="92.0" text="It’s time to test your knowledge" textFill="#868686">
+      <Label layoutX="400.0" layoutY="97.0" text="It’s time to test your knowledge" textFill="#868686">
          <font>
             <Font size="19.0" />
          </font>
