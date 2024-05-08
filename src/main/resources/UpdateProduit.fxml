@@ -39,12 +39,12 @@
             </Label>
          </children>
       </Pane>
-      <Text fill="#7bc186" layoutX="363.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="UPDATING DETAILS">
+      <Text fill="#48cd27" layoutX="363.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="UPDATING DETAILS">
          <font>
             <Font name="Bauhaus 93" size="36.0" />
          </font>
          <effect>
-            <Lighting diffuseConstant="1.38" specularConstant="0.9" specularExponent="25.52" surfaceScale="2.53">
+            <Lighting>
                <bumpInput>
                   <Shadow />
                </bumpInput>

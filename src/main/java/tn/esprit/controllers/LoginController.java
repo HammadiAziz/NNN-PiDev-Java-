@@ -112,6 +112,7 @@ void login (ActionEvent event){
                     ex.printStackTrace();
                     // Handle error if unable to load main application window
                 }
+                
             } else {
                 Alert alert = new Alert(Alert.AlertType.ERROR);
                 alert.setContentText("Invalid email or password. Please try again.");

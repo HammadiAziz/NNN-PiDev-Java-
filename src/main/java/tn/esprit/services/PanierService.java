@@ -21,6 +21,8 @@ public class PanierService implements IService<Panier> {
         this.cnx = MaConnexion.getInstance().getCnx();
     }
 
+    private double totalPriceWithTVA;
+
     public void addToPanier(int productId, int userId) {
         String req = "INSERT INTO panier (product_id, user_id) VALUES (?, ?)";
         try {
@@ -57,7 +59,38 @@ public class PanierService implements IService<Panier> {
         }
         return products;
     }
+    public void moveProductsToCommande(int userId) {
 
+        List<Produit2> productsInPanier = getProductsInPanier(userId);
+
+
+        double totalPrice = productsInPanier.stream().mapToDouble(Produit2::getPrixprodui).sum();
+        double tva = totalPrice * 0.2;
+        totalPriceWithTVA = totalPrice + tva+5;
+
+
+        Commande2 commande2 = new Commande2((int) totalPriceWithTVA, userId, produitsToString(productsInPanier));
+
+
+        Commande2Service commande2Service = new Commande2Service();
+        commande2Service.add(commande2);
+
+
+        for (Produit2 product : productsInPanier) {
+            deleteProductFromPanier(product.getId());
+        }
+    }
+    public double getTotalPriceWithTVA() {
+        return totalPriceWithTVA; // getter method to retrieve totalPriceWithTVA
+    }
+
+    private String produitsToString(List<Produit2> produits) {
+        StringBuilder sb = new StringBuilder();
+        for (Produit2 produit : produits) {
+            sb.append(produit.getNomprodui()).append(", ");
+        }
+        return sb.toString();
+    }
     public void deleteProductFromPanier(int productId) {
         String req = "DELETE FROM panier WHERE product_id = ?";
         try {
@@ -94,4 +127,5 @@ public class PanierService implements IService<Panier> {
     public Panier getOne(int id) {
         return null;
     }
+
 }

@@ -15,6 +15,7 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.HBox;
+import javafx.stage.Stage;
 import javafx.util.Callback;
 import tn.esprit.models.Produit2;
 import tn.esprit.services.Produit2Service;
@@ -102,6 +103,8 @@ public class AfficherProduits {
             private final Button button = new Button("", updateIcon);
             ImageView deleteIcon = new ImageView(new Image(getClass().getResourceAsStream("/images/trashprod.png")));
             private final Button button2 = new Button("", deleteIcon);
+            ImageView showIcon = new ImageView(new Image(getClass().getResourceAsStream("/images/showprod.png")));
+            private final Button button3 = new Button("", showIcon);
 
             {
 
@@ -145,7 +148,33 @@ public class AfficherProduits {
                     button.setDisable(true); // Désactive le bouton "update"
                     button2.setDisable(true); // Désactive le bouton "delete"
                 });
+                button3.setOnAction(e -> {
+                    Produit2 selectedProduct = getTableView().getItems().get(getIndex());
+                    try {
+                        FXMLLoader loader = new FXMLLoader(getClass().getResource("/showdtailsprod.fxml"));
+                        Parent root = loader.load();
+                        // Obtenez le contrôleur de la nouvelle page
+                        Showdtailsprod Listcontroller = loader.getController();
+                        // Obtenez la scène actuelle à partir de l'événement
+
+                        Stage newStage = new Stage();
+                        newStage.setTitle("Product detail"); // Set the title of the new window
+                        newStage.setScene(new Scene(root)); // Set the scene with the content loaded from the FXML file
+                        // Passez les données du produit sélectionné à la nouvelle page
+                        Listcontroller.setProductData(selectedProduct);
+                        // Show the new window
+                        newStage.show();
+
+
+                    } catch (IOException a) {
+                        // Gérez les exceptions d'E/S
+                        a.printStackTrace();
+                        throw new RuntimeException(a);
+                    }
+
+                });
             }
+
             //la méthode updateItem() d'une cellule de la colonne d'une TableView.
             @Override
             protected void updateItem(Void item, boolean empty) {
@@ -155,11 +184,13 @@ public class AfficherProduits {
                 } else {
                     // Créer une boîte horizontale pour placer les boutons
                     HBox buttonsContainer = new HBox(5);
-                    buttonsContainer.getChildren().addAll(button, button2);
+                    buttonsContainer.getChildren().addAll(button, button2, button3);
                     updateIcon.setFitWidth(20); // Largeur souhaitée en pixels
                     updateIcon.setFitHeight(20); // Hauteur souhaitée en pixels
                     deleteIcon.setFitWidth(20); // Largeur souhaitée en pixels
                     deleteIcon.setFitHeight(20); // Hauteur souhaitée en pixels
+                    showIcon.setFitWidth(20); // Largeur souhaitée en pixels
+                    showIcon.setFitHeight(20); // Hauteur souhaitée en pixels
                     setGraphic(buttonsContainer);
 
                 }

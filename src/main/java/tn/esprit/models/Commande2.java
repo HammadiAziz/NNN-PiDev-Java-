@@ -5,9 +5,6 @@ public class Commande2 {
     //Att
     private int id,prixtotale,user_id;
     private String produits;
-    //Produit2 prod;
-
-    //constr
 
     public Commande2() {
     }

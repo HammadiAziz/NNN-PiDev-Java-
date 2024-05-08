@@ -17,7 +17,44 @@ public  class Commande2Service implements IService<Commande2> {
     //actions
     @Override
     public void add(Commande2 commande2) {
+        String req = "INSERT INTO commande2 (prixtotale, user_id, produits) VALUES (?, ?, ?)";
+        try {
+            PreparedStatement ps = cnx.prepareStatement(req, Statement.RETURN_GENERATED_KEYS);
+            ps.setInt(1, commande2.getPrixtotale());
+            ps.setInt(2, commande2.getUser_id());
+            ps.setString(3, commande2.getProduits());
+            int rowCount = ps.executeUpdate();
+            if (rowCount > 0) {
+                System.out.println("Command added successfully!");
+            } else {
+                System.out.println("Failed to add command.");
+            }
+        } catch (SQLException e) {
+            System.out.println("Error adding command: " + e.getMessage());
+        }
+    }
 
+    public List<Commande2> getOrderedProductsForUser(int userId) {
+        List<Commande2> orderedProducts = new ArrayList<>();
+
+        String req = "SELECT * FROM commande2 WHERE user_id = ?";
+        try {
+            PreparedStatement ps = cnx.prepareStatement(req);
+            ps.setInt(1, userId);
+            ResultSet rs = ps.executeQuery();
+            while (rs.next()) {
+                Commande2 commande2 = new Commande2();
+                commande2.setId(rs.getInt("id"));
+                commande2.setPrixtotale(rs.getInt("prixtotale"));
+                commande2.setUser_id(rs.getInt("user_id"));
+                commande2.setProduits(rs.getString("produits"));
+
+                orderedProducts.add(commande2);
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException("Error retrieving ordered products: " + e.getMessage());
+        }
+        return orderedProducts;
     }
     @Override
     public void update(int id, Commande2 commande2) {

@@ -4,6 +4,7 @@ module NNN {
     requires javafx.graphics;
     requires java.sql;
     requires jbcrypt;
+    requires twilio;
 
     opens tn.esprit;
     opens tn.esprit.controllers to javafx.fxml;
