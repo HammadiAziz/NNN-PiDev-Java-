@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="esprit.nnn.controllers.Front.AddEvent">
+   <children>
+      <VBox layoutX="270.0" layoutY="39.0" prefHeight="403.0" prefWidth="303.0">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Add Event" wrappingWidth="101.336669921875">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="20.0" left="100.0" />
+               </VBox.margin>
+            </Text>
+            <ComboBox fx:id="groupCB" prefHeight="26.0" prefWidth="149.0" promptText="GROUP">
+               <VBox.margin>
+                  <Insets bottom="20.0" left="70.0" />
+               </VBox.margin>
+            </ComboBox>
+            <TextField fx:id="nameEventTF" prefHeight="26.0" prefWidth="285.0" promptText="name">
+               <VBox.margin>
+                  <Insets bottom="20.0" left="35.0" right="35.0" />
+               </VBox.margin>
+            </TextField>
+            <TextArea fx:id="descEventTA" prefHeight="91.0" prefWidth="290.0" promptText="add a description">
+               <VBox.margin>
+                  <Insets bottom="20.0" left="35.0" right="35.0" />
+               </VBox.margin>
+            </TextArea>
+            <DatePicker fx:id="debutDateDP" onAction="#getDebutDate" prefHeight="26.0" prefWidth="236.0" promptText="select a debut date">
+               <VBox.margin>
+                  <Insets bottom="20.0" left="30.0" />
+               </VBox.margin>
+            </DatePicker>
+            <DatePicker fx:id="endDateDP" onAction="#getEndDate" prefHeight="26.0" prefWidth="236.0" promptText="select an end date">
+               <VBox.margin>
+                  <Insets bottom="20.0" left="30.0" />
+               </VBox.margin>
+            </DatePicker>
+            <Button mnemonicParsing="false" onAction="#addEvent" prefHeight="26.0" prefWidth="147.0" text="Add">
+               <VBox.margin>
+                  <Insets left="70.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+      </VBox>
+      <Button layoutX="573.0" layoutY="25.0" mnemonicParsing="false" onAction="#backToAllEvents" prefHeight="26.0" prefWidth="85.0" text="back">
+         <graphic>
+            <ImageView fitHeight="19.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true" />
+         </graphic></Button>
+   </children>
+</AnchorPane>
