@@ -1,0 +1,17 @@
+
+Á
+java:S1192§"xDefine a constant instead of duplicating this literal "An error occurred while loading the Commande interface." 4 times.(•Û×ˆøÿÿÿÿ8ô¸´æ1J$f9276202-f122-491f-b33c-3be2f5bd1a0f
+‰
+java:S1192|"FDefine a constant instead of duplicating this literal "Error" 5 times.(µûø–8ô¸´æ1J$ea4a03ba-b9e4-43bb-9ddf-b29132f3940e
+¡	java:S116"ZRename this field "MainLeftSidebar" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ˆØ§çıÿÿÿÿ8±¹´æ1J$0b3e0128-d1fd-464e-bbbf-dd4e2f25db46
+Ê
+java:S1186›"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Æœìíÿÿÿÿÿ8²¹´æ1J$af66ef2f-1b2c-465f-a6ad-4ac43a452e87
+Ê
+java:S1186Û"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ˆéñıÿÿÿÿ8²¹´æ1J$faa2af40-4f15-4dc3-91d9-ae974f0955c3
+
+java:S1117“"=Rename "imagePath" which hides the field declared at line 51.(Š‘¾Š8Ä¹´æ1J$b4b6d694-b1e3-482c-b26e-47538548998f
+–	java:S100›"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Æœìíÿÿÿÿÿ8È¹´æ1J$3e8f25a1-8543-4e71-b89a-86730617d0d9
+–	java:S100 "NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(˜†¼âøÿÿÿÿ8É¹´æ1J$70697a84-a019-47a8-878c-f798bc46c4ad
+‘	java:S100¯"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ñü‚8Ë¹´æ1J$1351e64a-aee6-42f8-b4d8-415ecc4e5d64
+‘	java:S100¾"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ØÆÒ8Í¹´æ1J$b641673f-4e1d-41e1-bd21-73aa256ad1f1
+‘	java:S100Î"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(±ßø”8Ï¹´æ1J$96eb2c3c-0d07-4ec9-ac96-b89dfe6cae50

@@ -1,0 +1,21 @@
+
+Á
+java:S1192Œ"xDefine a constant instead of duplicating this literal "An error occurred while loading the Commande interface." 4 times.(•Û×ˆøÿÿÿÿ8çå·æ1J$6429d287-d92d-4a06-8b38-3c465e0090a6
+‰
+java:S1192G"FDefine a constant instead of duplicating this literal "Error" 5 times.(µûø–8çå·æ1J$5cfb1f5c-773a-4183-b8b8-869c82e8df1d
+¡	java:S116"ZRename this field "MainLeftSidebar" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ˆØ§çıÿÿÿÿ8Ëí¹æ1J$d170a225-58cb-480e-8867-5322c982764d
+Å
+java:S1186”"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ĞÇşğ8ŒĞÙæ1J$730ead59-3c57-40f3-bc34-44f184d0ea25
+Ê
+java:S1186™"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Æœìíÿÿÿÿÿ8ŒĞÙæ1J$668e0ce1-3c12-4ed8-acab-d89987d6de55
+–	java:S100…"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(˜†¼âøÿÿÿÿ8˜æşæ1J$00864f31-241a-4142-ae62-28adb5801a67
+–	java:S100™"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Æœìíÿÿÿÿÿ8šĞÙæ1J$9df79671-5622-4b70-af97-16f6b51be3e5
+‘	java:S100Ÿ"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ñü‚8ñå·æ1J$ddb85a0c-c2ea-4331-8f6a-19b569ffe6f1
+‘	java:S100¯"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(±ßø”8öå·æ1J$c5cec65a-f9ae-4d10-b317-b78474e5d77f
+‘	java:S100½"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ØÆÒ8øå·æ1J$7fcef443-4e2d-4352-8674-5f5b68cc3964
+
+java:S1128"9Remove this unused import 'edu.esprit.entities.Commande'.(Ğ³åÕûÿÿÿÿ8Šç×æ1J$a83b095d-a466-41b2-bcbd-7a4391727fc9
+€
+java:S1128"8Remove this unused import 'edu.esprit.entities.Service'.(êØ÷ßúÿÿÿÿ8Šç×æ1J$ce4ab4ec-ee0c-47fd-a2f1-a848c4755ca5
+ƒ
+java:S1128"@Remove this unused import 'edu.esprit.services.ServiceCommande'.(¼Öêœ8Šç×æ1J$9b0ccdc4-91e5-4aff-95d1-d3e1eef9fec4

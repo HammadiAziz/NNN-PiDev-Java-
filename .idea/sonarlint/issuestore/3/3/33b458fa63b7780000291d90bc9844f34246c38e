@@ -1,0 +1,16 @@
+
+Š
+java:S1192"FDefine a constant instead of duplicating this literal "Error" 4 times.(µûø–8œÁ›æ1J$52828069-95b3-4c02-8b59-13028c1202fc
+Á
+java:S1192€"xDefine a constant instead of duplicating this literal "An error occurred while loading the Commande interface." 3 times.(•Û×ˆøÿÿÿÿ8œÁ›æ1J$f537ff3a-d0e2-4531-b204-322ddd44d8a2
+¡	java:S116"ZRename this field "MainLeftSidebar" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ˆØ§çıÿÿÿÿ8Â›æ1J$77275e0e-2d88-4cb7-98e5-f4e32667d7a7
+¢	java:S116#"[Rename this field "SecondBorderPane" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¶ô§øúÿÿÿÿ8Â›æ1J$f0bba0da-2f35-4362-81c1-f1336ec7f770
+•	java:S100Y"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Æœìíÿÿÿÿÿ8˜Â›æ1J$f70d2eb9-675c-4477-93ce-0c07d2dd97a7
+	java:S100y"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(­–»8›Â›æ1J$5d6ed894-7244-4d2c-8195-5e3bba0434ef
+‘	java:S100‡"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ØÆÒ8Â›æ1J$0fab30a8-03bf-4b41-8938-b0160c27e138
+‘	java:S100•"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(±ßø”8ŸÂ›æ1J$3dfcd0c2-c590-4fd2-b46f-a128ddb60766
+s	java:S106¨"+Replace this use of System.out by a logger.(Ùß²Ğıÿÿÿÿ8¤Â›æ1J$13a4afe5-bd1a-46f5-9493-ad0a9c283482
+
+java:S1128"9Remove this unused import 'edu.esprit.entities.Commande'.(Ğ³åÕûÿÿÿÿ8§Â›æ1J$3880dc61-aa55-41ec-9c82-1111ca887cc8
+ƒ
+java:S1128"@Remove this unused import 'edu.esprit.services.ServiceCommande'.(¼Öêœ8¨Â›æ1J$e83cad8a-575a-4785-8e53-945401876a4b

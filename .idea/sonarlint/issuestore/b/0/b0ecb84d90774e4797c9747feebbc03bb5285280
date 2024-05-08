@@ -1,0 +1,13 @@
+
+Š
+java:S1192ƒ"FDefine a constant instead of duplicating this literal "Error" 5 times.(µûø–8¾ËĞæ1J$2e3ef29b-0eae-40d3-aad1-de1d1fe7dd44
+¡	java:S116"ZRename this field "MainLeftSidebar" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ˆØ§çıÿÿÿÿ8ÿËĞæ1J$5c1ab7c4-599e-45c4-a07a-1e30f6578edb
+¢	java:S116%"[Rename this field "SecondBorderPane" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¶ô§øúÿÿÿÿ8ÿËĞæ1J$092af3d4-a7b4-4fae-9918-783c051ee7c7
+•	java:S100["NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Æœìíÿÿÿÿÿ8”ÌĞæ1J$44f263c9-20c7-473b-8ba9-e4d95722f2b6
+r	java:S106|"+Replace this use of System.out by a logger.(ªşÿíşÿÿÿÿ8Òô­æ1J$0ff19035-b225-4921-a50e-35c10f8828de
+‘	java:S100‰"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(­–»8™ÌĞæ1J$d44b12cd-09e7-402c-9718-e45e902ddc37
+–	java:S100˜"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(˜†¼âøÿÿÿÿ8½·îæ1J$24003e6f-d2d5-4f13-b6ec-d82bffda9aa1
+‘	java:S100¨"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(±ßø”8ÌĞæ1J$119f1301-4a1c-47ed-b046-e2aea9b666cf
+–	java:S100¶"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(É²›Îıÿÿÿÿ8ŸÌĞæ1J$88c47d30-f3da-419f-a590-14f8ba725572
+„
+java:S1128"<Remove this unused import 'javafx.scene.control.ScrollPane'.( ––ùşÿÿÿÿ8§ÌĞæ1J$b9121ac2-d6eb-4271-b2df-0886746fcdf8

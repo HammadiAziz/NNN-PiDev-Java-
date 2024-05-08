@@ -1,0 +1,32 @@
+
+
+java:S1192J"LDefine a constant instead of duplicating this literal "description" 4 times.(Ãõ›8ûËòæ1J$3d24a097-f5b2-4cde-987c-9534632b6d13
+“	java:S117I"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‹¢À÷8üËòæ1J$ba152855-ffc4-49b0-9da3-b9e21b6d6fd7
+“	java:S117^"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‹¢À÷8üËòæ1J$9b3d5306-102b-4dce-8638-482a9d1cd89d
+’
+java:S2095Z"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(ªŠÄ»8›Ìòæ1J$4b266e2c-4bea-4e6f-94ed-b5ae70802df5
+’
+java:S2095n"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(ªŠÄ»8šÌòæ1J$b51b2ba1-0296-4d93-af59-842db0a3456e
+’
+java:S20953"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(ªŠÄ»8šÌòæ1J$a19afb94-06a9-4eae-8efa-906508525b94
+’
+java:S2095E"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(ªŠÄ»8šÌòæ1J$08784542-7354-4692-b590-abac1d585273
+“
+java:S2095‚"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(ªŠÄ»8õŸ÷æ1J$f717477c-d7fb-4276-aa2a-92c7028d4b98
+’
+java:S2095"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(ªŠÄ»8šÌòæ1J$882e78f8-4432-4714-9d21-bdcb33978519
+l
+java:S2095$"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(ªŠÄ»8«ë“æ1
+m	java:S106"+Replace this use of System.out by a logger.(çßøÓ8¢Ìòæ1J$d9d6973c-75f0-4c59-9b42-a3b300885f73
+m	java:S106"+Replace this use of System.out by a logger.(³æş“8¢Ìòæ1J$53c3e03f-471c-4746-a4e8-e9117cd67623
+m	java:S106)"+Replace this use of System.out by a logger.(ÃÂ…Ê8¥Ìòæ1J$1fa3fa5e-ae91-4df0-8538-ae50c5072693
+m	java:S106+"+Replace this use of System.out by a logger.(ü‹§Ö8¥Ìòæ1J$602c3dd2-0fc3-4141-a17f-1789e24b2bf0
+r	java:S1067"+Replace this use of System.out by a logger.(º¾‘ıÿÿÿÿ8§Ìòæ1J$5c91d57a-3396-4801-a690-74dc9ee2b7c1
+m	java:S1069"+Replace this use of System.out by a logger.(”ÎòÉ8§Ìòæ1J$3d9a6fb1-c0ec-4ae0-8aa4-baa57c0b44f5
+m	java:S106<"+Replace this use of System.out by a logger.(«è‹Ô8§Ìòæ1J$0fb90e7f-21f0-491c-adbd-a6027344ef09
+r	java:S106P"+Replace this use of System.out by a logger.(ªÑ˜ˆüÿÿÿÿ8©Ìòæ1J$2b64e5f3-999d-4eba-bb72-4ea63ba02900
+m	java:S106d"+Replace this use of System.out by a logger.(ÓÄï¤8¬Ìòæ1J$2cd1f1c9-ea5f-4524-beab-3e548cb9c2ba
+r	java:S106y"+Replace this use of System.out by a logger.(¹ñÇµûÿÿÿÿ8±Ìòæ1J$dcfbde07-7bc0-4a6c-ba7e-d30d5ce36a14
+H	java:S106"+Replace this use of System.out by a logger.(ú‘Ø°8Ìë“æ1
+€
+java:S1128"8Remove this unused import 'edu.esprit.entities.Service'.(êØ÷ßúÿÿÿÿ8ÊØ÷æ1J$7ec925cf-22d5-48f2-bd9f-a44fb2e9e19c

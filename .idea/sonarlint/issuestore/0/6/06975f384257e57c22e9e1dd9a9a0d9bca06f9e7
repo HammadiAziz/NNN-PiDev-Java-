@@ -1,0 +1,15 @@
+
+Α
+java:S1192Δ"xDefine a constant instead of duplicating this literal "An error occurred while loading the Commande interface." 4 times.(•ΫΧψÿÿÿÿ8±¬πζ1J$a301dff9-aa2a-446c-bae6-c920fdbf1beb
+
+java:S1192™"FDefine a constant instead of duplicating this literal "Error" 5 times.(µϋψ–8±¬πζ1J$3c5c46c0-241b-45db-911d-4865498aadd2
+΅	java:S116&"ZRename this field "MainLeftSidebar" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ψ§ηύÿÿÿÿ8δ”ρζ1J$ac62f792-64da-4257-a6d5-e58dd12190db
+Κ
+java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ιρύÿÿÿÿ8τίγθε1J$f1635864-e4e8-4efb-b6ca-c4c6703b493b
+Κ
+java:S1186¤"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Ζμνÿÿÿÿÿ8γαύθε1J$2a47f82f-a021-4f17-9987-e446e7f892f7
+–	java:S100¤"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ζμνÿÿÿÿÿ8οαύθε1J$b00a6b49-bdb7-4a28-830a-4c9904bfe110
+‘	java:S100½"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ρό‚8”­πζ1J$61337e0a-9c24-43f0-b62e-8a339399d6f1
+‘	java:S100Ν"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(±ίψ”8—­πζ1J$7364af49-5509-4cdc-91fd-a2e9af521aa6
+–	java:S100Ϊ"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(†Όβψÿÿÿÿ8σΘÿζ1J$5dc0af10-9945-445a-895f-75781ec985d6
+‘	java:S100θ"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ΨΖÒ8­πζ1J$0ae283f8-0a29-4fd4-b0a6-711ce377b77a

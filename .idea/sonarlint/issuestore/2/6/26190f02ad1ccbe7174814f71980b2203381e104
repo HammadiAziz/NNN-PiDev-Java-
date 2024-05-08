@@ -1,0 +1,20 @@
+
+’
+java:S2095%"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(ªŠÄ»8‹›‹æ1J$c470a335-b28b-41c7-be4a-2ac9a9149e9f
+’
+java:S20956"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(ªŠÄ»8Œ›‹æ1J$c9a83271-b885-4a24-9898-f44a53076247
+’
+java:S2095_"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(ªŠÄ»8Ÿƒ±Šæ1J$bef6f695-4aca-4376-a9f5-b5a9da3e034b
+’
+java:S2095"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(ªŠÄ»8‹›‹æ1J$550338a3-b740-47ed-b128-fa0d712158db
+’
+java:S2095H"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(ªŠÄ»8›‹æ1J$99eb2179-de70-4027-acc9-ed9e95636ab3
+m	java:S106"+Replace this use of System.out by a logger.(Àâ«œ8½ƒ±Šæ1J$b2a62d2e-8194-4b19-93fe-5a3f62f85094
+r	java:S106"+Replace this use of System.out by a logger.(ö’ç˜øÿÿÿÿ8¾ƒ±Šæ1J$898e87e1-3f53-4e73-8951-20c5308f4201
+m	java:S106,"+Replace this use of System.out by a logger.(¬àØí8Ëƒ±Šæ1J$9e8ff237-a875-4571-b6eb-defe633719f1
+r	java:S106."+Replace this use of System.out by a logger.(‘Œê·üÿÿÿÿ8Ìƒ±Šæ1J$535f218b-27cf-4a7a-b1dc-b8af35f5bd41
+m	java:S106:"+Replace this use of System.out by a logger.(ıÎ¿´8Ñƒ±Šæ1J$99636a97-082c-4300-946a-aaaca4925569
+m	java:S106<"+Replace this use of System.out by a logger.(‚ˆø©8Òƒ±Šæ1J$d240b651-9a62-4cbc-8b51-cc03cdeedaaf
+m	java:S106?"+Replace this use of System.out by a logger.(•Ê„8Ôƒ±Šæ1J$dd7f9be3-5454-4885-8afa-a14af20cd648
+r	java:S106U"+Replace this use of System.out by a logger.(£Á‚ñüÿÿÿÿ8æƒ±Šæ1J$ce7fe2ef-a554-461b-9a3f-fe60159b9984
+r	java:S106k"+Replace this use of System.out by a logger.(¹ñÇµûÿÿÿÿ8ìƒ±Šæ1J$dab21d4c-a6ba-428c-afb7-547817f04fd1

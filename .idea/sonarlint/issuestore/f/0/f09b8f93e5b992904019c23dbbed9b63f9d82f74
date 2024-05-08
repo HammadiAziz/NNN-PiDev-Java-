@@ -1,0 +1,16 @@
+
+‰	java:S116"NRename this field "URL" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÚÚÃ†J$5c46e9da-5cb0-4966-b22e-ec5f15fe6ac2
+	java:S116	"ORename this field "USER" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(õ­èëüÿÿÿÿJ$30687162-b04f-4728-8000-850da16f61d5
+	java:S116
+"NRename this field "PWD" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ê†ÀÏÿÿÿÿÿJ$8762d42f-61a8-4a9d-bb99-6b2be9e67baf
+]
+java:S1170"!Make this final field static too.(ÚÚÃ†J$7dccab2f-c90c-45a9-af78-b2338466c06e
+b
+java:S1170	"!Make this final field static too.(õ­èëüÿÿÿÿJ$d1711483-2d1b-43af-990a-8191b17e791f
+b
+java:S1170
+"!Make this final field static too.(ê†ÀÏÿÿÿÿÿJ$91ec1458-bedf-4852-ab04-e4f68ece320f
+j
+java:S2115")Add password protection to this database.(ıÏñ…øÿÿÿÿJ$44ce2ada-0cc9-439a-8c50-9c6b31fea96b
+k	java:S106"+Replace this use of System.out by a logger.(ş‹»µøÿÿÿÿJ$8a7bcbc1-8f7b-4aac-9038-71a92880c26f
+k	java:S106"+Replace this use of System.out by a logger.(©şêÜúÿÿÿÿJ$39dd96bc-503a-4c6d-bd7f-7a19db488d6b
