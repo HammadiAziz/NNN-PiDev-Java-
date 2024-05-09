@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.web.WebView?>
+<?import javafx.scene.control.Label?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="tn.esprit.controllers.MapController">
+    <!-- Main rectangle pane containing the map and details -->
+    <AnchorPane prefWidth="800" prefHeight="600">
+        <!-- Map square pane -->
+        <AnchorPane prefWidth="600" prefHeight="600" style="-fx-border-color: black; -fx-border-width: 1px;">
+            <WebView fx:id="mapView" prefWidth="598" prefHeight="598" layoutX="1" layoutY="1"/>
+        </AnchorPane>
+
+        <!-- Details square pane -->
+        <AnchorPane prefWidth="400" prefHeight="600" style="-fx-border-color: black; -fx-border-width: 1px;" layoutX="600">
+            <Label text="SuiviLiv Details" layoutX="10" layoutY="10" />
+            <Label text="ID:" layoutX="10" layoutY="40" />
+            <Label fx:id="id" layoutX="60" layoutY="40" />
+            <Label text="Date Commande:" layoutX="10" layoutY="60" />
+            <Label fx:id="dateCommande" layoutX="120" layoutY="60" />
+            <Label text="Livree:" layoutX="10" layoutY="80" />
+            <Label fx:id="livree" layoutX="60" layoutY="80" />
+            <Label text="Location:" layoutX="10" layoutY="100" />
+            <Label fx:id="location" layoutX="70" layoutY="100" />
+        </AnchorPane>
+    </AnchorPane>
+</AnchorPane>
