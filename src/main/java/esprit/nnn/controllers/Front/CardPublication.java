@@ -1,7 +1,9 @@
 package esprit.nnn.controllers.Front;
 
+import esprit.nnn.models.DislikePublication;
 import esprit.nnn.models.Like;
 import esprit.nnn.models.Publication;
+import esprit.nnn.services.DislikeService;
 import esprit.nnn.services.LikeService;
 import esprit.nnn.services.PublicationService;
 import javafx.fxml.FXML;
@@ -49,9 +51,34 @@ public class CardPublication {
 
     @FXML
     void dislike(ActionEvent event) {
+        DislikeService dislikeService = new DislikeService();
+        LikeService likeService = new LikeService();
 
+        // Check if a Like exists for the current publication
+        Like existingLike = likeService.getOneByPublicationId(publication.getId());
+
+        if (existingLike != null) {
+            // If a Like exists, delete it
+            likeService.delete(existingLike);
+            System.out.println("Like deleted");
+        }
+
+        // Retrieve the Dislike corresponding to the current publication if it exists
+        DislikePublication existingDislike = dislikeService.getOneByPublicationId(publication.getId());
+
+        if (existingDislike != null) {
+            // If a Dislike exists, delete it
+            dislikeService.delete(existingDislike);
+            System.out.println("Dislike deleted");
+        } else {
+            // Otherwise, create a new Dislike
+            DislikePublication newDislike = new DislikePublication(publication.getId());
+            dislikeService.add(newDislike);
+            System.out.println("Dislike added");
+        }
     }
-    
+
+
 
     public void setData(Publication publication) {
         this.publication = publication;
@@ -97,27 +124,34 @@ public class CardPublication {
     */
 
 
-   @FXML
-   void like(ActionEvent event) {
-       LikeService likeService = new LikeService();
+    @FXML
+    void like(ActionEvent event) {
+        DislikeService dislikeService = new DislikeService();
+        LikeService likeService = new LikeService();
 
-       // Retrieve the Like corresponding to the current publication if it exists
-       Like existingLike = likeService.getOneByPublicationId(publication.getId());
+        // Check if a Dislike exists for the current publication
+        DislikePublication existingDislike = dislikeService.getOneByPublicationId(publication.getId());
 
-       if (existingLike != null) {
-           // If a Like exists, delete it
-           likeService.delete(existingLike);
-           System.out.println("Like deleted");
-       } else {
-           // Otherwise, create a new Like
-           Like newLike = new Like(publication.getId());
-           likeService.add(newLike);
-           System.out.println("Like added");
-       }
+        if (existingDislike != null) {
+            // If a Dislike exists, delete it
+            dislikeService.delete(existingDislike);
+            System.out.println("Dislike deleted");
+        }
 
-       // Update the like state in the publication
-       publication.updateLikeState(existingLike == null);
-   }
+        // Retrieve the Like corresponding to the current publication if it exists
+        Like existingLike = likeService.getOneByPublicationId(publication.getId());
+
+        if (existingLike != null) {
+            // If a Like exists, delete it
+            likeService.delete(existingLike);
+            System.out.println("Like deleted");
+        } else {
+            // Otherwise, create a new Like
+            Like newLike = new Like(publication.getId());
+            likeService.add(newLike);
+            System.out.println("Like added");
+        }
+    }
 
     @FXML
     void DetailsPublication(ActionEvent event) {

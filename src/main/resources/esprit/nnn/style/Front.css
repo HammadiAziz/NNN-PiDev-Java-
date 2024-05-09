@@ -1,0 +1,190 @@
+.menu-button {
+     /* Set the background color */
+    -fx-background-color: rgba(255, 255, 255, 0);
+     /* Set the border color */
+     /* Set the border radius to make it rounded */
+    -fx-padding: 5; /* Add padding */
+    /* Add padding */
+}
+
+.menu-button:hover {
+
+    -fx-padding: 10;
+    -fx-border-color: #000000;
+    -fx-background-insets: 1.5, 20;
+    -fx-border-radius: 10;
+
+    /* Add shadow effect and change color to green on hover */
+}
+.selectedbutton {
+    /* Existing styles */
+    -fx-background-color: transparent;
+    -fx-alignment: center;
+
+    -fx-background-insets: 1.5, 20;
+    -fx-border-radius: 15;
+    -fx-border-color: #515151;
+    -fx-border-style: solid;
+    -fx-border-width: 0 0 1 0;
+
+   
+    /* Add shadow effect */
+
+}
+
+.button {
+    -fx-background-color: #7a7a7a; /* Green background */
+    -fx-text-fill: white; /* White text color */
+    -fx-font-size: 14px; /* Font size */
+    -fx-padding: 8px 16px; /* Padding */
+    -fx-background-radius: 10px; /* Rounded corners */
+    -fx-border-radius: 10px; /* Rounded corners */
+    -fx-border-color: transparent; /* Transparent border */
+}
+
+.button:hover {
+    -fx-background-color: #676767; /* Darker green on hover */
+}
+
+.button:pressed {
+    -fx-background-color: #357a38; /* Dark green when pressed */
+}
+
+
+.sign-button {
+    -fx-background-color: #6e6e6e; /* Set background color (adjust for desired color) */
+    -fx-text-fill: #ffffff; /* Set text color */
+    -fx-padding: 10px 20px; /* Add some padding */
+    -fx-font-weight: bold; /* Make the text bolder */
+
+    -fx-border-style: solid;
+    -fx-border-color: #393939; /* Set border color */
+    -fx-border-width: 2px;
+
+}
+
+.sign-button:hover {
+    -fx-background-color: #ddd; /* Change background color on hover (adjust for desired color) */
+    -fx-text-fill: #333; /* Change text color on hover (adjust for desired color) */
+    -fx-cursor: hand; /* Change cursor to a hand on hover */
+}
+
+
+
+
+
+.scroula{
+    -fx-background-color:transparent;
+}
+
+.scroula > .viewport {
+-fx-background-color: transparent;
+}
+.scroula .scroll-bar {
+    -fx-background-color: transparent; /* Set transparent background for the entire scrollbar */
+    -fx-border-color: black; /* Set black border around the scrollbar (simulates track) */
+    -fx-border-width: 0px; /* Set border width for the simulated track */
+}
+.scroula .scroll-bar:vertical .thumb,
+.scroula .scroll-bar:horizontal .thumb {
+    -fx-background-color: #717171; /* Set the color of the thumb */
+    -fx-background-radius: 5px; /* Set the border radius to make it rounded */
+}
+
+
+/* Style the track (the non-draggable part of the scrollbar) */
+
+
+.recherche{
+    -fx-background-radius: 15; /* Set the background radius to make it rounded */
+    -fx-border-radius: 15; /* Set the border radius to make it rounded */
+    -fx-border-color: #000000; /* Set the border color */
+    -fx-padding: 5;
+    -fx-background-color: transparent;
+    /* Add padding */
+}
+.recherche .text {
+    -fx-text-fill: black; /* Set the prompt text color to black */
+}
+.recherche:hover {
+    -fx-border-color: green; /* Change border color on hover */
+}
+.recherche Label.text {  /* Target a Label control within recherche */
+    -fx-text-fill: black;
+}
+.custom-checkbox {
+    -fx-background-color: transparent; /* Set background color to transparent */
+}
+
+.custom-checkbox .box {
+    -fx-background-color: transparent; /* Set background color of the checkbox box to transparent */
+    -fx-border-color: #000000; /* Set border color */
+    -fx-border-radius: 5; /* Set border radius to make it rounded */
+}
+
+.custom-checkbox:hover .box {
+    -fx-border-color: green; /* Change border color on hover */
+}
+
+.custom-checkbox:selected .box {
+    -fx-background-color: green; /* Change background color of the checkbox box when selected */
+}
+
+.custom-checkbox:selected .mark {
+    -fx-background-color: #ffffff; /* Set color of the check mark when selected */
+}
+
+
+.spinner {
+    -fx-font-size: 14px; /* Set the font size */
+    -fx-text-fill: #000000; /* Set the text color */
+    -fx-background-color: transparent; /* Set the background color */
+    -fx-padding: 5px; /* Set padding around the Spinner */
+}
+
+/* Styling for the Spinner arrows */
+
+.spinner .increment-arrow-button, .spinner .decrement-arrow-button {
+    -fx-background-color: transparent; /* Set the background color of the arrows */
+}
+
+.spinner .increment-arrow-button:hover, .spinner .decrement-arrow-button:hover {
+    -fx-background-color: transparent; /* Set the background color of the arrows when hovered */
+}
+
+/* Styling for the Spinner text field */
+
+.spinner .text-field {
+    -fx-background-color:transparent; /* Set the background color of the text field */
+    -fx-border-color: #cccccc; /* Set the border color of the text field */
+    -fx-border-radius: 5px; /* Set the border radius to make it rounded */
+}
+/* Styling for the ComboBox */
+.combo-box {
+    -fx-font-size: 14px; /* Set the font size */
+    -fx-text-fill: #fbfbfb; /* Set the text color */
+    -fx-background-color: transparent; /* Set the background color */
+    -fx-padding: 5px; /* Set padding around the ComboBox */
+    -fx-background-radius: 15px; /* Set the background radius to make it rounded */
+    -fx-border-color: #454545; /* Set the border color */
+    -fx-border-width: 1px; /* Set the border width */
+    -fx-border-radius: 15px;/* Set the border width */
+}
+
+/* Styling for the ComboBox arrow button */
+.combo-box .arrow-button {
+    -fx-background-color: transparent; /* Set the background color of the arrow button */
+}
+
+.combo-box .arrow-button:hover {
+    -fx-background-color: transparent; /* Set the background color of the arrow button when hovered */
+}
+
+/* Styling for the ComboBox list cell */
+.combo-box .list-cell {
+    -fx-background-color: transparent; /* Set the background color of the list cell */
+}
+
+.combo-box .list-cell:hover {
+    -fx-background-color: transparent; /* Set the background color of the list cell when hovered */
+}

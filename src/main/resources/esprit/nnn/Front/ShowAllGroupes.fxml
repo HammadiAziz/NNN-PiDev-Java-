@@ -1,29 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.RowConstraints?>
-<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="main_form_Groupes" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="esprit.nnn.controllers.Front.ShowAllGroupes">
+<AnchorPane fx:id="main_form_Groupes" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="559.0" prefWidth="954.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="esprit.nnn.controllers.Front.ShowAllGroupes">
    <children>
-      <VBox prefHeight="200.0" prefWidth="100.0">
+      <Pane layoutX="13.0" layoutY="14.0" prefHeight="95.0" prefWidth="944.0">
          <children>
-            <AnchorPane prefHeight="340.0" prefWidth="562.0">
-               <children>
-                  <ScrollPane fx:id="ScrollPaneGroupe" layoutY="63.0" prefHeight="348.0" prefWidth="725.0">
-                     <content>
-                        <GridPane fx:id="menu_gridPane_groupe" prefHeight="78.0" prefWidth="94.0">
-                          <rowConstraints>
-                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                          </rowConstraints>
-                        </GridPane>
-                     </content>
-                  </ScrollPane>
-               </children>
-            </AnchorPane>
+            <Label layoutX="256.0" layoutY="26.0" prefHeight="47.0" prefWidth="87.0" styleClass="menu-button" stylesheets="@../style/Front.css" text="Events" />
+            <ImageView fitHeight="68.0" fitWidth="60.0" layoutX="22.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true" />
+            <Label layoutX="359.0" layoutY="26.0" prefHeight="47.0" prefWidth="76.0" styleClass="menu-button" stylesheets="@../style/Front.css" text="Groups" />
+            <Label layoutX="450.0" layoutY="26.0" prefHeight="47.0" prefWidth="76.0" styleClass="menu-button" stylesheets="@../style/Front.css" text="Quiz" />
+            <Label layoutX="539.0" layoutY="25.0" prefHeight="47.0" prefWidth="87.0" styleClass="menu-button" stylesheets="@../style/Front.css" text="Market" />
+            <Circle layoutX="770.0" layoutY="48.0" radius="19.0" stroke="BLACK" strokeType="INSIDE" />
+            <Label layoutX="52.0" layoutY="37.0" prefHeight="29.0" prefWidth="60.0" text="NNN.">
+               <font>
+                  <Font name="Tw Cen MT Condensed Extra Bold" size="28.0" />
+               </font>
+            </Label>
+            <Label layoutX="796.0" layoutY="41.0" text="Aziz Hammadi" />
          </children>
-      </VBox>
+      </Pane>
+      <AnchorPane layoutY="115.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="300.0" prefWidth="970.0">
+         <children>
+            <ScrollPane fx:id="ScrollPaneGroupe" layoutY="-1.0" prefHeight="444.0" prefWidth="970.0">
+               <content>
+                  <GridPane fx:id="menu_gridPane_groupe" prefHeight="78.0" prefWidth="94.0">
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                  </GridPane>
+               </content>
+            </ScrollPane>
+         </children>
+      </AnchorPane>
    </children>
 </AnchorPane>

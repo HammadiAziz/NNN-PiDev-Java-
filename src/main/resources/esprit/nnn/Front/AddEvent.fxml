@@ -4,17 +4,20 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
 <AnchorPane prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="esprit.nnn.controllers.Front.AddEvent">
    <children>
-      <VBox layoutX="270.0" layoutY="39.0" prefHeight="403.0" prefWidth="303.0">
+      <VBox layoutX="279.0" layoutY="110.0" prefHeight="375.0" prefWidth="303.0">
          <children>
             <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Add Event" wrappingWidth="101.336669921875">
                <font>
@@ -24,7 +27,7 @@
                   <Insets bottom="20.0" left="100.0" />
                </VBox.margin>
             </Text>
-            <ComboBox fx:id="groupCB" prefHeight="26.0" prefWidth="149.0" promptText="GROUP">
+            <ComboBox fx:id="groupCB" prefHeight="26.0" prefWidth="149.0" promptText="GROUP" styleClass="combo-box" stylesheets="@../style/Front.css">
                <VBox.margin>
                   <Insets bottom="20.0" left="70.0" />
                </VBox.margin>
@@ -49,16 +52,28 @@
                   <Insets bottom="20.0" left="30.0" />
                </VBox.margin>
             </DatePicker>
-            <Button mnemonicParsing="false" onAction="#addEvent" prefHeight="26.0" prefWidth="147.0" text="Add">
+            <Button mnemonicParsing="false" onAction="#addEvent" prefHeight="26.0" prefWidth="147.0" styleClass="selectedbutton" stylesheets="@../style/Front.css" text="Add">
                <VBox.margin>
                   <Insets left="70.0" />
                </VBox.margin>
             </Button>
          </children>
       </VBox>
-      <Button layoutX="573.0" layoutY="25.0" mnemonicParsing="false" onAction="#backToAllEvents" prefHeight="26.0" prefWidth="85.0" text="back">
-         <graphic>
-            <ImageView fitHeight="19.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true" />
-         </graphic></Button>
+      <Pane layoutX="7.0" prefHeight="95.0" prefWidth="944.0">
+         <children>
+            <Label layoutX="256.0" layoutY="26.0" prefHeight="47.0" prefWidth="87.0" styleClass="menu-button" stylesheets="@../style/Front.css" text="Events" />
+            <ImageView fitHeight="68.0" fitWidth="60.0" layoutX="22.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true" />
+            <Label layoutX="358.0" layoutY="27.0" prefHeight="47.0" prefWidth="76.0" styleClass="menu-button" stylesheets="@../style/Front.css" text="Groups" />
+            <Label layoutX="450.0" layoutY="26.0" prefHeight="47.0" prefWidth="76.0" styleClass="menu-button" stylesheets="@../style/Front.css" text="Quiz" />
+            <Label layoutX="526.0" layoutY="25.0" prefHeight="47.0" prefWidth="87.0" styleClass="menu-button" stylesheets="@../style/Front.css" text="Market" />
+            <Circle layoutX="770.0" layoutY="48.0" radius="19.0" stroke="BLACK" strokeType="INSIDE" />
+            <Label layoutX="52.0" layoutY="37.0" prefHeight="29.0" prefWidth="60.0" text="NNN.">
+               <font>
+                  <Font name="Tw Cen MT Condensed Extra Bold" size="28.0" />
+               </font>
+            </Label>
+            <Label layoutX="796.0" layoutY="41.0" text="Aziz Hammadi" />
+         </children>
+      </Pane>
    </children>
 </AnchorPane>

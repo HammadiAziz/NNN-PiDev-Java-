@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
-<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
@@ -18,127 +17,29 @@
 <?import javafx.scene.shape.Circle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="esprit.nnn.controllers.Front.ShowAllEvents">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="944.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="esprit.nnn.controllers.Front.ShowAllEvents">
    <children>
-      <VBox layoutY="14.0" prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: #F2F2F2;" stylesheets="@../style/home.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="700.0" AnchorPane.topAnchor="0.0">
+      <AnchorPane prefHeight="600.0" prefWidth="698.0">
          <children>
-            <HBox alignment="CENTER_LEFT" prefHeight="53.0" prefWidth="200.0">
+            <Pane prefHeight="75.0" prefWidth="944.0">
                <children>
-                  <Pane id="profilePic" maxHeight="30.0" maxWidth="30.0" prefHeight="30.0" prefWidth="30.0" stylesheets="/esprit/nnn/style/home.css">
-                     <children>
-                        <Circle fill="#31ff31" layoutX="27.0" layoutY="27.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
-                     </children>
-                     <opaqueInsets>
-                        <Insets />
-                     </opaqueInsets>
-                     <cursor>
-                        <Cursor fx:constant="HAND" />
-                     </cursor>
-                  </Pane>
-                  <Label text="Ayoub Dahmen">
-                     <HBox.margin>
-                        <Insets left="15.0" />
-                     </HBox.margin>
+                  <Label layoutX="256.0" layoutY="26.0" prefHeight="47.0" prefWidth="87.0" text="Events" />
+                  <ImageView fitHeight="68.0" fitWidth="60.0" layoutX="22.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true" />
+                  <Label layoutX="359.0" layoutY="26.0" prefHeight="47.0" prefWidth="76.0" text="Groups" />
+                  <Label layoutX="450.0" layoutY="26.0" prefHeight="47.0" prefWidth="76.0" text="Quiz" />
+                  <Label layoutX="539.0" layoutY="25.0" prefHeight="47.0" prefWidth="87.0" text="Market" />
+                  <Circle layoutX="770.0" layoutY="48.0" radius="19.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Label layoutX="52.0" layoutY="37.0" prefHeight="29.0" prefWidth="60.0" text="NNN.">
                      <font>
-                        <Font name="HelveticaNowDisplay-ExtraBold" size="12.0" />
+                        <Font name="Tw Cen MT Condensed Extra Bold" size="28.0" />
                      </font>
                   </Label>
+                  <Label layoutX="796.0" layoutY="41.0" text="Aziz Hammadi" />
                </children>
-               <VBox.margin>
-                  <Insets left="20.0" right="20.0" />
-               </VBox.margin>
-            </HBox>
-            <VBox prefHeight="548.0" prefWidth="184.0">
-               <children>
-                  <HBox alignment="CENTER_LEFT" spacing="10.0" styleClass="link" stylesheets="/esprit/nnn/style/home.css">
-                     <children>
-
-                        <Label text="Profile" />
-                     </children>
-                     <VBox.margin>
-                        <Insets top="40.0" />
-                     </VBox.margin>
-                     <cursor>
-                        <Cursor fx:constant="HAND" />
-                     </cursor>
-                     <padding>
-                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-                     </padding>
-                  </HBox>
-                  <HBox alignment="CENTER_LEFT" spacing="10.0" styleClass="link" stylesheets="/esprit/nnn/style/home.css">
-                     <children>
-                        <ImageView fitHeight="30.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                             <!-- <Image url="@img/icon/blog-icon.png" />-->
-                           </image>
-                        </ImageView>
-                        <Label text="Blogs" />
-                     </children>
-                     <VBox.margin>
-                        <Insets top="30.0" />
-                     </VBox.margin>
-                     <cursor>
-                        <Cursor fx:constant="HAND" />
-                     </cursor>
-                     <padding>
-                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-                     </padding>
-                  </HBox>
-                  <HBox alignment="CENTER_LEFT" spacing="10.0" styleClass="link" stylesheets="/esprit/nnn/style/home.css">
-                     <children>
-                        <ImageView fitHeight="19.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                            <!--  <Image url="@img/icon/donation-icon.png" />-->
-                           </image>
-                        </ImageView>
-                        <Label text="Donations" />
-                     </children>
-                     <VBox.margin>
-                        <Insets top="30.0" />
-                     </VBox.margin>
-                     <cursor>
-                        <Cursor fx:constant="HAND" />
-                     </cursor>
-                     <padding>
-                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-                     </padding>
-                  </HBox>
-                  <HBox alignment="CENTER_LEFT" spacing="10.0" styleClass="link" stylesheets="/esprit/nnn/style/home.css">
-                     <children>
-                        <ImageView fitHeight="59.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                            <!--  <Image url="@img/icon/claim-icon.png" />-->
-                           </image>
-                        </ImageView>
-                        <Label text="Claims" />
-                     </children>
-                     <VBox.margin>
-                        <Insets top="30.0" />
-                     </VBox.margin>
-                     <cursor>
-                        <Cursor fx:constant="HAND" />
-                     </cursor>
-                     <padding>
-                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-                     </padding>
-                  </HBox>
-               </children>
-               <VBox.margin>
-                  <Insets left="10.0" right="10.0" />
-               </VBox.margin>
-            </VBox>
-         </children>
-      </VBox>
-      <ImageView fitHeight="150.0" fitWidth="160.0" layoutX="322.0" layoutY="422.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0">
-         <image>
-           <!-- <Image url="@../../../../../Desktop/1.png" />-->
-         </image>
-      </ImageView>
-      <AnchorPane layoutX="198.0" prefHeight="600.0" prefWidth="698.0">
-         <children>
-            <BorderPane prefHeight="600.0" prefWidth="702.0">
+            </Pane>
+            <BorderPane layoutY="72.0" prefHeight="300.0" prefWidth="944.0">
                <top>
-                  <HBox prefHeight="51.0" prefWidth="690.0" BorderPane.alignment="CENTER">
+                  <HBox prefHeight="26.0" prefWidth="944.0" BorderPane.alignment="CENTER">
                      <children>
                         <Label alignment="CENTER" prefHeight="51.0" prefWidth="174.0" styleClass="white-background" stylesheets="@../style/home.css" text="Events">
                            <font>
@@ -170,11 +71,11 @@
                         <HBox prefHeight="51.0" prefWidth="104.0">
                            <children>
                               <Button mnemonicParsing="false" prefHeight="37.0" prefWidth="94.0" text="Add an event">
-
+      
                                  <HBox.margin>
                                     <Insets top="5.0" />
-                                 </HBox.margin></Button>
-                              <Button layoutX="400.0" layoutY="70.0" text="View Stats" onAction="#viewStatsClicked"/>
+                                 </HBox.margin>
+                              </Button>
                            </children>
                         </HBox>
                         <HBox prefHeight="51.0" prefWidth="108.0">
@@ -201,7 +102,7 @@
                               </Label>
                            </children>
                         </VBox>
-                        <ScrollPane layoutY="37.0" prefHeight="510.0" prefWidth="702.0">
+                        <ScrollPane layoutY="37.0" prefHeight="510.0" prefWidth="944.0">
                            <content>
                               <GridPane fx:id="menu_gridPane_event" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="187.0" prefWidth="179.0">
                                 <rowConstraints>
