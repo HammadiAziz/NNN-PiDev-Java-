@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="626.0" prefWidth="937.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.esprit.controllers.AfficherQuiv">
+   <children>
+      <Pane layoutX="103.0" prefHeight="71.0" prefWidth="858.0" styleClass="parent" stylesheets="@CSS/Dashboard/Dashboard.css" />
+      <Pane prefHeight="626.0" prefWidth="103.0" styleClass="sidebar" stylesheets="@CSS/Dashboard/Dashboard.css">
+         <children>
+            <Button alignment="CENTER" layoutX="7.0" layoutY="253.0" mnemonicParsing="false" prefHeight="71.0" prefWidth="91.0" styleClass="btn" stylesheets="@CSS/Dashboard/Dashboard.css" text="Event" textFill="WHITE" />
+            <ImageView fitHeight="45.0" fitWidth="43.0" layoutX="32.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../Img/logo.png" />
+               </image>
+            </ImageView>
+            <Button alignment="CENTER" layoutX="8.0" layoutY="182.0" mnemonicParsing="false" prefHeight="71.0" prefWidth="91.0" styleClass="btn" stylesheets="@CSS/Dashboard/Dashboard.css" text="Group" textFill="WHITE" />
+            <Button alignment="CENTER" layoutX="8.0" layoutY="111.0" mnemonicParsing="false" prefHeight="71.0" prefWidth="91.0" styleClass="btn" stylesheets="@CSS/Dashboard/Dashboard.css" text="User" textFill="WHITE" />
+            <Button alignment="CENTER" layoutX="8.0" layoutY="324.0" mnemonicParsing="false" prefHeight="71.0" prefWidth="91.0" styleClass="btn" stylesheets="@CSS/Dashboard/Dashboard.css" text="Quiz" textFill="WHITE" />
+            <Button alignment="CENTER" layoutX="8.0" layoutY="466.0" mnemonicParsing="false" onAction="#NavigateToLiv" prefHeight="71.0" prefWidth="91.0" styleClass="btn" stylesheets="@CSS/Dashboard/Dashboard.css" text="Livraison" textFill="WHITE" />
+            <Button alignment="CENTER" layoutX="8.0" layoutY="395.0" mnemonicParsing="false" onAction="#Suivi" prefHeight="71.0" prefWidth="91.0" styleClass="btn" stylesheets="@CSS/Dashboard/Dashboard.css" text="Suivi" textFill="WHITE" />
+
+            <Label layoutX="25.0" layoutY="48.0" text="NNN." textFill="#7bc186">
+               <font>
+                  <Font name="Dubai Bold" size="23.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutX="103.0" layoutY="71.0" prefHeight="554.0" prefWidth="858.0" styleClass="panbackground" stylesheets="@CSS/Dashboard/Dashboard.css">
+         <children>
+            <TableView fx:id="tableViewId" layoutX="242.0" layoutY="152.0" prefHeight="217.0" prefWidth="299.0" stylesheets="@CSS/Dashboard/Livraison/livraisonList.css">
+              <columns>
+                <TableColumn fx:id="idT" prefWidth="75.0" text="Id" />
+                <TableColumn fx:id="locationT" prefWidth="75.0" text="Localisation" />
+                  <TableColumn fx:id="dateCT" prefWidth="75.0" text="date commande" />
+                  <TableColumn fx:id="livreeT" prefWidth="69.5999755859375" text="etat" />
+              </columns>
+            </TableView>
+            <Button fx:id="AjouterSuiv" layoutX="343.0" layoutY="398.0" mnemonicParsing="false" onAction="#AjouterSuiv" stylesheets="@CSS/Dashboard/Livraison/livraisonList.css" text="Ajouter" />
+            <Button fx:id="back" layoutX="215.0" layoutY="398.0" mnemonicParsing="false" onAction="#BackLiv" stylesheets="@CSS/Dashboard/Livraison/livraisonList.css" text="Back" />
+            <Button fx:id="modifierSuiv" layoutX="483.0" layoutY="397.0" mnemonicParsing="false" onAction="#modifierSuiv" stylesheets="@CSS/Dashboard/Livraison/livraisonList.css" text="Modifier" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

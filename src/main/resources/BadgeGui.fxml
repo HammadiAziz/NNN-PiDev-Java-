@@ -6,21 +6,21 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="463.0" prefWidth="656.0" styleClass="nav-form" stylesheets="@style/dashboardDesign.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.esprit.controllers.BadgeController">
+<AnchorPane prefHeight="463.0" prefWidth="656.0" styleClass="nav-form" stylesheets="@style/dashboardDesign.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.esprit.controllers.UserControllers.BadgeController">
     <children>
         <ImageView fitHeight="80.0" fitWidth="96.0" layoutX="147.0" layoutY="113.0" pickOnBounds="true" preserveRatio="true">
             <image>
-                <Image url="@../../../../Untitled-2.png" />
+                <Image url="@images/Untitled-2.png" />
             </image>
         </ImageView>
         <ImageView fitHeight="80.0" fitWidth="70.0" layoutX="267.0" layoutY="113.0" pickOnBounds="true" preserveRatio="true">
             <image>
-                <Image url="@../../../../slayvar2.png" />
+                <Image url="@images/slayvar2.png" />
             </image>
         </ImageView>
         <ImageView fitHeight="80.0" fitWidth="64.0" layoutX="400.0" layoutY="107.0" pickOnBounds="true" preserveRatio="true">
             <image>
-                <Image url="@../../../../gold1.png" />
+                <Image url="@images/gold1.png" />
             </image>
         </ImageView>
         <Text fx:id="bronzePrice" layoutX="146.0" layoutY="236.0" strokeType="OUTSIDE" strokeWidth="0.0" text="bronzePrice" />

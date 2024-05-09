@@ -13,7 +13,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.esprit.controllers.LoginController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.esprit.controllers.UserControllers.LoginController">
    <children>
       <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="400.0" style="-fx-background-color: #064E3B;">
          <children>
@@ -49,13 +49,12 @@
             <Button layoutX="122.0" layoutY="395.0" mnemonicParsing="false" onAction="#handleLoginButton" styleClass="btn" stylesheets="@style/login.css" text="Login" />
             <Label layoutX="115.0" layoutY="452.0" text="Create Account," />
             <Hyperlink layoutX="200.0" layoutY="449.0" onAction="#handleRegisterButton" text="Sign Up" />
-            <Hyperlink layoutX="29.0" layoutY="349.0" text="Forgot Password ?" />
-            <ImageView fitHeight="82.0" fitWidth="400.0" layoutY="95.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="82.0" fitWidth="400.0" layoutY="76.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../../Desktop/1.png" />
+                  <Image url="@images/1.png" />
                </image>
             </ImageView>
-            <Hyperlink layoutX="295.0" layoutY="562.0" onAction="#handleReset" text="Reset Password" />
+            <Hyperlink layoutX="29.0" layoutY="352.0" onAction="#handleReset" text="Forgot Password ?" />
          </children>
       </Pane>
       <ProgressIndicator fx:id="loadingindicator" layoutX="327.0" layoutY="7.0" progress="0.0" />

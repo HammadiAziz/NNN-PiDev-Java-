@@ -10,7 +10,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="594.0" prefWidth="781.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.esprit.controllers.ProfileController">
+<AnchorPane prefHeight="594.0" prefWidth="781.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.esprit.controllers.UserControllers.ProfileController">
    <children>
       <AnchorPane prefHeight="597.0" prefWidth="208.0" styleClass="nav-form" stylesheets="@style/dashboardDesign.css">
          <children>
@@ -20,8 +20,8 @@
                </font>
             </Label>
             <Line endX="80.40000915527344" endY="-1.52587890625E-5" layoutX="113.0" layoutY="190.0" startX="-100.0" stroke="WHITE" />
-            <Button layoutX="29.0" layoutY="203.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="180.0" styleClass="nav-btn" stylesheets="@style/dashboardDesign.css" text="Go Back Home" />
-            <Button layoutX="12.0" layoutY="544.0" mnemonicParsing="false" onAction="#logout" stylesheets="@../../../../../Desktop/EmployeeManagementSystem-main/employeeManagementSystem/src/employeemanagementsystem/dashboardDesign.css">
+            <Button fx:id="NavToShop" layoutX="29.0" layoutY="203.0" mnemonicParsing="false" onAction="#NavToHome" prefHeight="35.0" prefWidth="180.0" styleClass="nav-btn" stylesheets="@style/dashboardDesign.css" text="Go Back Home" />
+            <Button layoutX="12.0" layoutY="544.0" mnemonicParsing="false" onAction="#logout" stylesheets="@style/dashboardDesign.css">
                <styleClass>
                   <String fx:value="logout" />
                   <String fx:value="shadow" />
@@ -67,68 +67,62 @@
             </ImageView>
             <ImageView fitHeight="106.0" fitWidth="101.0" layoutX="42.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@img/66620d1.png" />
+                  <Image url="@images/66620d1.png" />
                </image>
             </ImageView>
-            <Text fx:id="emailq" fill="WHITE" layoutX="25.0" layoutY="176.0" strokeType="OUTSIDE" strokeWidth="0.0" text="email">
+            <Text fx:id="emailq" fill="WHITE" layoutX="9.0" layoutY="177.0" strokeType="OUTSIDE" strokeWidth="0.0" text="email">
                <font>
-                  <Font name="Arial Bold" size="13.0" />
-               </font>
-            </Text>
+                  <Font name="Arial Bold" size="16.0" />
+               </font></Text>
          </children>
       </AnchorPane>
-      <Button layoutX="224.0" layoutY="541.0" mnemonicParsing="false" onAction="#deleteaccount" prefHeight="42.0" prefWidth="159.0" styleClass="delete-btn" stylesheets="@style/dashboardDesign.css" text="Delete My Account !" />
+      <Button layoutX="273.0" layoutY="541.0" mnemonicParsing="false" onAction="#deleteaccount" prefHeight="42.0" prefWidth="159.0" styleClass="delete-btn" stylesheets="@style/dashboardDesign.css" text="Delete My Account !" />
       <ImageView fitHeight="112.0" fitWidth="152.0" layoutX="661.0" layoutY="485.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../../../../xampp/htdocs/test/public/SRC/logo.png" />
+            <Image url="@img/logo/logo.png" />
          </image>
       </ImageView>
-      <Label layoutX="228.0" layoutY="25.0" prefHeight="30.0" prefWidth="287.0" text="THESE ARE YOUR DEATILS SIR :" textFill="#368981">
+      <Label layoutX="276.0" layoutY="23.0" prefHeight="30.0" prefWidth="287.0" text="THESE ARE YOUR DEATILS SIR :" textFill="#368981">
          <font>
             <Font name="Impact" size="24.0" />
          </font>
       </Label>
-      <Label layoutX="242.0" layoutY="87.0" opacity="0.72" text="First Name :" textFill="#043309">
+      <Label layoutX="279.0" layoutY="86.0" opacity="0.72" text="First Name :" textFill="#043309">
          <font>
             <Font name="Bell MT Bold" size="14.0" />
          </font>
       </Label>
-      <Label layoutX="231.0" layoutY="128.0" opacity="0.72" text="Last Name :" textFill="#043309">
+      <Label layoutX="279.0" layoutY="119.0" opacity="0.72" text="Last Name :" textFill="#043309">
          <font>
             <Font name="Bell MT Bold" size="14.0" />
          </font>
       </Label>
-      <Label layoutX="231.0" layoutY="176.0" opacity="0.72" text="Phone Number :" textFill="#043309">
+      <Label layoutX="265.0" layoutY="156.0" opacity="0.72" text="Phone Number :" textFill="#043309">
          <font>
             <Font name="Bell MT Bold" size="14.0" />
          </font>
       </Label>
-      <Label layoutX="247.0" layoutY="215.0" opacity="0.72" text="Birthdate :" textFill="#043309">
+      <Label layoutX="283.0" layoutY="197.0" opacity="0.72" text="Birthdate :" textFill="#043309">
          <font>
             <Font name="Bell MT Bold" size="14.0" />
          </font>
       </Label>
-      <Label layoutX="226.0" layoutY="258.0" opacity="0.72" text="Your Wallet :" textFill="#043309">
-         <font>
-            <Font name="Bell MT Bold" size="14.0" />
-         </font>
-      </Label>
-      <Text fx:id="nameq" fill="#187922" fontSmoothingType="LCD" layoutX="336.0" layoutY="100.0" strokeType="OUTSIDE" strokeWidth="0.0" text="name" />
-      <Text fx:id="lastnameq" fill="#187922" fontSmoothingType="LCD" layoutX="316.0" layoutY="142.0" strokeType="OUTSIDE" strokeWidth="0.0" text="last name" />
-      <Text fx:id="numberq" fill="#187922" fontSmoothingType="LCD" layoutX="351.0" layoutY="189.0" strokeType="OUTSIDE" strokeWidth="0.0" text="phone number" />
-      <Text fx:id="birthdayq" fill="#187922" fontSmoothingType="LCD" layoutX="336.0" layoutY="228.0" strokeType="OUTSIDE" strokeWidth="0.0" text="birthday" />
-      <AnchorPane layoutX="640.0" layoutY="15.0" prefHeight="27.0" prefWidth="91.0" stylesheets="@style/dashboardDesign.css">
+      <Text fx:id="nameq" fill="#187922" fontSmoothingType="LCD" layoutX="390.0" layoutY="100.0" strokeType="OUTSIDE" strokeWidth="0.0" text="name" />
+      <Text fx:id="lastnameq" fill="#187922" fontSmoothingType="LCD" layoutX="379.0" layoutY="133.0" strokeType="OUTSIDE" strokeWidth="0.0" text="last name" />
+      <Text fx:id="numberq" fill="#187922" fontSmoothingType="LCD" layoutX="380.0" layoutY="171.0" strokeType="OUTSIDE" strokeWidth="0.0" text="phone number" />
+      <Text fx:id="birthdayq" fill="#187922" fontSmoothingType="LCD" layoutX="368.0" layoutY="212.0" strokeType="OUTSIDE" strokeWidth="0.0" text="birthday" />
+      <AnchorPane layoutX="691.0" layoutY="14.0" prefHeight="30.0" prefWidth="79.0" stylesheets="@style/dashboardDesign.css">
          <styleClass>
-            <String fx:value="white-bg" />
             <String fx:value="shadow" />
+            <String fx:value="white-bg" />
          </styleClass>
          <children>
-            <ImageView fitHeight="33.0" fitWidth="23.0" layoutX="3.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="23.0" fitWidth="41.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@img/diamond.png" />
                </image>
             </ImageView>
-            <Text fx:id="diamonsq" layoutX="26.0" layoutY="18.0" strokeType="OUTSIDE" strokeWidth="0.0" text="diamons" wrappingWidth="65.60000000000002" />
+            <Text fx:id="diamonsq" layoutX="27.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="diamons" />
          </children>
       </AnchorPane>
    </children>

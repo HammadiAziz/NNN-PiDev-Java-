@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="630.0" prefWidth="532.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.esprit.controllers.Showdtailsprod">
+   <children>
+      <Text fill="#48cd27" layoutX="121.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PRODUCT DETAILS">
+         <font>
+            <Font name="Bauhaus 93" size="36.0" />
+         </font>
+         <effect>
+            <Lighting diffuseConstant="1.38" specularConstant="0.9" specularExponent="25.52" surfaceScale="2.53">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant />
+               </light>
+            </Lighting>
+         </effect>
+      </Text>
+      <ImageView fitHeight="41.0" fitWidth="45.0" layoutX="83.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/showprod.png" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutX="153.0" layoutY="76.0" prefHeight="222.0" prefWidth="226.0" stylesheets="@CSS/shop.css">
+         <styleClass>
+            <String fx:value="shadow" />
+            <String fx:value="radius" />
+            <String fx:value="white-bg" />
+         </styleClass>
+         <children>
+            <ImageView fx:id="pictureShow" fitHeight="201.0" fitWidth="210.0" layoutX="7.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="18.0" layoutY="378.0" prefHeight="245.0" prefWidth="503.0" stylesheets="@CSS/shop.css">
+         <styleClass>
+            <String fx:value="shadow" />
+            <String fx:value="radius" />
+            <String fx:value="white-bg" />
+         </styleClass>
+         <children>
+            <HBox layoutX="1.0" layoutY="23.0" prefHeight="62.0" prefWidth="503.0">
+               <children>
+                  <Label fx:id="desc2show" prefHeight="71.0" prefWidth="504.0" />
+               </children></HBox>
+            <Text fill="#48cd27" layoutX="8.0" layoutY="22.0" strokeType="OUTSIDE" strokeWidth="0.0" text="First Description :">
+               <font>
+                  <Font name="Bauhaus 93" size="27.0" />
+               </font>
+               <effect>
+                  <Lighting>
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant />
+                     </light>
+                  </Lighting>
+               </effect>
+            </Text>
+            <Text fill="#48cd27" layoutX="8.0" layoutY="110.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Second Description :">
+               <font>
+                  <Font name="Bauhaus 93" size="27.0" />
+               </font>
+               <effect>
+                  <Lighting bumpInput="$null">
+                     <light>
+                        <Light.Distant />
+                     </light>
+                  </Lighting>
+               </effect>
+            </Text>
+            <HBox layoutX="1.0" layoutY="118.0" prefHeight="120.0" prefWidth="503.0">
+               <children>
+                  <Label fx:id="desc1show" prefHeight="130.0" prefWidth="506.0" />
+               </children></HBox>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="107.0" layoutY="315.0" prefHeight="53.0" prefWidth="319.0" stylesheets="@CSS/shop.css">
+         <styleClass>
+            <String fx:value="shadow" />
+            <String fx:value="radius" />
+            <String fx:value="white-bg" />
+         </styleClass>
+         <children>
+            <HBox prefHeight="53.0" prefWidth="314.0">
+               <children>
+                  <Label fx:id="nomshow" prefHeight="53.0" prefWidth="164.0" />
+                  <Label prefHeight="52.0" prefWidth="64.0" />
+                  <Label fx:id="priceshow" prefHeight="28.0" prefWidth="73.0" />
+                  <Text fill="#48cd27" strokeType="OUTSIDE" strokeWidth="0.0" text="\$">
+                     <font>
+                        <Font name="Bauhaus 93" size="22.0" />
+                     </font>
+                  </Text>
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="adresssText" prefHeight="616.0" prefWidth="919.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.esprit.controllers.AjouterLivraison">
+   <children>
+      <TextField fx:id="nomText" layoutX="595.0" layoutY="94.0" prefHeight="26.0" prefWidth="206.0" promptText="nom" styleClass="input" stylesheets="@CSS/dash2.css" />
+      <TextField fx:id="prenomText" layoutX="595.0" layoutY="187.0" prefHeight="26.0" prefWidth="206.0" promptText="prenom" styleClass="input" stylesheets="@CSS/dash2.css" />
+      <TextField fx:id="emailText" layoutX="194.0" layoutY="94.0" prefHeight="26.0" prefWidth="230.0" promptText="email" styleClass="input" stylesheets="@CSS/dash2.css" />
+      <TextField fx:id="phoneText" layoutX="601.0" layoutY="300.0" prefHeight="26.0" prefWidth="206.0" promptText="phone" styleClass="input" stylesheets="@CSS/dash2.css" />
+      <TextField fx:id="stateText" layoutX="194.0" layoutY="187.0" prefHeight="26.0" prefWidth="230.0" promptText="State" styleClass="input" stylesheets="@CSS/dash2.css" />
+      <ComboBox fx:id="PaiementCom" layoutX="194.0" layoutY="300.0" prefHeight="26.0" prefWidth="230.0" promptText="Type de paiement" />
+      <Button layoutX="158.0" layoutY="473.0" mnemonicParsing="false" onAction="#AjouterLiv" prefHeight="38.0" prefWidth="151.0" style="-fx-background-color: #7bc186;" text="Ajouter">
+         <effect>
+            <Reflection />
+         </effect></Button>
+      <TextField fx:id="adresseText" layoutX="601.0" layoutY="392.0" prefHeight="26.0" prefWidth="206.0" promptText="Adresse" styleClass="input" stylesheets="@CSS/dash2.css" />
+      <Button fx:id="navigateAjoutbtn" layoutX="382.0" layoutY="473.0" mnemonicParsing="false" onAction="#navigatetoAfficherLivAction" prefHeight="38.0" prefWidth="137.0" style="-fx-background-color: #7bc186;" text="Navigate">
+         <effect>
+            <Reflection />
+         </effect></Button>
+      <Pane prefHeight="626.0" prefWidth="103.0" styleClass="sidebar" stylesheets="@CSS/Dashboard/Dashboard.css">
+         <children>
+            <Button alignment="CENTER" layoutX="7.0" layoutY="253.0" mnemonicParsing="false" prefHeight="71.0" prefWidth="91.0" styleClass="btn" stylesheets="@CSS/Dashboard/Dashboard.css" text="Event" textFill="WHITE" />
+            <ImageView fitHeight="45.0" fitWidth="43.0" layoutX="32.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/logo.png" />
+               </image>
+            </ImageView>
+            <Button alignment="CENTER" layoutX="8.0" layoutY="182.0" mnemonicParsing="false" prefHeight="71.0" prefWidth="91.0" styleClass="btn" stylesheets="@CSS/Dashboard/Dashboard.css" text="Group" textFill="WHITE" />
+            <Button alignment="CENTER" layoutX="8.0" layoutY="111.0" mnemonicParsing="false" prefHeight="71.0" prefWidth="91.0" styleClass="btn" stylesheets="@CSS/Dashboard/Dashboard.css" text="User" textFill="WHITE" />
+            <Button alignment="CENTER" layoutX="8.0" layoutY="324.0" mnemonicParsing="false" prefHeight="71.0" prefWidth="91.0" styleClass="btn" stylesheets="@CSS/Dashboard/Dashboard.css" text="Quiz" textFill="WHITE" />
+            <Button alignment="CENTER" layoutX="8.0" layoutY="466.0" mnemonicParsing="false" prefHeight="71.0" prefWidth="91.0" styleClass="btn" stylesheets="@CSS/Dashboard/Dashboard.css" text="Reclamation" textFill="WHITE" />
+            <Button alignment="CENTER" layoutX="8.0" layoutY="395.0" mnemonicParsing="false" prefHeight="71.0" prefWidth="91.0" styleClass="btn" stylesheets="@CSS/Dashboard/Dashboard.css" text="Market" textFill="WHITE" />
+            <Label layoutX="25.0" layoutY="48.0" text="NNN." textFill="#7bc186">
+               <font>
+                  <Font name="Dubai Bold" size="23.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Text fill="#7bc186" layoutX="362.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ADD DELEVERY">
+         <font>
+            <Font name="Baskerville Old Face" size="36.0" />
+         </font>
+         <effect>
+            <Lighting diffuseConstant="1.38" specularConstant="0.9" specularExponent="25.52" surfaceScale="2.53">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant />
+               </light>
+            </Lighting>
+         </effect>
+      </Text>
+
+   </children>
+</AnchorPane>

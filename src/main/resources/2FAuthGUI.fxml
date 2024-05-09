@@ -7,12 +7,12 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane prefHeight="600.0" prefWidth="800.0" stylesheets="@style/2AF.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.esprit.controllers.DoubleAuthentication">
+<AnchorPane prefHeight="600.0" prefWidth="800.0" stylesheets="@style/2AF.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.esprit.controllers.UserControllers.TwoFactorController">
 
     <VBox alignment="CENTER" layoutX="245.0" layoutY="180.0" prefHeight="328.0" prefWidth="285.0" spacing="10">
         <Label text="Enter SMS Code" />
-        <TextField fx:id="smsCodeField" />
-        <Button onAction="#handleVerifyButton" stylesheets="@style/2AF.css" text="Verify" />
+        <TextField fx:id="codeField" />
+        <Button onAction="#handleButtonLogin" stylesheets="@style/2AF.css" text="Verify" />
         <Label fx:id="messageLabel" />
     </VBox>
 

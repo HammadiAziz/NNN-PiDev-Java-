@@ -1,0 +1,44 @@
+.table-view {
+    -fx-background-color: #5e5e5e; /* Background color of the table */
+}
+
+.table-row-cell {
+    -fx-text-fill: #7bc186; /* Text color */
+    -fx-padding: -1px;
+    -fx-border-color: transparent transparent #cccccc transparent; /* Color of the lines between rows */
+    /* Padding around the cell content */
+}
+
+.table-row-cell:selected {
+    -fx-background-color: #7bc186; /* Background color of selected rows */
+}
+
+.table-column {
+    -fx-alignment: CENTER; /* Alignment of column content (LEFT, CENTER, RIGHT) */
+    -fx-font-weight: bold;
+    /* Bold font for column headers */
+}
+
+.table-column .label {
+    -fx-font-size: 14px; /* Font size for column headers */
+    -fx-alignment: CENTER; /* Center align column headers */
+}
+
+.button {
+    -fx-background-color: #4CAF50; /* Background color of the button */
+    -fx-text-fill: white; /* Text color */
+    -fx-font-size: 14px; /* Font size */
+    -fx-font-weight: bold; /* Font weight */
+    -fx-padding: 10px 20px; /* Padding around the button text */
+    -fx-border-radius: 5px; /* Border radius for rounded corners */
+    -fx-background-radius: 5px; /* Background radius for rounded corners */
+}
+
+.button:hover {
+    -fx-background-color: #45a049; /* Background color on hover */
+}
+
+.button:pressed {
+    -fx-background-color: #388e3c; /* Background color when pressed */
+}
+
