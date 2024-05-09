@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.esprit.controllers.user.EditRec">
+   <children>
+      <TextField fx:id="objectUpdate" layoutX="150.0" layoutY="132.0" />
+      <TextField fx:id="descriptionUpdate" layoutX="150.0" layoutY="187.0" />
+      <TextField fx:id="categorieUpdate" layoutX="150.0" layoutY="241.0" />
+      <Button fx:id="buttonUpdate" layoutX="136.0" layoutY="309.0" mnemonicParsing="false" onAction="#handleUpdate" prefHeight="25.0" prefWidth="91.0" style="-fx-background-color: #15aa6e;" text="Send" textFill="WHITE">
+         <effect>
+            <Reflection />
+         </effect>
+      </Button>
+      <Text fill="#15aa6e" layoutX="31.0" layoutY="104.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Update Reclamation" wrappingWidth="195.34378051757812">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Button fx:id="back" layoutX="270.0" layoutY="309.0" mnemonicParsing="false" onAction="#back_U" prefHeight="25.0" prefWidth="91.0" style="-fx-background-color: #15aa6e;" text="Back" textFill="WHITE">
+         <effect>
+            <Reflection />
+         </effect>
+      </Button>
+      <AnchorPane prefHeight="42.0" prefWidth="729.0" style="-fx-background-color: #15aa6e;">
+         <children>
+            <Button layoutX="747.0" layoutY="4.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="33.0" style="-fx-background-color: #15aa6e;">
+               <graphic>
+                  <ImageView fitHeight="27.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/notification.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <ImageView fitHeight="42.0" fitWidth="57.0" layoutX="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../styles/logo.png" />
+               </image>
+            </ImageView>
+            <Text fill="WHITE" layoutX="336.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="NNN" wrappingWidth="112.80340576171875">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Text>
+            <Button layoutX="703.0" layoutY="4.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="27.0" style="-fx-background-color: #15aa6e;">
+               <graphic>
+                  <ImageView fitHeight="29.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/profile.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

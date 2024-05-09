@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.effect.Reflection?>
@@ -62,11 +63,16 @@
             <Reflection />
          </effect>
       </Button>
-      <Text fill="#7bc186" layoutX="176.0" layoutY="253.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ID Rec" wrappingWidth="116.80337524414062">
+      <Text fill="#7bc186" layoutX="176.0" layoutY="265.0" strokeType="OUTSIDE" strokeWidth="0.0" text="STATUS" wrappingWidth="116.80337524414062">
          <font>
             <Font name="Candara Bold" size="14.0" />
          </font>
       </Text>
-      <TextField fx:id="idRecRep" layoutX="182.0" layoutY="269.0" />
+      <ComboBox fx:id="statusCombo" layoutX="182.0" layoutY="290.0" prefWidth="150.0" style="-fx-background-color: #7bc186;" />
+      <Button layoutX="435.0" layoutY="149.0" mnemonicParsing="false" onAction="#RegReponse" prefHeight="25.0" prefWidth="103.0" style="-fx-background-color: #7bc186;" text="Regenerate" textFill="WHITE">
+         <effect>
+            <Reflection />
+         </effect>
+      </Button>
    </children>
 </AnchorPane>

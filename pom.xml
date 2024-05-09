@@ -30,6 +30,17 @@
                 <artifactId>javafx-controls</artifactId>
                 <version>20.0.2</version>
               </dependency>
+
+        <dependency>
+            <groupId>com.theokanning.openai-gpt3-java</groupId>
+            <artifactId>service</artifactId>
+            <version>0.12.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.sun.mail</groupId>
+            <artifactId>javax.mail</artifactId>
+            <version>1.6.2</version>
+        </dependency>
     </dependencies>
 
     <build>
@@ -39,7 +50,7 @@
                 <artifactId>javafx-maven-plugin</artifactId>
                 <version>0.0.1</version>
                 <configuration>
-                    <mainClass>tn.esprit.util.MainRep</mainClass>
+                    <mainClass>tn.esprit.util.PieChartDemo</mainClass>
                 </configuration>
             </plugin>
         </plugins>

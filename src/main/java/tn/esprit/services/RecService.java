@@ -1,15 +1,15 @@
 package tn.esprit.services;
 
 import tn.esprit.interfaces.IReclamation;
-import tn.esprit.models.*;
-import java.util.List;
-import java.sql.SQLException;
-import java.sql.Connection;
+import tn.esprit.models.Reclamation;
+import tn.esprit.models.Reponse;
 import tn.esprit.util.MaConnexion;
-import java.sql.Statement;
-import java.sql.PreparedStatement;
+
+import java.sql.*;
 import java.util.ArrayList;
-import java.sql.ResultSet;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 public class RecService implements IReclamation<Reclamation> {
 
@@ -19,7 +19,7 @@ public class RecService implements IReclamation<Reclamation> {
     //methodes
 
     public void add(Reclamation Rec){
-        String req= "INSERT INTO `reclamation`(`object`, `description_rec`, `categorie`, `etat`) VALUES ('"+Rec.getObject()+"','"+Rec.getDescription()+"','"+Rec.getCategorie()+"','"+Rec.getEtat()+"')" ;
+        String req= "INSERT INTO `reclamation`(`object`, `description_rec`, `categorie`, `etat`,`user_id`) VALUES ('"+Rec.getObject()+"','"+Rec.getDescription()+"','"+Rec.getCategorie()+"','"+Rec.getEtat()+"','"+Rec.getId_user()+"')" ;
         try{
             Statement st = cnx.createStatement();
             st.executeUpdate(req);
@@ -84,6 +84,34 @@ public class RecService implements IReclamation<Reclamation> {
                 rec.setDescription(res.getString(3));
                 rec.setCategorie(res.getString(4));
                 rec.setEtat(res.getString(5));
+                rec.setId_user(res.getInt("user_id"));
+
+                recs.add(rec);
+            }
+
+        }catch(SQLException e ){
+            throw new RuntimeException(e);
+        }
+
+        return recs;
+    }
+    public List<Reclamation> getAllByUserId(int user_id){
+        List<Reclamation> recs = new ArrayList<>() ;
+        String req = "SELECT * FROM reclamation WHERE user_id=?";
+
+        try{
+            PreparedStatement ps = cnx.prepareStatement(req);
+            ps.setInt(1, user_id);
+            ResultSet res = ps.executeQuery();
+            while (res.next()){
+
+                Reclamation rec = new Reclamation();
+                rec.setId(res.getInt("id"));
+                rec.setObject(res.getString(2));
+                rec.setDescription(res.getString(3));
+                rec.setCategorie(res.getString(4));
+                rec.setEtat(res.getString(5));
+                rec.setId_user(res.getInt("user_id"));
 
                 recs.add(rec);
             }
@@ -111,6 +139,8 @@ public class RecService implements IReclamation<Reclamation> {
                 rec.setDescription(res.getString("description_rec"));
                 rec.setCategorie(res.getString("categorie"));
                 rec.setEtat(res.getString("etat"));
+                rec.setId_user(res.getInt("user_id"));
+
             } else {
                 System.out.println("No reclamation found with ID: " + id);
             }
@@ -166,6 +196,19 @@ public class RecService implements IReclamation<Reclamation> {
         }
         return reponses;
     }
-
-
+    public Map<String, Integer> getReclamationStatisticsByCategory() throws SQLException {
+        Map<String, Integer> statistics = new HashMap<>();
+        String query = "SELECT categorie, COUNT(*) AS count FROM reclamation GROUP BY categorie";
+        try (PreparedStatement statement = cnx.prepareStatement(query);
+             ResultSet resultSet = statement.executeQuery()) {
+            while (resultSet.next()) {
+                String categorie = resultSet.getString("categorie");
+                int count = resultSet.getInt("count");
+                statistics.put(categorie, count);
+            }
+        }
+        return statistics;
+    }
 }
+
+

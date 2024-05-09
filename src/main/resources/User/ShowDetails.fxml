@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="437.0" prefWidth="789.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.esprit.controllers.user.ShowDetails">
+   <children>
+      <Label layoutX="221.0" layoutY="44.0" prefHeight="35.0" prefWidth="306.0" text="Details of Reclamation" textFill="#5dd28c">
+         <font>
+            <Font name="Cambria Math" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="59.0" layoutY="62.0" prefHeight="17.0" prefWidth="148.0" text="Object : " textFill="#40965e">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="59.0" layoutY="125.0" prefHeight="17.0" prefWidth="148.0" text="Categorie :" textFill="#40965e">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="59.0" layoutY="186.0" prefHeight="17.0" prefWidth="148.0" text="Description : " textFill="#40965e">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="label_object" layoutX="121.0" layoutY="62.0" prefHeight="17.0" prefWidth="172.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="label_categorie" layoutX="152.0" layoutY="125.0" prefHeight="17.0" prefWidth="172.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="59.0" layoutY="250.0" prefHeight="17.0" prefWidth="148.0" text="Etat : " textFill="#40965e">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="label_decription" layoutX="163.0" layoutY="186.0" prefHeight="17.0" prefWidth="404.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="label_etat" layoutX="109.0" layoutY="250.0" prefHeight="17.0" prefWidth="148.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Button layoutX="479.0" layoutY="327.0" mnemonicParsing="false" onAction="#back" prefHeight="25.0" prefWidth="95.0" style="-fx-background-color: #15aa6e;" text="Back" textFill="WHITE">
+         <effect>
+            <Reflection />
+         </effect>
+      </Button>
+      <Label layoutX="59.0" layoutY="313.0" prefHeight="17.0" prefWidth="148.0" text="Reponses: " textFill="#40965e">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="label_reponse" layoutX="163.0" layoutY="318.0" prefHeight="76.0" prefWidth="306.0" />
+      <AnchorPane layoutX="-2.0" prefHeight="42.0" prefWidth="729.0" style="-fx-background-color: #15aa6e;">
+         <children>
+            <Button layoutX="747.0" layoutY="4.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="33.0" style="-fx-background-color: #15aa6e;">
+               <graphic>
+                  <ImageView fitHeight="27.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/notification.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <ImageView fitHeight="42.0" fitWidth="57.0" layoutX="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../styles/logo.png" />
+               </image>
+            </ImageView>
+            <Text fill="WHITE" layoutX="336.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="NNN" wrappingWidth="112.80340576171875">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Text>
+            <Button layoutX="703.0" layoutY="4.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="27.0" style="-fx-background-color: #15aa6e;">
+               <graphic>
+                  <ImageView fitHeight="29.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/profile.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

@@ -1,18 +1,15 @@
 package tn.esprit.services;
-import java.sql.*;
 
+import tn.esprit.interfaces.IReponse;
 import tn.esprit.models.Reponse;
 import tn.esprit.util.MaConnexion;
 
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
-
-import tn.esprit.interfaces.*;
-import tn.esprit.models.*;
-import java.sql.SQLException;
-import java.sql.Connection;
-import java.sql.Statement;
-import java.sql.PreparedStatement;
 
 
 public class RepService implements IReponse<Reponse> {
@@ -37,12 +34,12 @@ public class RepService implements IReponse<Reponse> {
 	}
 
 
-	public void update_Rep(Reponse rep, int id){
+	public void update_Rep(Reponse rep){
 		String query = "UPDATE reponse SET description_rep = ? WHERE id = ?";
 		try {
 			PreparedStatement statement = cnx.prepareStatement(query);
 			statement.setString(1, rep.getDescription_rep());
-			statement.setInt(2, id);
+			statement.setInt(2, rep.getId());
 			statement.executeUpdate();
 			System.out.println("Reponse mise à jour avec succès");
 		} catch (SQLException e) {
@@ -54,20 +51,21 @@ public class RepService implements IReponse<Reponse> {
 
 	}
 
-	public List<Reponse> getAll_Rep(){
+	public List<Reponse> getAll_Rep(int id){
 
 		List<Reponse> reps = new ArrayList<>() ;
-		String req = "SELECT * FROM reponse";
+		String query = "SELECT * FROM reponse WHERE rep_rec_id= ?";
 
 		try{
-			Statement st = cnx.createStatement();
-			ResultSet res = st.executeQuery(req);
+			PreparedStatement statement = cnx.prepareStatement(query);
+			statement.setInt(1,id);
+			ResultSet res = statement.executeQuery();
 			while (res.next()){
 
 				Reponse rep = new Reponse();
 				rep.setId(res.getInt("id"));
 
-				rep.setDescription_rep(res.getString(2));
+				rep.setDescription_rep(res.getString("description_rep"));
 
 				reps.add(rep);
 			}
@@ -106,4 +104,38 @@ public class RepService implements IReponse<Reponse> {
 		return rep;
 	}
 
+	public void updateReclamationStatus(int reclamationId, String status) throws SQLException {
+		String query = "UPDATE reclamation SET etat = ? WHERE id = ?";
+
+		try {
+			PreparedStatement statement = cnx.prepareStatement(query);
+			statement.setString(1, status);
+			statement.setInt(2, reclamationId);
+			statement.executeUpdate();
+			System.out.println("État de la réclamation mis à jour avec succès");
+		} catch (SQLException e) {
+			throw e;
+		}
+	}
+public String getusermail(int id){
+
+		String req = "SELECT email FROM user WHERE id = ?";
+
+		try {
+			PreparedStatement ps = cnx.prepareStatement(req);
+			ps.setInt(1, id);
+			ResultSet res = ps.executeQuery();
+
+			if (res.next()) {
+				return res.getString("email");
+			} else {
+			}
+		} catch (SQLException e) {
+			throw new RuntimeException(e);
+		}
+
+		return null;
+	}
 }
+
+

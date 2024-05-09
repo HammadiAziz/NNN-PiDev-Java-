@@ -1,35 +1,44 @@
 package tn.esprit.models;
+
 import java.util.List;
-import tn.esprit.models.Reponse;
 
 public class Reclamation {
 
     //Att
     private String object,description,categorie,etat;
-    private int id;
+    private int id,id_user;
     //List Reclamation
     private List<Reponse> reponses;
 
     //cont
 
-    public Reclamation(String object, String description, String categorie, String etat, int id) {
+    public Reclamation(String object, String description, String categorie, String etat, int id,int id_user) {
         this.object = object;
         this.description = description;
         this.categorie = categorie;
         this.etat = etat;
         this.id = id;
+        this.id_user=id_user;
     }
 
-    public Reclamation(String object, String description, String categorie, String etat) {
+    public Reclamation(String object, String description, String categorie, String etat,int id_user) {
         this.object = object;
         this.description = description;
         this.categorie = categorie;
         this.etat = etat;
+        this.id_user=id_user;
     }
 
     public Reclamation() {
     }
 
+    public int getId_user() {
+        return id_user;
+    }
+
+    public void setId_user(int id_user) {
+        this.id_user = id_user;
+    }
 
     public String getObject() {
         return object;
@@ -71,14 +80,17 @@ public class Reclamation {
         this.etat = etat;
     }
 
+    @Override
     public String toString() {
         return "Reclamation{" +
-                       "id=" + id +
-                       ", object='" + object + '\'' +
-                       ", description='" + description + '\'' +
-                       ", categorie='" + categorie + '\'' +
-                       ", etat='" + etat + '\'' +
-                       '}';
+                "object='" + object + '\'' +
+                ", description='" + description + '\'' +
+                ", categorie='" + categorie + '\'' +
+                ", etat='" + etat + '\'' +
+                ", id=" + id +
+                ", id_user=" + id_user +
+                ", reponses=" + reponses +
+                '}';
     }
 
     public List<Reponse> getReponses() {

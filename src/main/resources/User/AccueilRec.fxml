@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="400.0" prefWidth="767.0" xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="tn.esprit.controllers.user.AccueilRec">
+   <children>
+      <Button layoutX="170.0" layoutY="152.0" mnemonicParsing="false" onAction="#List_Traite" style="-fx-background-color: #15aa6e;">
+         <graphic>
+            <AnchorPane prefHeight="158.0" prefWidth="143.0" style="-fx-background-color: #15aa6e;">
+               <children>
+                  <Text layoutX="13.0" layoutY="20.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Reclamations Traites" textAlignment="CENTER" wrappingWidth="118.0">
+                     <font>
+                        <Font name="Cambria Math" size="18.0" />
+                     </font>
+                  </Text>
+                  <ImageView fitHeight="53.0" fitWidth="55.0" layoutX="45.0" layoutY="65.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/traite.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </graphic>
+      </Button>
+      <Button layoutX="428.0" layoutY="152.0" mnemonicParsing="false" onAction="#List_Non_Traite" style="-fx-background-color: #15aa6e;">
+         <graphic>
+            <AnchorPane prefHeight="158.0" prefWidth="143.0" style="-fx-background-color: #15aa6e;">
+               <children>
+                  <Text layoutX="13.0" layoutY="20.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Reclamations non Traites" textAlignment="CENTER" wrappingWidth="118.0">
+                     <font>
+                        <Font name="Cambria Math" size="18.0" />
+                     </font>
+                  </Text>
+                  <ImageView fitHeight="53.0" fitWidth="55.0" layoutX="45.0" layoutY="65.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/img.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </graphic>
+      </Button>
+      <AnchorPane layoutX="-7.0" prefHeight="42.0" prefWidth="775.0" style="-fx-background-color: #15aa6e;">
+         <children>
+            <Button layoutX="725.0" layoutY="3.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="33.0" style="-fx-background-color: #15aa6e;">
+               <graphic>
+                  <ImageView fitHeight="27.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/notification.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <ImageView fitHeight="42.0" fitWidth="57.0" layoutX="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../styles/logo.png" />
+               </image>
+            </ImageView>
+            <Text fill="WHITE" layoutX="352.0" layoutY="29.0" strokeType="OUTSIDE" strokeWidth="0.0" text="NNN" wrappingWidth="112.80340576171875">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Text>
+            <Button layoutX="681.0" layoutY="3.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="27.0" style="-fx-background-color: #15aa6e;">
+               <graphic>
+                  <ImageView fitHeight="29.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/profile.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </AnchorPane>
+      <Button layoutX="37.0" layoutY="71.0" mnemonicParsing="false" onAction="#navigateAdd" prefHeight="29.0" prefWidth="186.0" style="-fx-background-color: #15aa6e;" text="Add new Reclamation" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <effect>
+            <Reflection />
+         </effect>
+      </Button>
+   </children>
+</AnchorPane>
