@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="546.0" prefWidth="945.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.esprit.controllers.FrontFatma.AddEvent">
+   <children>
+      <ImageView fitHeight="571.0" fitWidth="945.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/Front/backgroundfront.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="490.0" layoutY="474.0" mnemonicParsing="false" onAction="#backToAllEvents" prefHeight="44.0" prefWidth="139.0" styleClass="sign-button" stylesheets="@../CSS/Front/Front.css" text="back" textAlignment="CENTER" />
+      <Text layoutX="421.0" layoutY="134.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Add Event" wrappingWidth="139.0">
+         <font>
+            <Font name="System Bold" size="26.0" />
+         </font>
+      </Text>
+      <ComboBox fx:id="groupCB" layoutX="412.0" layoutY="174.0" prefHeight="38.0" prefWidth="147.0" promptText="GROUP" stylesheets="@../CSS/Front/Front.css" />
+      <TextField fx:id="nameEventTF" layoutX="363.0" layoutY="229.0" prefHeight="29.0" prefWidth="243.0" promptText="name" styleClass="recherche" stylesheets="@../CSS/Front/Front.css" />
+      <TextArea fx:id="descEventTA" layoutX="363.0" layoutY="272.0" prefHeight="83.0" prefWidth="243.0" promptText="add a description" styleClass="recherche" stylesheets="@../CSS/Front/Front.css" />
+      <DatePicker fx:id="debutDateDP" layoutX="368.0" layoutY="419.0" onAction="#getDebutDate" prefHeight="26.0" prefWidth="236.0" promptText="select a debut date" stylesheets="@../CSS/Front/Front.css" />
+      <Button layoutX="326.0" layoutY="474.0" mnemonicParsing="false" onAction="#addEvent" prefHeight="26.0" prefWidth="147.0" styleClass="sign-button" stylesheets="@../CSS/Front/Front.css" text="Add" />
+      <DatePicker fx:id="endDateDP" layoutX="367.0" layoutY="370.0" onAction="#getEndDate" prefHeight="26.0" prefWidth="236.0" promptText="select an end date" stylesheets="@../CSS/Front/Front.css" />
+      <Pane layoutX="1.0" prefHeight="95.0" prefWidth="944.0">
+         <children>
+            <ImageView fitHeight="68.0" fitWidth="60.0" layoutX="22.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/Front/logo.png" />
+               </image>
+            </ImageView>
+            <Circle layoutX="770.0" layoutY="48.0" radius="19.0" stroke="BLACK" strokeType="INSIDE" />
+            <Label layoutX="52.0" layoutY="37.0" prefHeight="29.0" prefWidth="60.0" text="NNN.">
+               <font>
+                  <Font name="Tw Cen MT Condensed Extra Bold" size="28.0" />
+               </font>
+            </Label>
+            <Button layoutX="240.0" layoutY="26.0" mnemonicParsing="false" onAction="#goToEvents" prefHeight="47.0" prefWidth="76.0" styleClass="buttonmenu" stylesheets="@../CSS/Front/Front.css" text="Events" />
+            <Button layoutX="330.0" layoutY="24.0" mnemonicParsing="false" onAction="#goToGroups" prefHeight="47.0" prefWidth="76.0" styleClass="buttonmenu" stylesheets="@../CSS/Front/Front.css" text="Groups" />
+            <Button layoutX="416.0" layoutY="25.0" mnemonicParsing="false" onAction="#goToQuiz" prefHeight="47.0" prefWidth="76.0" styleClass="buttonmenu" stylesheets="@../CSS/Front/Front.css" text="Quiz" />
+            <Button layoutX="492.0" layoutY="24.0" mnemonicParsing="false" onAction="#goToMarket" prefHeight="47.0" prefWidth="94.0" styleClass="buttonmenu" stylesheets="@../CSS/Front/Front.css" text="Market" />
+            <Button layoutX="586.0" layoutY="24.0" mnemonicParsing="false" onAction="#goToLivraison" prefHeight="47.0" prefWidth="94.0" styleClass="buttonmenu" stylesheets="@../CSS/Front/Front.css" text="Livraison" />
+            <Button fx:id="home" layoutX="154.0" layoutY="25.0" mnemonicParsing="false" onAction="#gotoHome" prefHeight="47.0" prefWidth="76.0" styleClass="buttonmenu" stylesheets="@../CSS/Front/Front.css" text="Home" />
+            <Button fx:id="profilename" layoutX="783.0" layoutY="31.0" mnemonicParsing="false" onAction="#gotoprofile" prefHeight="33.0" prefWidth="94.0" styleClass="buttonmenu" stylesheets="@../CSS/Front/Front.css" text="Button" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

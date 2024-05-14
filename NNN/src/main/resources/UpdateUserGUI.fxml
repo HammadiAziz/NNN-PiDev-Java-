@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="548.0" prefWidth="926.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.esprit.controllers.UserControllers.ProfileController">
+   <children>
+      <ImageView fitHeight="591.0" fitWidth="926.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/Front/backgroundfront.png" />
+         </image>
+      </ImageView>
+      <AnchorPane prefHeight="547.0" prefWidth="215.0">
+         <children>
+            <Label layoutX="55.0" layoutY="126.0" text="Welcome," textFill="WHITE">
+               <font>
+                  <Font name="Tahoma" size="17.0" />
+               </font>
+            </Label>
+            <Line endX="80.40000915527344" endY="-1.52587890625E-5" fill="BLACK" layoutX="113.0" layoutY="190.0" startX="-100.0" />
+            <Button layoutX="29.0" layoutY="203.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="180.0" styleClass="nav-btn" stylesheets="@style/dashboardDesign.css" text="Go Back Home" />
+            <Button layoutX="19.0" layoutY="463.0" mnemonicParsing="false" onAction="#logout" prefHeight="50.0" prefWidth="74.0" stylesheets="@CSS/Front/Front.css">
+               <styleClass>
+                  <String fx:value="sign-button" />
+                  <String fx:value="shadow" />
+               </styleClass>
+               <graphic>
+                  <ImageView fitHeight="26.0" fitWidth="28.0" onMouseClicked="#logout" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/logout.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Label layoutX="99.0" layoutY="474.0" text="Logout">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Button fx:id="edit" layoutX="29.0" layoutY="238.0" mnemonicParsing="false" onAction="#NavigateToUpdate" prefHeight="35.0" prefWidth="180.0" styleClass="nav-btn" stylesheets="@style/dashboardDesign.css" text="Edit Details" />
+            <Button layoutX="29.0" layoutY="269.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="180.0" styleClass="nav-btn" stylesheets="@style/dashboardDesign.css" text="Change Password" />
+            <Button fx:id="navToBadge" layoutX="2.0" layoutY="304.0" mnemonicParsing="false" onAction="#navToBadges" prefHeight="35.0" prefWidth="180.0" styleClass="nav-btn" stylesheets="@style/dashboardDesign.css" text="Buy Badges">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/diamondd.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <ImageView fitHeight="20.0" fitWidth="15.0" layoutX="14.0" layoutY="213.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/home.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="30.0" fitWidth="27.0" layoutX="8.0" layoutY="242.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/editprofile.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="23.0" fitWidth="27.0" layoutX="7.0" layoutY="275.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/changepass.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="106.0" fitWidth="101.0" layoutX="42.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/66620d1.png" />
+               </image>
+            </ImageView>
+            <Text fx:id="emailq" fill="WHITE" layoutX="55.0" layoutY="185.0" strokeType="OUTSIDE" strokeWidth="0.0" text="email">
+               <font>
+                  <Font name="Arial Bold" size="16.0" />
+               </font></Text>
+         </children>
+      </AnchorPane>
+      <Button layoutX="234.0" layoutY="463.0" mnemonicParsing="false" onAction="#deleteaccount" prefHeight="44.0" prefWidth="193.0" styleClass="sign-button" stylesheets="@CSS/Front/Front.css" text="Delete My Account !" />
+      <Label layoutX="299.0" layoutY="20.0" prefHeight="39.0" prefWidth="385.0" text="These are your information ">
+         <font>
+            <Font name="Impact" size="31.0" />
+         </font>
+      </Label>
+      <Label layoutX="215.0" layoutY="126.0" opacity="0.72" text="First Name :">
+         <font>
+            <Font name="Arial Bold" size="23.0" />
+         </font>
+      </Label>
+      <Text fx:id="nameq" fill="#6e6e6e" layoutX="361.0" layoutY="150.0" strokeType="OUTSIDE" strokeWidth="0.0" text="name">
+         <font>
+            <Font size="27.0" />
+         </font></Text>
+      <Text fx:id="lastnameq" fill="#6e6e6e" layoutX="361.0" layoutY="219.0" strokeType="OUTSIDE" strokeWidth="0.0" text="last name">
+         <font>
+            <Font size="27.0" />
+         </font></Text>
+      <Text fx:id="numberq" fill="#6e6e6e" layoutX="387.0" layoutY="281.0" strokeType="OUTSIDE" strokeWidth="0.0" text="phone number">
+         <font>
+            <Font size="27.0" />
+         </font></Text>
+      <Text fx:id="birthdayq" fill="#6e6e6e" layoutX="322.0" layoutY="341.0" strokeType="OUTSIDE" strokeWidth="0.0" text="birthday">
+         <font>
+            <Font size="27.0" />
+         </font></Text>
+      <AnchorPane layoutX="813.0" layoutY="10.0" prefHeight="30.0" prefWidth="79.0" stylesheets="@style/dashboardDesign.css">
+         <styleClass>
+            <String fx:value="shadow" />
+            <String fx:value="white-bg" />
+         </styleClass>
+         <children>
+            <ImageView fitHeight="23.0" fitWidth="41.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/diamond.png" />
+               </image>
+            </ImageView>
+            <Text fx:id="diamonsq" layoutX="27.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="diamons" />
+         </children>
+      </AnchorPane>
+      <Button layoutX="445.0" layoutY="463.0" mnemonicParsing="false" onAction="#navigate_reclamation" prefHeight="35.0" prefWidth="180.0" styleClass="sign-button" stylesheets="@CSS/Front/Front.css" text="Reclamation" />
+      <Label layoutX="216.0" layoutY="195.0" opacity="0.72" text="Last Name :">
+         <font>
+            <Font name="Arial Bold" size="23.0" />
+         </font>
+      </Label>
+      <Label layoutX="215.0" layoutY="257.0" opacity="0.72" text="phone number:">
+         <font>
+            <Font name="Arial Bold" size="23.0" />
+         </font>
+      </Label>
+      <Label layoutX="215.0" layoutY="317.0" opacity="0.72" text="Birthday:">
+         <font>
+            <Font name="Arial Bold" size="23.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

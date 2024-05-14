@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="404.0" prefWidth="676.0" style="-fx-background-color: #064E3B;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.esprit.controllers.UserControllers.ProfileController">
+    <children>
+        <AnchorPane layoutX="-4.0" prefHeight="404.0" prefWidth="222.0" style="-fx-background-color: #70C247;">
+            <children>
+                <ImageView fitHeight="34.0" fitWidth="33.0" layoutX="30.0" layoutY="213.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@img/changepass.png" />
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="35.0" fitWidth="42.0" layoutX="29.0" layoutY="167.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@img/editprofile.png" />
+                    </image>
+                </ImageView>
+            <Button fx:id="edit" layoutX="83.0" layoutY="176.0" mnemonicParsing="false" onAction="#NavigateToUpdate" text="Edit" />
+            <Button layoutX="83.0" layoutY="217.0" mnemonicParsing="false" text="Change Password" />
+
+            <Button layoutX="79.0" layoutY="260.0" mnemonicParsing="false" onAction="#deleteaccount" text="Delete My Account" />
+            <Text fx:id="emailq" fill="WHITE" layoutX="87.0" layoutY="139.0" strokeType="OUTSIDE" strokeWidth="0.0" text="email" />
+            </children></AnchorPane>
+
+        <ImageView fitHeight="35.0" fitWidth="34.0" layoutX="573.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@img/home.png" />
+            </image>
+        </ImageView>
+        <Label layoutX="575.0" layoutY="56.0" text="Home" textFill="WHITE" />
+        <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="626.0" layoutY="19.0" onMouseClicked="#logout" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@img/logout.png" />
+            </image>
+        </ImageView>
+        <Label layoutX="625.0" layoutY="56.0" text="Log out" textFill="WHITE" />
+        <ImageView fitHeight="104.0" fitWidth="108.0" layoutX="55.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true" />
+        <Label layoutX="252.0" layoutY="80.0" opacity="0.72" text="First Name :" textFill="WHITE" />
+        <Label layoutX="252.0" layoutY="122.0" opacity="0.72" text="Last Name :" textFill="WHITE" />
+        <Label layoutX="252.0" layoutY="209.0" opacity="0.72" text="Phone number :" textFill="WHITE" />
+        <Label layoutX="252.0" layoutY="252.0" opacity="0.72" text="Birthdate :" textFill="WHITE" />
+        <Label layoutX="231.0" layoutY="4.0" text="User Details" textFill="WHITE">
+            <font>
+                <Font name="Barlow Condensed Black Italic" size="54.0" />
+            </font>
+        </Label>
+      <Text fx:id="nameq" fill="WHITE" layoutX="362.0" layoutY="93.0" strokeType="OUTSIDE" strokeWidth="0.0" text="name" />
+      <Text fx:id="birthdayq" fill="WHITE" layoutX="347.0" layoutY="265.0" strokeType="OUTSIDE" strokeWidth="0.0" text="birthday" />
+      <Text fx:id="lastnameq" fill="WHITE" layoutX="372.0" layoutY="135.0" strokeType="OUTSIDE" strokeWidth="0.0" text="last name" />
+      <Text fx:id="numberq" fill="WHITE" layoutX="372.0" layoutY="222.0" strokeType="OUTSIDE" strokeWidth="0.0" text="phone number" />
+    </children>
+</AnchorPane>

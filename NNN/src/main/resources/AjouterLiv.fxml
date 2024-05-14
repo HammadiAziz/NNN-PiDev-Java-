@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="adresssText" prefHeight="546.0" prefWidth="945.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.esprit.controllers.AjouterLivraison">
+   <children>
+      <ImageView fitHeight="565.0" fitWidth="967.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/Front/backgroundfront.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="nomText" layoutX="160.0" layoutY="213.0" prefHeight="26.0" prefWidth="206.0" promptText="nom" styleClass="recherche" stylesheets="@CSS/Front/Front.css" />
+      <TextField fx:id="prenomText" layoutX="160.0" layoutY="276.0" prefHeight="26.0" prefWidth="206.0" promptText="prenom" styleClass="recherche" stylesheets="@CSS/Front/Front.css" />
+      <TextField fx:id="emailText" layoutX="160.0" layoutY="348.0" prefHeight="28.0" prefWidth="206.0" promptText="email" styleClass="recherche" stylesheets="@CSS/Front/Front.css" />
+      <TextField fx:id="phoneText" layoutX="591.0" layoutY="213.0" prefHeight="26.0" prefWidth="206.0" promptText="phone" styleClass="recherche" stylesheets="@CSS/Front/Front.css" />
+      <TextField fx:id="stateText" layoutX="591.0" layoutY="276.0" prefHeight="28.0" prefWidth="206.0" promptText="State" styleClass="recherche" stylesheets="@CSS/Front/Front.css" />
+      <ComboBox fx:id="PaiementCom" layoutX="363.0" layoutY="399.0" prefHeight="26.0" prefWidth="230.0" promptText="Type de paiement" stylesheets="@CSS/Front/Front.css" />
+      <Button layoutX="338.0" layoutY="487.0" mnemonicParsing="false" onAction="#AjouterLiv" prefHeight="44.0" prefWidth="137.0" styleClass="sign-button" stylesheets="@CSS/Front/Front.css" text="Ajouter" />
+      <TextField fx:id="adresseText" layoutX="591.0" layoutY="348.0" prefHeight="26.0" prefWidth="206.0" promptText="Adresse" styleClass="recherche" stylesheets="@CSS/Front/Front.css" />
+      <Button fx:id="navigateAjoutbtn" layoutX="491.0" layoutY="487.0" mnemonicParsing="false" onAction="#navigatetoAfficherLivAction" prefHeight="38.0" prefWidth="137.0" styleClass="sign-button" stylesheets="@CSS/Front/Front.css" text="Navigate" />
+      <Pane layoutX="6.0" prefHeight="95.0" prefWidth="944.0">
+         <children>
+            <ImageView fitHeight="68.0" fitWidth="60.0" layoutX="22.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/Front/logo.png" />
+               </image>
+            </ImageView>
+            <Circle layoutX="770.0" layoutY="48.0" radius="19.0" stroke="BLACK" strokeType="INSIDE" />
+            <Label layoutX="52.0" layoutY="37.0" prefHeight="29.0" prefWidth="60.0" text="NNN.">
+               <font>
+                  <Font name="Tw Cen MT Condensed Extra Bold" size="28.0" />
+               </font>
+            </Label>
+            <Button layoutX="240.0" layoutY="26.0" mnemonicParsing="false" onAction="#goToEvents" prefHeight="47.0" prefWidth="76.0" styleClass="buttonmenu" stylesheets="@CSS/Front/Front.css" text="Events" />
+            <Button layoutX="330.0" layoutY="24.0" mnemonicParsing="false" onAction="#goToGroups" prefHeight="47.0" prefWidth="76.0" styleClass="buttonmenu" stylesheets="@CSS/Front/Front.css" text="Groups" />
+            <Button layoutX="416.0" layoutY="25.0" mnemonicParsing="false" onAction="#goToQuiz" prefHeight="47.0" prefWidth="76.0" styleClass="buttonmenu" stylesheets="@CSS/Front/Front.css" text="Quiz" />
+            <Button layoutX="492.0" layoutY="24.0" mnemonicParsing="false" onAction="#goToMarket" prefHeight="47.0" prefWidth="94.0" styleClass="buttonmenu" stylesheets="@CSS/Front/Front.css" text="Market" />
+            <Button layoutX="586.0" layoutY="24.0" mnemonicParsing="false" onAction="#goToLivraison" prefHeight="47.0" prefWidth="94.0" styleClass="buttonmenu" stylesheets="@CSS/Front/Front.css" text="Livraison" />
+            <Button fx:id="home" layoutX="154.0" layoutY="25.0" mnemonicParsing="false" onAction="#gotoHome" prefHeight="47.0" prefWidth="76.0" styleClass="buttonmenu" stylesheets="@CSS/Front/Front.css" text="Home" />
+            <Button fx:id="profilename" layoutX="783.0" layoutY="31.0" mnemonicParsing="false" onAction="#gotoprofile" prefHeight="33.0" prefWidth="94.0" styleClass="buttonmenu" stylesheets="@CSS/Front/Front.css" text="Button" />
+         </children>
+      </Pane>
+      <Label layoutX="359.0" layoutY="106.0" text="ADD DELEVERY">
+         <font>
+            <Font name="System Bold" size="32.0" />
+         </font>
+      </Label>
+
+   </children>
+</AnchorPane>

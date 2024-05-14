@@ -1,0 +1,34 @@
+.parent{
+
+    -fx-background-color: #4F4F4F;
+}
+
+.sidebar{
+ -fx-border-color: #B0B0B0;
+    -fx-background-color: #3E3E3E;
+}
+
+
+
+.button {
+    -fx-background-color:  #3E3E3E;
+    -fx-background-radius: 0em;
+}
+.button:hover {
+    -fx-background-color: #393939;
+}
+
+.button:pressed{
+    -fx-background-color: #596c5e;
+}
+.button:focused {
+    -fx-background-color: #7D6CC;
+    -fx-border-color: #7bc186;
+    -fx-border-width: 0px 0px 0px 3px;
+}
+.input {
+    -fx-background-color: transparent;
+    -fx-border-color: #7bc186;
+    -fx-border-width: 0 0 3px 0;
+}
+

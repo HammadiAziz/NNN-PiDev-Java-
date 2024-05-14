@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" stylesheets="@../../../style/dashboardDesign.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.esprit.controllers.ReclamationControllers.Admin.AddRep">
+   <children>
+      <Pane layoutX="85.0" prefHeight="62.0" prefWidth="824.0" styleClass="parent" stylesheets="">
+         <children>
+            <Text fill="#7bc186" layoutX="50.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Traiter Reclamation" wrappingWidth="213.47003173828125">
+               <font>
+                  <Font name="Cambria Math" size="24.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <Text fill="#7bc186" layoutX="176.0" layoutY="106.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description" wrappingWidth="116.80337524414062">
+         <font>
+            <Font name="Candara Bold" size="14.0" />
+         </font>
+      </Text>
+      <TextField fx:id="description_rep" alignment="TOP_LEFT" layoutX="182.0" layoutY="124.0" prefHeight="101.0" prefWidth="236.0" promptText="Saisir réponse .....">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </TextField>
+      <Button layoutX="314.0" layoutY="363.0" mnemonicParsing="false" onAction="#addRep" prefHeight="25.0" prefWidth="103.0" style="-fx-background-color: #7bc186;" text="Send" textFill="WHITE">
+         <effect>
+            <Reflection />
+         </effect>
+      </Button>
+      <Button layoutX="642.0" layoutY="110.0" mnemonicParsing="false" onAction="#listReclamation" prefHeight="25.0" prefWidth="144.0" style="-fx-background-color: #7bc186;" text="List of Reclamation" textFill="WHITE">
+         <effect>
+            <Reflection />
+         </effect>
+      </Button>
+      <Text fill="#7bc186" layoutX="176.0" layoutY="265.0" strokeType="OUTSIDE" strokeWidth="0.0" text="STATUS" wrappingWidth="116.80337524414062">
+         <font>
+            <Font name="Candara Bold" size="14.0" />
+         </font>
+      </Text>
+      <ComboBox fx:id="statusCombo" layoutX="182.0" layoutY="290.0" prefWidth="150.0" style="-fx-background-color: #7bc186;" />
+      <Button layoutX="497.0" layoutY="110.0" mnemonicParsing="false" onAction="#RegReponse" prefHeight="25.0" prefWidth="103.0" style="-fx-background-color: #7bc186;" text="Regenerate" textFill="WHITE">
+         <effect>
+            <Reflection />
+         </effect>
+      </Button>
+      <Pane layoutX="1.0" layoutY="1.0" prefHeight="614.0" prefWidth="103.0" styleClass="sidebar" stylesheets="@../../../CSS/Dashboard.css">
+         <children>
+            <Button alignment="CENTER" layoutX="7.0" layoutY="253.0" mnemonicParsing="false" onAction="#gotoevent" prefHeight="71.0" prefWidth="91.0" styleClass="btn" stylesheets="@../../../CSS/Dashboard.css" text="Event" textFill="WHITE" />
+            <ImageView fitHeight="45.0" fitWidth="43.0" layoutX="32.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../Img/logo.png" />
+               </image>
+            </ImageView>
+            <Button alignment="CENTER" layoutX="8.0" layoutY="182.0" mnemonicParsing="false" onAction="#gotogroup" prefHeight="71.0" prefWidth="91.0" styleClass="btn" stylesheets="@../../../CSS/Dashboard.css" text="Group" textFill="WHITE" />
+            <Button alignment="CENTER" layoutX="8.0" layoutY="111.0" mnemonicParsing="false" onAction="#gotouser" prefHeight="71.0" prefWidth="91.0" styleClass="btn" stylesheets="@../../../CSS/Dashboard.css" text="User" textFill="WHITE" />
+            <Button alignment="CENTER" layoutX="8.0" layoutY="324.0" mnemonicParsing="false" onAction="#gotoquiz" prefHeight="71.0" prefWidth="91.0" styleClass="btn" stylesheets="@../../../CSS/Dashboard.css" text="Quiz" textFill="WHITE" />
+            <Button alignment="CENTER" layoutX="8.0" layoutY="466.0" mnemonicParsing="false" onAction="#gotoreclamation" prefHeight="71.0" prefWidth="91.0" styleClass="btn" stylesheets="@../../../CSS/Dashboard.css" text="Reclamation" textFill="WHITE" />
+            <Button alignment="CENTER" layoutX="8.0" layoutY="395.0" mnemonicParsing="false" onAction="#gotomarket" prefHeight="71.0" prefWidth="91.0" styleClass="btn" stylesheets="@../../../CSS/Dashboard.css" text="Market" textFill="WHITE" />
+            <Label layoutX="25.0" layoutY="48.0" text="NNN." textFill="#7bc186">
+               <font>
+                  <Font name="Dubai Bold" size="23.0" />
+               </font>
+            </Label>
+            <Button alignment="CENTER" layoutX="10.0" layoutY="531.0" mnemonicParsing="false" onAction="#gotolivraison" prefHeight="71.0" prefWidth="91.0" styleClass="btn" stylesheets="@../../../CSS/Dashboard.css" text="Livraison" textFill="WHITE" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,33 @@
+.post-card {
+    -fx-background-color: #f9f9f9;
+    -fx-border-color: #e0e0e0; / Lighter gray /
+    -fx-border-width: 1px;
+    -fx-border-radius: 8px;
+    -fx-padding: 15px;
+    -fx-margin: 10px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 5, 0, 0, 1);
+    -fx-background-radius: 8px; / Rounded corners /
+}
+
+.post-card:hover {
+    -fx-background-color: #adfa93; / White /
+    -fx-border-color: #54ad43; / Light gray */
+}
+
+.button {
+    -fx-background-color: #4CAF50; /* Green */
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-padding: 10px 20px;
+}
+
+/* Hover state */
+.button:hover {
+    -fx-background-color: #45a049; /* Darker green */
+}
+
+/* Pressed state */
+.button:pressed {
+    -fx-background-color: #388e3c; /* Even darker green */
+}

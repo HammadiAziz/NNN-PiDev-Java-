@@ -1,0 +1,22 @@
+* {
+    -fx-primary-color: #1280d5;
+    -fx-secondary-color: rgb(62, 93, 151);
+    -fx-grey-color: #b9b9b9;
+    -fx-focus-color: -fx-secondary-color;
+}
+
+.input{
+
+    -fx-background-color: transparent;
+    -fx-border-color: #ccc;
+    -fx-border-width: 0 0 1px 0;
+}
+
+.btn {
+    -fx-background-radius: 9px;
+    -fx-background-color: green;
+    -fx-text-fill: #000000;
+}
+.btn:hover{
+    -fx-background-color:-fx-secondary-color;
+}

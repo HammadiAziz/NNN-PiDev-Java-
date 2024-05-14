@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.esprit.controllers.UserControllers.RegisterController">
+    <children>
+        <ImageView fitWidth="30.0" layoutX="69.0" layoutY="24.0" onMouseClicked="#NavigateToLogin" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="70.0" AnchorPane.topAnchor="50.0">
+            
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+        </ImageView>
+        <ImageView fitHeight="77.0" fitWidth="70.0" layoutX="810.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
+            <image>
+                <Image url="@img/logo/logo.png" />
+            </image>
+        </ImageView>
+        <ImageView fitHeight="120.0" fitWidth="924.0" layoutX="30.0" layoutY="467.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="60.0">
+            <image>
+                <Image url="@img/plantShadow.png" />
+            </image>
+        </ImageView>
+        <ImageView fitHeight="425.0" fitWidth="162.0" layoutX="742.0" layoutY="168.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="74.0" AnchorPane.rightAnchor="10.0">
+            <image>
+                <Image url="@img/Character.png" />
+            </image>
+        </ImageView>
+        <VBox alignment="TOP_CENTER" layoutX="-1.0" layoutY="81.0" prefHeight="541.0" prefWidth="560.0" spacing="15.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="170.0" AnchorPane.rightAnchor="170.0" AnchorPane.topAnchor="60.0">
+            <children>
+                <ImageView fitHeight="77.0" fitWidth="88.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@img/icon/patientIcon.png" />
+                    </image>
+                    <VBox.margin>
+                        <Insets bottom="20.0" />
+                    </VBox.margin>
+                </ImageView>
+                <HBox alignment="CENTER" spacing="10.0">
+                    <children>
+                        <VBox prefHeight="25.0" prefWidth="262.0" spacing="5.0">
+                            <children>
+                                <TextField fx:id="nomR" prefHeight="25.0" prefWidth="262.0" promptText="Name" styleClass="input" stylesheets="@style/login.css">
+                                    <font>
+                                        <Font name="HelveticaNowDisplay-Regular" size="16.0" />
+                                    </font>
+                                </TextField>
+                                <Label fx:id="nameError" textFill="FF6060" />
+                            </children>
+                        </VBox>
+                        <VBox spacing="5.0">
+                            <children>
+                                <TextField fx:id="prenomR" prefHeight="25.0" prefWidth="262.0" promptText="Last Name" styleClass="input" stylesheets="@style/login.css">
+                                    <font>
+                                        <Font name="HelveticaNowDisplay-Regular" size="16.0" />
+                                    </font>
+                                </TextField>
+                                <Label fx:id="lastnameError" textFill="FF6060" />
+                            </children>
+                        </VBox>
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER" spacing="10.0">
+                    <children>
+                        <VBox spacing="5.0">
+                            <children>
+                                <TextField fx:id="emailR" prefHeight="25.0" prefWidth="262.0" promptText="Email" styleClass="input" stylesheets="@style/login.css">
+                                    <font>
+                                        <Font name="HelveticaNowDisplay-Regular" size="16.0" />
+                                    </font>
+                                </TextField>
+
+                            </children>
+                        </VBox>
+                        <VBox spacing="5.0">
+                            <children>
+                                <PasswordField fx:id="passwordR" prefHeight="25.0" prefWidth="262.0" promptText="Password" styleClass="input" stylesheets="@style/login.css">
+                                    <font>
+                                        <Font name="HelveticaNowDisplay-Regular" size="16.0" />
+                                    </font>
+                                </PasswordField>
+
+                            </children>
+                        </VBox>
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER" layoutX="10.0" layoutY="193.0" spacing="10.0">
+                    <children>
+                        <VBox spacing="5.0">
+                            <children>
+                                <ComboBox fx:id="ComboBoxR" prefHeight="25.0" prefWidth="262.0" promptText="Select Role">
+                                    <cursor>
+                                        <Cursor fx:constant="HAND" />
+                                    </cursor>
+                                    <items>
+                                        <FXCollections fx:factory="observableArrayList">
+                                            <String fx:value="Male" />
+                                            <String fx:value="Female" />
+                                        </FXCollections>
+                                    </items>
+                                </ComboBox>
+                                <Label fx:id="genderError" textFill="FF6060" />
+                            </children>
+                        </VBox>
+                        <VBox spacing="5.0">
+                            <children>
+                                <DatePicker fx:id="birthdayR" prefWidth="262.0" promptText="Your Birth Day" styleClass="date-picker" />
+                                <Label fx:id="dateError" textFill="FF6060" />
+                            </children>
+                        </VBox>
+                    </children>
+                </HBox>
+                <VBox alignment="CENTER" spacing="5.0">
+                    <children>
+                        <TextField fx:id="phoneR" maxWidth="535.0" prefHeight="34.0" prefWidth="565.0" promptText="Phone Number" styleClass="input" stylesheets="@style/login.css">
+                            <font>
+                                <Font name="HelveticaNowDisplay-Regular" size="16.0" />
+                            </font>
+                        </TextField>
+                        <Label fx:id="matriculeError" textFill="FF6060" />
+                    </children>
+                </VBox>
+                <Button fx:id="registerButton" mnemonicParsing="false" onAction="#handleRegistrationButton" styleClass="btn" stylesheets="@style/login.css" text="Sign Up">
+                    <font>
+                        <Font name="HelveticaNowDisplay-Regular" size="16.0" />
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                    <padding>
+                        <Insets bottom="12.0" left="40.0" right="40.0" top="12.0" />
+                    </padding>
+                    <VBox.margin>
+                        <Insets />
+                    </VBox.margin>
+                </Button>
+            </children>
+        </VBox>
+      <ImageView fitHeight="38.0" fitWidth="83.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+      </ImageView>
+      <ImageView fitHeight="38.0" fitWidth="61.0" layoutX="20.0" layoutY="19.0" onMouseClicked="#NavigateToLogin" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/icon/Line1.png" />
+         </image>
+      </ImageView>
+    </children>
+</AnchorPane>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="546.0" prefWidth="950.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.esprit.controllers.AfficherLivUser">
+    <children>
+      <ImageView fitHeight="566.0" fitWidth="955.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/Front/backgroundfront.png" />
+         </image>
+      </ImageView>
+      <Pane layoutX="6.0" prefHeight="95.0" prefWidth="944.0">
+         <children>
+            <ImageView fitHeight="68.0" fitWidth="60.0" layoutX="22.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/Front/logo.png" />
+               </image>
+            </ImageView>
+            <Circle layoutX="770.0" layoutY="48.0" radius="19.0" stroke="BLACK" strokeType="INSIDE" />
+            <Label layoutX="52.0" layoutY="37.0" prefHeight="29.0" prefWidth="60.0" text="NNN.">
+               <font>
+                  <Font name="Tw Cen MT Condensed Extra Bold" size="28.0" />
+               </font>
+            </Label>
+            <Button layoutX="240.0" layoutY="26.0" mnemonicParsing="false" onAction="#goToEvents" prefHeight="47.0" prefWidth="76.0" styleClass="buttonmenu" stylesheets="@CSS/Front/Front.css" text="Events" />
+            <Button layoutX="330.0" layoutY="24.0" mnemonicParsing="false" onAction="#goToGroups" prefHeight="47.0" prefWidth="76.0" styleClass="buttonmenu" stylesheets="@CSS/Front/Front.css" text="Groups" />
+            <Button layoutX="416.0" layoutY="25.0" mnemonicParsing="false" onAction="#goToQuiz" prefHeight="47.0" prefWidth="76.0" styleClass="buttonmenu" stylesheets="@CSS/Front/Front.css" text="Quiz" />
+            <Button layoutX="492.0" layoutY="24.0" mnemonicParsing="false" onAction="#goToMarket" prefHeight="47.0" prefWidth="94.0" styleClass="buttonmenu" stylesheets="@CSS/Front/Front.css" text="Market" />
+            <Button layoutX="586.0" layoutY="24.0" mnemonicParsing="false" onAction="#goToLivraison" prefHeight="47.0" prefWidth="94.0" styleClass="buttonmenu" stylesheets="@CSS/Front/Front.css" text="Livraison" />
+            <Button fx:id="home" layoutX="154.0" layoutY="25.0" mnemonicParsing="false" onAction="#gotoHome" prefHeight="47.0" prefWidth="76.0" styleClass="buttonmenu" stylesheets="@CSS/Front/Front.css" text="Home" />
+            <Button fx:id="profilename" layoutX="783.0" layoutY="31.0" mnemonicParsing="false" onAction="#gotoprofile" prefHeight="33.0" prefWidth="94.0" styleClass="buttonmenu" stylesheets="@CSS/Front/Front.css" text="Button" />
+         </children>
+      </Pane>
+        <Pane layoutX="21.0" layoutY="78.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="440.0" prefWidth="897.0" stylesheets="@CSS/Dashboard/Dashboard.css">
+            <children>
+                <TableView fx:id="treeview" layoutX="92.0" layoutY="71.0" prefHeight="266.0" prefWidth="744.0" stylesheets="@CSS/Dashboard/Livraison/livraisonList.css">
+                    <columns>
+                        <TableColumn fx:id="nomT" prefWidth="68.80001831054688" text="nom" />
+                        <TableColumn fx:id="prenomT" prefWidth="70.39997863769531" text="prenom" />
+                        <TableColumn fx:id="emailT" prefWidth="150.4000244140625" text="email" />
+                        <TableColumn fx:id="adresseT" prefWidth="72.79998779296875" text="adresse" />
+                        <TableColumn fx:id="numT" prefWidth="103.20001220703125" text="num Tel" />
+                        <TableColumn fx:id="typeT" prefWidth="95.99993896484375" text="typePay" />
+                        <TableColumn fx:id="stateT" prefWidth="102.4000244140625" text="State" />
+                        <TableColumn fx:id="idT" prefWidth="75.0" text="id" />
+                    </columns>
+                </TableView>
+                <Button fx:id="addLiv" layoutX="244.0" layoutY="390.0" mnemonicParsing="false" onAction="#ajouterLiv" prefHeight="41.0" prefWidth="103.0" styleClass="sign-button" stylesheets="@CSS/Front/Front.css" text="Ajouter" />
+                <Button fx:id="UpdateLiv" layoutX="353.0" layoutY="390.0" mnemonicParsing="false" onAction="#UpdateLiv" prefHeight="41.0" prefWidth="103.0" styleClass="sign-button" stylesheets="@CSS/Front/Front.css" text="Modifier" />
+                <Button fx:id="archivee" layoutX="464.0" layoutY="390.0" mnemonicParsing="false" onAction="#ArchiverLiv" prefHeight="41.0" prefWidth="103.0" styleClass="sign-button" stylesheets="@CSS/Front/Front.css" text="Archiver" />
+                <Button fx:id="SuiviLiv" layoutX="571.0" layoutY="390.0" mnemonicParsing="false" onAction="#Suivi" prefHeight="25.0" prefWidth="86.0" styleClass="sign-button" stylesheets="@CSS/Front/Front.css" text="Suivi" />
+            </children>
+        </Pane>
+    </children>
+</AnchorPane>

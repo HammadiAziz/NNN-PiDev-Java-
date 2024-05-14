@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="322.0" prefWidth="274.0" stylesheets="@../CSS/Front/Front.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.esprit.controllers.FrontFatma.CardEvent">
+   <children>
+      <AnchorPane layoutX="12.0" layoutY="7.0" prefHeight="306.0" prefWidth="247.0" styleClass="anchor-pane" stylesheets="@../CSS/Front/Front.css">
+         <children>
+            <Label fx:id="event_end_date" layoutX="55.0" layoutY="186.0" prefHeight="42.0" prefWidth="136.0" styleClass="border" stylesheets="@../style/home.css" text="event_end_date" textFill="RED" />
+            <Label fx:id="event_debut_date" layoutX="56.0" layoutY="162.0" prefHeight="30.0" prefWidth="136.0" text="event_debut_date" textFill="#00cf5d" />
+            <Label fx:id="Event_desc" layoutX="41.0" layoutY="70.0" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="82.0" prefWidth="166.0" text="Event_desc" textAlignment="JUSTIFY" textFill="#636363" />
+            <Label fx:id="event_name" layoutX="31.0" layoutY="14.0" prefHeight="58.0" prefWidth="185.0" text="evnt_name">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Label>
+            <Button fx:id="joinEvent" layoutX="41.0" layoutY="239.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="149.0" styleClass="sign-button" stylesheets="@../CSS/Front/Front.css" text="Join Event" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

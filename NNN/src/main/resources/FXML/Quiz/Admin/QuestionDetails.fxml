@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="503.0" prefWidth="456.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.esprit.controllers.Question.QuestionDetailsController">
+   <children>
+      <Label layoutX="14.0" layoutY="75.0" text="text:">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <Label layoutX="12.0" layoutY="128.0" text="choix1:">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <Label layoutX="12.0" layoutY="182.0" text="choix2:">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <Label layoutX="12.0" layoutY="237.0" text="choix3:">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <Label layoutX="12.0" layoutY="290.0" text="choix4:">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <Label layoutX="12.0" layoutY="391.0" text="correct:">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <Label layoutX="13.0" layoutY="341.0" text="points:">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <TextField fx:id="textup" layoutX="287.0" layoutY="76.0" promptText="Your Question" styleClass="input" stylesheets="@../../CSS/Quiz/Home.css" />
+      <TextField fx:id="ch1up" layoutX="287.0" layoutY="129.0" promptText="Choix 1" styleClass="input" stylesheets="@../../CSS/Quiz/Home.css" />
+      <TextField fx:id="ch2up" layoutX="287.0" layoutY="183.0" promptText="Choix 2" styleClass="input" stylesheets="@../../CSS/Quiz/Home.css" />
+      <TextField fx:id="ch3up" layoutX="287.0" layoutY="238.0" promptText="Choix 3" styleClass="input" stylesheets="@../../CSS/Quiz/Home.css" />
+      <TextField fx:id="ch4up" layoutX="287.0" layoutY="291.0" promptText="Choix 4" styleClass="input" stylesheets="@../../CSS/Quiz/Home.css" />
+      <TextField fx:id="pointup" layoutX="287.0" layoutY="342.0" promptText="Points" styleClass="input" stylesheets="@../../CSS/Quiz/Home.css" />
+      <Label layoutX="165.0" layoutY="14.0" text="Details">
+         <font>
+            <Font name="System Bold" size="33.0" />
+         </font>
+      </Label>
+      <Button layoutX="172.0" layoutY="456.0" mnemonicParsing="false" onAction="#update" styleClass="choice" stylesheets="@../../CSS/Quiz/Home.css" text="Update" />
+      <Button layoutX="235.0" layoutY="456.0" mnemonicParsing="false" onAction="#clear" styleClass="choice" stylesheets="@../../CSS/Quiz/Home.css" text="Clear" />
+      <Label fx:id="text" layoutX="68.0" layoutY="80.0" text="Label" />
+      <TextField layoutX="-464.0" layoutY="-150.0" />
+      <TextField fx:id="correctup" layoutX="287.0" layoutY="392.0" promptText="Correct" styleClass="input" stylesheets="@../../CSS/Quiz/Home.css" />
+      <Label fx:id="ch1" layoutX="74.0" layoutY="133.0" text="Label" />
+      <Label fx:id="ch2" layoutX="74.0" layoutY="187.0" text="Label" />
+      <Label fx:id="ch3" layoutX="74.0" layoutY="243.0" text="Label" />
+      <Label fx:id="ch4" layoutX="74.0" layoutY="295.0" text="Label" />
+      <Label fx:id="points" layoutX="74.0" layoutY="346.0" text="Label" />
+      <Label fx:id="correct" layoutX="74.0" layoutY="396.0" text="Label" />
+   </children>
+</AnchorPane>

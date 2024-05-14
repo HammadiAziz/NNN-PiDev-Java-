@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="386.0" prefWidth="656.0" styleClass="nav-form" stylesheets="@style/dashboardDesign.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.esprit.controllers.UserControllers.BadgeController">
+    <children>
+      <ImageView fitHeight="546.0" fitWidth="656.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/Front/backgroundfront.png" />
+         </image>
+      </ImageView>
+        <ImageView fitHeight="80.0" fitWidth="96.0" layoutX="147.0" layoutY="113.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@images/Untitled-2.png" />
+            </image>
+        </ImageView>
+        <ImageView fitHeight="80.0" fitWidth="70.0" layoutX="276.0" layoutY="113.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@images/slayvar2.png" />
+            </image>
+        </ImageView>
+        <ImageView fitHeight="80.0" fitWidth="64.0" layoutX="394.0" layoutY="113.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@images/gold1.png" />
+            </image>
+        </ImageView>
+        <Text fx:id="bronzePrice" layoutX="146.0" layoutY="236.0" strokeType="OUTSIDE" strokeWidth="0.0" text="bronzePrice" />
+        <Text fx:id="GoldPrice" layoutX="399.0" layoutY="236.0" strokeType="OUTSIDE" strokeWidth="0.0" text="GoldPrice" />
+        <Text fx:id="silverPrice" layoutX="283.0" layoutY="236.0" strokeType="OUTSIDE" strokeWidth="0.0" text="silverPrice" />
+        <Button layoutX="132.0" layoutY="260.0" mnemonicParsing="false" onAction="#purchaseBronze" stylesheets="@CSS/Front/Front.css" text="purchase" />
+        <Button layoutX="385.0" layoutY="260.0" mnemonicParsing="false" onAction="#purchaseGold" stylesheets="@CSS/Front/Front.css" text="purchase" />
+        <Button layoutX="264.0" layoutY="260.0" mnemonicParsing="false" onAction="#purchaseSilver" stylesheets="@CSS/Front/Front.css" text="purchase" />
+    </children>
+</AnchorPane>

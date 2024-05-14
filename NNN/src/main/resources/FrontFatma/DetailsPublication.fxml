@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="600.0" prefWidth="490.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.esprit.controllers.FrontFatma.DetailsPublication">
+   <children>
+      <ImageView fitHeight="600.0" fitWidth="626.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/Front/smallbackground.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="publication_date" layoutX="136.0" layoutY="294.0" prefHeight="30.0" prefWidth="163.0" text="publication_date" />
+      <Text layoutX="28.0" layoutY="315.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Publication date:" wrappingWidth="109.3367919921875">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text layoutX="31.0" layoutY="275.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Publication title:" wrappingWidth="104.5367431640625">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Button layoutX="189.0" layoutY="550.0" mnemonicParsing="false" onAction="#returnToGroups" prefHeight="26.0" prefWidth="128.0" styleClass="sign-button" stylesheets="@../CSS/Front/Front.css" text="return" />
+      <ImageView fx:id="image_publication" fitHeight="185.0" fitWidth="210.0" layoutX="149.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true" />
+      <Label fx:id="publication_title" layoutX="136.0" layoutY="246.0" prefHeight="48.0" prefWidth="188.0" text="publication_title" />
+      <AnchorPane layoutX="108.0" layoutY="346.0" prefHeight="185.0" prefWidth="290.0" styleClass="anchor-pane" stylesheets="@../CSS/Front/Front.css">
+         <children>
+            <Label fx:id="publication_desc" layoutX="20.0" layoutY="14.0" prefHeight="158.0" prefWidth="258.0" text="publication_desc" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
